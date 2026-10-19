@@ -16,6 +16,7 @@ export default function initSmoothScroll() {
     smoothWheel: true,
     syncTouch: false,
   });
+  window.__lenis = lenis;
 
   lenis.on("scroll", ScrollTrigger.update);
   const tick = (time) => lenis.raf(time * 1000);

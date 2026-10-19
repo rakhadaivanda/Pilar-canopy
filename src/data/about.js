@@ -1,85 +1,45 @@
-// Seksi "Filosofi & Profil Perusahaan" — sumber: halaman Tentang Kami, Keunggulan Kami,
-// Sertifikasi & Kompetensi, dan data pada katalog PDF.
+// /* DIUBAH */ Data section Tentang Kami (Profil + 7 Keunggulan digabung)
 export const ABOUT = {
-  eyebrow: "Filosofi & Profil Perusahaan",
-  heading: "Dedikasi teknis dalam rekayasa bentang kain dan baja presisi.",
-  quote:
-    "“Kami perusahaan yang bergerak di bidang konstruksi, canopy membrane, struktur rangka baja, dan solusi bangunan dengan fokus pada kualitas, ketepatan pekerjaan, kekuatan struktur, serta desain yang modern dan fungsional.”",
-  body: "Kami hadir untuk memberikan solusi konstruksi yang tidak hanya mengutamakan estetika, tetapi juga mempertimbangkan kekuatan, keamanan, ketahanan, efisiensi, dan kebutuhan setiap proyek. Dengan dukungan tenaga profesional, teknisi berpengalaman, serta proses pengerjaan yang terencana, kami berkomitmen menjadi mitra terpercaya, mulai dari konsep, desain, fabrikasi, hingga instalasi di lapangan.",
+  eyebrow: "Tentang Kami",
+  heading: "Kenyamanan yang Tak Lekang oleh Waktu untuk Setiap Rumah",
+  body: "PT. Rezeki Barokah Jaya adalah perusahaan di bidang konstruksi, canopy membrane, struktur rangka baja, dan solusi bangunan dengan fokus pada kualitas, ketepatan pekerjaan, kekuatan struktur, serta desain modern dan fungsional. Kami tidak hanya mengutamakan estetika, tetapi juga kekuatan, keamanan, ketahanan, dan efisiensi. Didukung tenaga profesional dan teknisi berpengalaman dengan proses terencana, kami berkomitmen menjadi mitra terpercaya dari konsep, desain, fabrikasi, hingga instalasi.",
 };
 
-// 7 poin "Keunggulan Kami" + 1 poin "Sertifikasi & Kompetensi" (8 kartu = 2 baris penuh pada grid 4 kolom).
-export const PILLARS = [
+// 7 Kartu Keunggulan (Quality, Professional, Custom Design, Strong Structure, Precision, On-Time, After Sales)
+export const ADVANTAGES = [
   {
-    icon: "workspace_premium",
+    icon: "verified",
     title: "Quality",
-    text: "Kami mengutamakan kualitas material dan hasil pekerjaan pada setiap proyek.",
-    tag: "01 / QUALITY",
+    desc: "Kualitas material dan hasil kerja berstandar tinggi untuk ketahanan maksimal.",
   },
   {
     icon: "engineering",
     title: "Professional",
-    text: "Pekerjaan dilakukan dengan perencanaan dan proses kerja yang terstruktur.",
-    tag: "02 / PROFESSIONAL",
+    desc: "Perencanaan matang dan proses terstruktur oleh tim ahli berpengalaman.",
   },
   {
-    icon: "architecture",
+    icon: "design_services",
     title: "Custom Design",
-    text: "Setiap desain dapat disesuaikan dengan karakter dan kebutuhan proyek.",
-    tag: "03 / CUSTOM DESIGN",
+    desc: "Desain arsitektural yang disesuaikan dengan karakter dan kebutuhan spesifik proyek.",
   },
   {
-    icon: "verified_user",
+    icon: "foundation",
     title: "Strong Structure",
-    text: "Struktur dirancang dengan mempertimbangkan fungsi, kekuatan, dan kondisi penggunaannya.",
-    tag: "04 / STRONG STRUCTURE",
+    desc: "Dirancang presisi sesuai fungsi, kekuatan beban, dan kondisi lingkungan penggunaan.",
   },
   {
-    icon: "precision_manufacturing",
+    icon: "straighten",
     title: "Precision",
-    text: "Ketelitian dalam proses fabrikasi dan instalasi menjadi bagian penting dari pekerjaan kami.",
-    tag: "05 / PRECISION",
+    desc: "Teliti dan akurat dalam setiap tahapan fabrikasi hingga instalasi di lapangan.",
   },
   {
     icon: "schedule",
     title: "On-Time",
-    text: "Kami berusaha menjaga target waktu pelaksanaan sesuai dengan jadwal proyek.",
-    tag: "06 / ON-TIME",
+    desc: "Menjaga target waktu penyelesaian pekerjaan secara disiplin sesuai jadwal.",
   },
   {
     icon: "support_agent",
     title: "After Sales",
-    text: "Kami menjaga hubungan dengan pelanggan setelah proyek selesai untuk memastikan hasil pekerjaan tetap optimal.",
-    tag: "07 / AFTER SALES",
-  },
-  {
-    icon: "school",
-    title: "Sertifikasi & Kompetensi",
-    text: "Peningkatan kompetensi tenaga kerja melalui pelatihan, sertifikasi, dan pengembangan keahlian yang relevan.",
-    tag: "08 / COMPETENCE",
-  },
-];
-
-// Strip angka — seluruhnya diturunkan dari katalog (jumlah model koleksi = 10 halaman x 6 model).
-export const STATS = [
-  {
-    value: "60",
-    title: "Model Koleksi",
-    text: "Awning kain, kanopi membrane, tenda glamping, dan kabin dalam katalog 2025–2026.",
-  },
-  {
-    value: "10–20 Th",
-    title: "Garansi Membrane",
-    text: "Brand membrane: HEYtex, Mighty, Dickson, AGTex & Serge Ferrari.",
-  },
-  {
-    value: "5",
-    title: "Pilihan Ketebalan",
-    text: "Membrane 420, 550, 650, 750, hingga 900 GSM sesuai kebutuhan proyek.",
-  },
-  {
-    value: "9",
-    title: "Tahap Proses Kerja",
-    text: "Dari konsultasi dan survey lokasi hingga quality control & handover.",
+    desc: "Menjaga hubungan baik dan memberikan layanan purna jual setelah proyek selesai.",
   },
 ];

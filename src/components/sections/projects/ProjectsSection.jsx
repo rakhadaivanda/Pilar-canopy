@@ -1,218 +1,232 @@
-import { useEffect, useRef, useState } from "react";
+import { useState, useMemo, useRef } from "react";
 import Icon from "../../ui/Icon";
-import { gsap, ScrollTrigger, MQ } from "../../../motion/gsap";
 import SectionEyebrow from "../../ui/SectionEyebrow";
-import WipeText from "../../ui/WipeText";
 import ProjectCard from "./ProjectCard";
-import useCarousel from "../../../hooks/useCarousel";
-import { PROJECTS, PROJECTS_HEADER } from "../../../data/projects";
+import ProjectDetailModal from "./ProjectDetailModal";
+import { PROJECTS, PROJECTS_HEADER, PROJECT_CATEGORIES } from "../../../data/projects";
 
 const pad = (n) => String(n).padStart(2, "0");
 
-/** Desktop lebar + gerak penuh → slider dikunci (pinned) dan digeser oleh scroll. */
-const PIN_MQ = "(min-width: 1024px) and (prefers-reduced-motion: no-preference)";
+const INITIAL_VISIBLE = 8;
 
-const ARROW_BUTTON =
-  "group w-12 h-12 rounded-full border border-outline-variant/50 bg-surface hover:bg-primary hover:text-on-primary hover:border-primary transition-[background-color,color,border-color,transform] duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] flex items-center justify-center text-primary shadow-sm active:scale-95";
-
+/* DIUBAH: Section Portofolio (id="portofolio") dengan Category Tabs, Grid/Slider Switcher, 24+ Card Lengkap, dan Modal Detail Proyek Independent Scroll */
 export default function ProjectsSection() {
-  const sectionRef = useRef(null);
-  const barRef = useRef(null);
-  const [pinned, setPinned] = useState(false);
-  const [shown, setShown] = useState(0);
+  const [activeCategory, setActiveCategory] = useState("all");
+  const [viewMode, setViewMode] = useState("grid"); // "grid" | "slider"
+  const [visibleCount, setVisibleCount] = useState(INITIAL_VISIBLE);
+  const [selectedProject, setSelectedProject] = useState(null);
+  const sliderTrackRef = useRef(null);
 
-  const { trackRef, activeIndex, next, prev, goTo, handleScroll, hoverHandlers } = useCarousel(
-    PROJECTS.length,
-    5500,
-    !pinned,
-  );
+  // Filter projects by category
+  const filteredProjects = useMemo(() => {
+    if (activeCategory === "all") return PROJECTS;
+    return PROJECTS.filter((p) => p.category === activeCategory);
+  }, [activeCategory]);
 
-  // Sinkronkan mode dengan media query (sekali saat mount + saat berubah).
-  useEffect(() => {
-    const mq = window.matchMedia(PIN_MQ);
-    const sync = () => setPinned(mq.matches);
-    sync();
-    mq.addEventListener("change", sync);
-    return () => mq.removeEventListener("change", sync);
+  // Displayed projects in grid mode
+  const displayedProjects = useMemo(() => {
+    if (viewMode === "slider") return filteredProjects;
+    return filteredProjects.slice(0, visibleCount);
+  }, [filteredProjects, visibleCount, viewMode]);
+
+  // Category counts
+  const categoryCounts = useMemo(() => {
+    const counts = { all: PROJECTS.length };
+    PROJECTS.forEach((p) => {
+      counts[p.category] = (counts[p.category] || 0) + 1;
+    });
+    return counts;
   }, []);
 
-  // Mode pinned: scroll vertikal memindahkan track ke kiri (ScrollTrigger pin + scrub).
-  useEffect(() => {
-    if (!pinned) return undefined;
-    const section = sectionRef.current;
-    const track = trackRef.current;
-    if (!section || !track) return undefined;
+  const handleCategoryChange = (categoryId) => {
+    setActiveCategory(categoryId);
+    setVisibleCount(INITIAL_VISIBLE);
+    if (sliderTrackRef.current) {
+      sliderTrackRef.current.scrollTo({ left: 0, behavior: "smooth" });
+    }
+  };
 
-    gsap.set(track, { clearProps: "transform" });
-
-    const mm = gsap.matchMedia();
-    mm.add(PIN_MQ, () => {
-      const distance = () => {
-        const kids = track.children;
-        if (!kids.length) return 0;
-        const last = kids[kids.length - 1];
-        const padRight = parseFloat(getComputedStyle(track).paddingRight) || 0;
-        const contentEnd = last.offsetLeft + last.offsetWidth - track.offsetLeft;
-        return Math.max(0, contentEnd - (track.clientWidth - padRight));
-      };
-
-      const tween = gsap.to(track, {
-        x: () => -distance(),
-        ease: "none",
-        scrollTrigger: {
-          trigger: section,
-          start: "top top",
-          end: () => "+=" + (distance() + window.innerHeight * 0.35),
-          pin: true,
-          scrub: 0.7,
-          invalidateOnRefresh: true,
-          onUpdate: (self) => {
-            const p = self.progress;
-            if (barRef.current) barRef.current.style.width = `${Math.max(3, p * 100)}%`;
-            const i = Math.round(p * (PROJECTS.length - 1));
-            setShown((prevIndex) => (prevIndex === i ? prevIndex : i));
-          },
-        },
-      });
-
-      return () => {
-        tween.scrollTrigger?.kill();
-        tween.kill();
-      };
+  const scrollSlider = (direction) => {
+    if (!sliderTrackRef.current) return;
+    const scrollAmount = 420;
+    sliderTrackRef.current.scrollBy({
+      left: direction === "next" ? scrollAmount : -scrollAmount,
+      behavior: "smooth",
     });
-
-    const raf = requestAnimationFrame(() => ScrollTrigger.refresh());
-    return () => {
-      cancelAnimationFrame(raf);
-      mm.revert();
-      gsap.set(track, { clearProps: "transform" });
-      setShown(0);
-      if (barRef.current) barRef.current.style.width = "3%";
-    };
-  }, [pinned, trackRef]);
-
-  // Storytelling horizontal: gambar bergeser pelan berlawanan arah saat slider digeser (desktop saja).
-  useEffect(() => {
-    const track = trackRef.current;
-    if (!track) return undefined;
-    const mm = gsap.matchMedia();
-    mm.add(MQ.desktop, () => {
-      const medias = Array.from(track.querySelectorAll("[data-card-media]"));
-      const setters = medias.map((el) => gsap.quickTo(el, "x", { duration: 0.6, ease: "power3.out" }));
-      let ticking = false;
-      const update = () => {
-        ticking = false;
-        const t = track.getBoundingClientRect();
-        const center = t.left + t.width / 2;
-        medias.forEach((el, i) => {
-          const r = el.parentElement.getBoundingClientRect();
-          const d = (r.left + r.width / 2 - center) / (t.width / 2 + r.width / 2);
-          setters[i](gsap.utils.clamp(-1, 1, d) * -22);
-        });
-      };
-      const onScroll = () => {
-        if (!ticking) {
-          ticking = true;
-          requestAnimationFrame(update);
-        }
-      };
-      update();
-      track.addEventListener("scroll", onScroll, { passive: true });
-      return () => {
-        track.removeEventListener("scroll", onScroll);
-        gsap.set(medias, { x: 0 });
-      };
-    });
-    return () => mm.revert();
-  }, [trackRef]);
-
-  const shownIndex = pinned ? shown : activeIndex;
+  };
 
   return (
-    <section
-      ref={sectionRef}
-      data-section
-      className="w-full bg-surface-container-low py-24 sm:py-32 overflow-hidden"
-      id="proyek"
-    >
-      <div className="max-w-7xl mx-auto px-6 lg:px-12">
-        {/* Header & nav controls */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
-          <div data-reveal-group data-parallax-y="14">
-            <SectionEyebrow>{PROJECTS_HEADER.eyebrow}</SectionEyebrow>
-            <h2 className="font-headline-lg text-headline-lg text-primary tracking-tight font-light">
-              <WipeText>{PROJECTS_HEADER.heading}</WipeText>
-            </h2>
-            <p data-reveal-item className="font-body-md text-body-md text-on-surface-variant mt-2 max-w-xl">
-              {PROJECTS_HEADER.description}
-            </p>
+    <>
+      <section
+        data-section
+        className="w-full bg-surface-container-low py-20 sm:py-28 overflow-hidden"
+        id="portofolio"
+      >
+        <div className="max-w-7xl mx-auto px-6 lg:px-12">
+          {/* Header Portofolio & Controls */}
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
+            <div data-reveal-group>
+              <SectionEyebrow className="mb-2">{PROJECTS_HEADER.eyebrow}</SectionEyebrow>
+              <h2 className="font-headline-lg text-2xl sm:text-3xl lg:text-4xl text-primary font-bold tracking-tight">
+                {PROJECTS_HEADER.heading}
+              </h2>
+              <p className="font-body-md text-base text-on-surface-variant mt-2 max-w-2xl leading-relaxed">
+                {PROJECTS_HEADER.description}
+              </p>
+            </div>
+
+            {/* View Mode Switcher & Slider Controls */}
+            <div className="flex items-center gap-3 self-start md:self-end">
+              <div className="inline-flex items-center p-1 bg-surface-container rounded-lg border border-outline-variant/40">
+                <button
+                  type="button"
+                  onClick={() => setViewMode("grid")}
+                  className={`flex items-center gap-1.5 px-3 py-1.5 rounded-md text-xs font-semibold transition-all duration-200 ${
+                    viewMode === "grid"
+                      ? "bg-primary text-on-primary shadow-sm"
+                      : "text-on-surface-variant hover:text-primary"
+                  }`}
+                  aria-label="Tampilan Grid"
+                >
+                  <Icon name="grid_view" className="text-[16px]" />
+                  <span>Grid</span>
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setViewMode("slider")}
+                  className={`flex items-center gap-1.5 px-3 py-1.5 rounded-md text-xs font-semibold transition-all duration-200 ${
+                    viewMode === "slider"
+                      ? "bg-primary text-on-primary shadow-sm"
+                      : "text-on-surface-variant hover:text-primary"
+                  }`}
+                  aria-label="Tampilan Slider"
+                >
+                  <Icon name="view_carousel" className="text-[16px]" />
+                  <span>Slider</span>
+                </button>
+              </div>
+
+              {viewMode === "slider" && (
+                <div className="flex items-center gap-2">
+                  <button
+                    aria-label="Geser ke kiri"
+                    className="w-9 h-9 rounded-full border border-outline-variant/50 bg-surface hover:bg-primary hover:text-on-primary transition-all duration-300 flex items-center justify-center text-primary shadow-sm active:scale-95"
+                    onClick={() => scrollSlider("prev")}
+                    type="button"
+                  >
+                    <Icon name="arrow_back" className="text-[18px]" />
+                  </button>
+                  <button
+                    aria-label="Geser ke kanan"
+                    className="w-9 h-9 rounded-full border border-outline-variant/50 bg-surface hover:bg-primary hover:text-on-primary transition-all duration-300 flex items-center justify-center text-primary shadow-sm active:scale-95"
+                    onClick={() => scrollSlider("next")}
+                    type="button"
+                  >
+                    <Icon name="arrow_forward" className="text-[18px]" />
+                  </button>
+                </div>
+              )}
+            </div>
           </div>
 
-          {!pinned && (
-            <div className="flex items-center gap-3">
-              <button aria-label="Geser ke kiri" className={ARROW_BUTTON} onClick={prev} type="button">
-                <Icon name="arrow_back" className="text-[20px] transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:-translate-x-1" />
-              </button>
-              <button aria-label="Geser ke kanan" className={ARROW_BUTTON} onClick={next} type="button">
-                <Icon name="arrow_forward" className="text-[20px] transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:translate-x-1" />
-              </button>
-              <div className="ml-2 hidden sm:flex items-center gap-1.5 font-spec-code text-spec-code text-on-surface-variant">
-                <span className="text-primary font-bold">{pad(activeIndex + 1)}</span>
-                <span>/</span>
-                <span>{pad(PROJECTS.length)}</span>
+          {/* Interactive Category Filter Tabs */}
+          <div className="flex items-center gap-2 overflow-x-auto no-scrollbar pb-3 mb-8 border-b border-outline-variant/30">
+            {PROJECT_CATEGORIES.map((cat) => {
+              const count = categoryCounts[cat.id] || 0;
+              const isActive = activeCategory === cat.id;
+              return (
+                <button
+                  key={cat.id}
+                  type="button"
+                  onClick={() => handleCategoryChange(cat.id)}
+                  className={`flex-none flex items-center gap-2 px-4 py-2 rounded-full text-xs sm:text-sm font-medium transition-all duration-300 whitespace-nowrap ${
+                    isActive
+                      ? "bg-primary text-on-primary shadow-md scale-[1.02]"
+                      : "bg-surface-container-lowest text-on-surface-variant hover:text-primary hover:bg-surface-container border border-outline-variant/40"
+                  }`}
+                >
+                  <span>{cat.label}</span>
+                  <span
+                    className={`px-1.5 py-0.2 rounded-full text-[10px] font-bold ${
+                      isActive
+                        ? "bg-secondary text-on-secondary"
+                        : "bg-surface-container text-on-surface-variant"
+                    }`}
+                  >
+                    {count}
+                  </span>
+                </button>
+              );
+            })}
+          </div>
+
+          {/* Content Area: Grid View or Slider View */}
+          {viewMode === "grid" ? (
+            /* GRID VIEW */
+            <div>
+              <div
+                data-stagger
+                className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
+              >
+                {displayedProjects.map((project) => (
+                  <ProjectCard
+                    key={project.id}
+                    project={project}
+                    onClick={() => setSelectedProject(project)}
+                  />
+                ))}
+              </div>
+
+              {/* Tampilkan Lebih Banyak Proyek */}
+              {filteredProjects.length > visibleCount && (
+                <div className="mt-12 text-center flex flex-col items-center gap-3">
+                  <p className="font-spec-code text-xs text-on-surface-variant">
+                    Menampilkan <strong className="text-primary">{displayedProjects.length}</strong> dari{" "}
+                    <strong className="text-primary">{filteredProjects.length}</strong> proyek portofolio
+                  </p>
+                  <button
+                    type="button"
+                    onClick={() => setVisibleCount((prev) => prev + 8)}
+                    className="inline-flex items-center gap-2 px-7 py-3 rounded-full bg-primary text-on-primary hover:bg-secondary font-semibold text-sm transition-all duration-300 shadow-md hover:shadow-xl hover:-translate-y-0.5 active:scale-95"
+                  >
+                    <Icon name="add_circle" className="text-[18px]" />
+                    <span>Tampilkan Lebih Banyak Proyek</span>
+                  </button>
+                </div>
+              )}
+            </div>
+          ) : (
+            /* SLIDER VIEW */
+            <div className="relative">
+              <div
+                ref={sliderTrackRef}
+                className="flex gap-6 overflow-x-auto snap-x snap-mandatory scroll-smooth no-scrollbar pb-6 -mx-6 px-6 lg:-mx-12 lg:px-12"
+              >
+                {filteredProjects.map((project) => (
+                  <div key={project.id} className="flex-none w-[85vw] sm:w-[360px] lg:w-[380px] snap-center">
+                    <ProjectCard
+                      project={project}
+                      onClick={() => setSelectedProject(project)}
+                    />
+                  </div>
+                ))}
+              </div>
+              <div className="mt-4 flex items-center justify-between text-xs font-spec-code text-on-surface-variant px-2">
+                <span>Geser horizontal untuk melihat koleksi {filteredProjects.length} portofolio</span>
+                <span>Total: {pad(filteredProjects.length)} Proyek</span>
               </div>
             </div>
           )}
         </div>
+      </section>
 
-        {/* Slider track */}
-        <div
-          ref={trackRef}
-          className={`flex gap-6 no-scrollbar pb-8 -mx-6 px-6 lg:-mx-12 lg:px-12 ${
-            pinned ? "overflow-clip" : "overflow-x-auto snap-x snap-mandatory scroll-smooth"
-          }`}
-          onScroll={handleScroll}
-          {...(pinned ? {} : hoverHandlers)}
-        >
-          {PROJECTS.map((project) => (
-            <ProjectCard key={project.id} project={project} />
-          ))}
-        </div>
-
-        {pinned ? (
-          /* Progres horizontal (scroll-driven) */
-          <div className="mt-4 flex items-center gap-4">
-            <span className="font-spec-code text-spec-code text-primary font-bold">
-              {pad(shownIndex + 1)}
-            </span>
-            <div className="relative h-[3px] flex-1 overflow-hidden bg-outline-variant/50">
-              <div
-                ref={barRef}
-                className="absolute inset-y-0 left-0 bg-secondary"
-                style={{ width: "3%" }}
-              ></div>
-            </div>
-            <span className="font-spec-code text-spec-code text-on-surface-variant">
-              {pad(PROJECTS.length)}
-            </span>
-          </div>
-        ) : (
-          /* Pagination dots */
-          <div className="flex items-center justify-center gap-2 mt-4">
-            {PROJECTS.map((project, index) => (
-              <button
-                key={project.id}
-                aria-label={`Slide ${index + 1}`}
-                className={`slider-dot h-1.5 rounded-full transition-all duration-300 ${
-                  index === activeIndex ? "w-8 bg-primary" : "w-2 bg-outline-variant/60"
-                }`}
-                onClick={() => goTo(index)}
-                type="button"
-              ></button>
-            ))}
-          </div>
-        )}
-      </div>
-    </section>
+      {/* Project Detail Modal (Lengkap dengan foto, spesifikasi, highlight & independent scrolling) */}
+      {selectedProject && (
+        <ProjectDetailModal
+          project={selectedProject}
+          onClose={() => setSelectedProject(null)}
+        />
+      )}
+    </>
   );
 }

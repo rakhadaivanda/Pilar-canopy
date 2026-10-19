@@ -9,12 +9,11 @@ export default function Preloader() {
       className="pointer-events-none fixed inset-0 z-[110] flex flex-col items-center justify-center gap-5 bg-surface"
     >
       <div data-preloader-mark className="flex items-center gap-3">
-        <div className="flex h-10 w-10 items-center justify-center rounded-DEFAULT bg-primary text-sm font-bold tracking-tighter text-on-primary">
-          {SITE.logoMark}
-        </div>
-        <span className="font-headline-sm text-headline-sm uppercase tracking-tight text-primary">
-          {SITE.name}
-        </span>
+        <img
+          src={SITE.logo}
+          alt={SITE.name}
+          className="h-14 sm:h-16 w-auto object-contain"
+        />
       </div>
 
       <div className="flex items-center gap-3">

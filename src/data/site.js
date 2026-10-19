@@ -1,17 +1,39 @@
-// Identitas & kontak perusahaan — sumber: halaman "More Information" pada katalog PDF.
+import logoImg from "../assets/images/logo.png";
+import logoWhite from "../assets/images/logo-white.png";
+import logoMark from "../assets/images/logo-mark.png";
+
+// /* DIUBAH */ Identitas & kontak resmi PT. REZEKI BAROKAH JAYA (PILAR CANOPY PERKASA)
 export const SITE = {
-  name: "Pilar Canopy",
-  legalName: "PT. IBSINDO",
+  name: "Pilar Canopy Perkasa",
+  legalName: "PT. REZEKI BAROKAH JAYA",
   tagline: "Innovate. Build. Solve.",
-  catalogue: "2025 – 2026",
-  logoMark: "PC",
+  year: "2026",
+  logo: logoImg,
+  logoWhite: logoWhite,
+  logoMark: logoMark,
+  kantor: "Ruko Colony Metland Cileungsi Block DE1 No.40",
+  workshop: "Jl. Raya Karang Tengah KM 14, Cibadak, Sukabumi",
   phones: [
-    { display: "0831-7347-2384", waNumber: "6283173472384" },
-    { display: "0895-4133-80806", waNumber: "62895413380806" },
+    {
+      display: "0811-880-880-36",
+      waNumber: "6281188088036",
+      waUrl: "https://wa.me/6281188088036",
+    },
+    {
+      display: "0811-880-880-65",
+      waNumber: "6281188088065",
+      waUrl: "https://wa.me/6281188088065",
+    },
   ],
-  email: "Info.pilarcanopyibsindo@gmail.com",
-  workshop: "Workshop, Sukabumi - Jawa Barat",
+  social: {
+    whatsapp: "https://wa.me/6281188088036",
+    instagram: "https://instagram.com/pilarcanopy",
+  },
+  website: "www.pilarcanopy.com",
+  instagram: "@pilarcanopy",
+  instagramUrl: "https://instagram.com/pilarcanopy",
+  copyright: "© 2026 PT. Rezeki Barokah Jaya. All rights reserved.",
 };
 
-// Nomor WhatsApp utama (dipakai tombol navbar, CTA, dan form).
+// Nomor WhatsApp utama untuk CTA cepat
 export const PRIMARY_WA = SITE.phones[0].waNumber;

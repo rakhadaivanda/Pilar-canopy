@@ -60,6 +60,10 @@
   0%,100% { transform: scale(1); }
   50% { transform: scale(1.12); }
 }
+@keyframes fadeSlideUp {
+  from { opacity: 0; transform: translateY(24px) scale(0.97); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
 
 .animate-float-pill { animation: floatSoft 3.2s ease-in-out infinite; }
 .animate-pulse-dot { animation: pulseSoft 1.6s infinite ease-in-out; }
@@ -322,4 +326,32 @@ html.has-cursor select {
   .link-underline::after {
     transition-duration: 0.01ms;
   }
+}
+
+/* Modal Scrollbar */
+.modal-scroll {
+  overflow-y: auto !important;
+  overscroll-behavior: contain !important;
+  -webkit-overflow-scrolling: touch !important;
+  scrollbar-width: thin;
+  scrollbar-color: #c85a17 rgba(0, 0, 0, 0.08);
+}
+
+.modal-scroll::-webkit-scrollbar {
+  width: 8px;
+}
+
+.modal-scroll::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 9999px;
+  margin: 8px 0;
+}
+
+.modal-scroll::-webkit-scrollbar-thumb {
+  background: #c85a17;
+  border-radius: 9999px;
+}
+
+.modal-scroll::-webkit-scrollbar-thumb:hover {
+  background: #9e430d;
 }

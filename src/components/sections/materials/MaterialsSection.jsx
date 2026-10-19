@@ -1,75 +1,132 @@
-import { useEffect, useRef, useState } from "react";
-import { gsap, ScrollTrigger, MQ } from "../../../motion/gsap";
-import Icon from "../../ui/Icon";
 import SectionEyebrow from "../../ui/SectionEyebrow";
-import WipeText from "../../ui/WipeText";
-import SpecPanel from "./SpecPanel";
-import { MATERIAL_TABS, MATERIALS_HEADER } from "../../../data/materials";
+import Icon from "../../ui/Icon";
+import { MATERIALS_HEADER, MATERIAL_COLUMNS, CERTIFICATION_BLOCK } from "../../../data/materials";
+import materialsBg from "../../../assets/images/materials/background(2).png";
 
-const TAB_BASE =
-  "px-6 py-3 rounded-DEFAULT font-label-caps text-label-caps uppercase tracking-wider transition-[background-color,color,box-shadow,border-color] duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] flex items-center gap-2";
-const TAB_ACTIVE = "bg-primary text-on-primary shadow-md";
-const TAB_INACTIVE =
-  "bg-surface-container-low text-primary hover:bg-surface-container-high border border-outline-variant/30";
-
+/* DIUBAH: Section Material & Spesifikasi (id="material") dengan background(2).png dan 3 Kolom Spesifikasi */
 export default function MaterialsSection() {
-  const [activeId, setActiveId] = useState(MATERIAL_TABS[0].id);
-  const activeTab = MATERIAL_TABS.find((tab) => tab.id === activeId) ?? MATERIAL_TABS[0];
-  const panelRef = useRef(null);
-  const prevId = useRef(activeId);
-
-  // Pergantian tab: panel masuk halus (bukan pada render pertama).
-  useEffect(() => {
-    if (prevId.current === activeId) return undefined;
-    prevId.current = activeId;
-    const el = panelRef.current?.querySelector("[data-spec-panel]");
-    if (!el) return undefined;
-    const reduce = window.matchMedia(MQ.reduce).matches;
-    const tween = gsap.fromTo(
-      el,
-      reduce ? { opacity: 0 } : { opacity: 0, y: 18 },
-      { opacity: 1, y: 0, duration: reduce ? 0.3 : 0.7, ease: "power3.out", clearProps: "transform,opacity" },
-    );
-    const raf = requestAnimationFrame(() => ScrollTrigger.refresh());
-    return () => {
-      cancelAnimationFrame(raf);
-      tween.kill();
-    };
-  }, [activeId]);
-
   return (
-    <section data-section className="w-full bg-surface py-24 sm:py-32" id="material">
-      <div className="max-w-7xl mx-auto px-6 lg:px-12">
-        <div data-reveal-group className="max-w-3xl mb-12">
-          <SectionEyebrow>{MATERIALS_HEADER.eyebrow}</SectionEyebrow>
-          <h2 className="font-headline-lg text-headline-lg text-primary tracking-tight font-light">
-            <WipeText>{MATERIALS_HEADER.heading}</WipeText>
+    <section
+      data-section
+      className="relative w-full overflow-hidden bg-sand py-20 sm:py-28"
+      id="material"
+    >
+      {/* Background Graphic: background(2).png */}
+      <div className="absolute inset-0 z-0 pointer-events-none select-none">
+        <img
+          src={materialsBg}
+          alt=""
+          aria-hidden="true"
+          className="w-full h-full object-cover object-center opacity-60 mix-blend-multiply"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-sand/80 via-sand/45 to-sand/85" />
+      </div>
+
+      <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-12">
+        {/* Header Material */}
+        <div data-reveal-group className="max-w-3xl mb-14">
+          <SectionEyebrow className="mb-3">{MATERIALS_HEADER.eyebrow}</SectionEyebrow>
+          <h2 className="font-headline-lg text-2xl sm:text-3xl lg:text-4xl text-primary font-bold tracking-tight">
+            {MATERIALS_HEADER.heading}
           </h2>
-          <p data-reveal-item className="font-body-lg text-body-lg text-on-surface-variant mt-3 leading-relaxed">
+          <p className="font-body-md text-base text-on-surface-variant mt-2 leading-relaxed">
             {MATERIALS_HEADER.description}
           </p>
         </div>
 
-        {/* Interactive tab switcher */}
-        <div data-reveal="card" className="flex flex-wrap items-center gap-3 mb-8" role="tablist">
-          {MATERIAL_TABS.map((tab) => (
-            <button
-              key={tab.id}
-              aria-selected={tab.id === activeId}
-              className={`${TAB_BASE} ${tab.id === activeId ? TAB_ACTIVE : TAB_INACTIVE}`}
-              onClick={() => setActiveId(tab.id)}
-              role="tab"
-              type="button"
+        {/* 3 Kolom Material (Membrane, Struktur Rangka, Aksesoris) */}
+        <div
+          data-stagger
+          className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8 mb-16"
+        >
+          {MATERIAL_COLUMNS.map((col) => (
+            <div
+              key={col.id}
+              className="rounded-2xl bg-surface-container-lowest/90 backdrop-blur-md border border-outline-variant/50 shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col justify-between group"
             >
-              <Icon name={tab.tabIcon} className="text-[18px]" />
-              {tab.tabLabel}
-            </button>
+              <div>
+                {/* Image header */}
+                <div className="relative w-full h-[220px] overflow-hidden bg-surface-container">
+                  <img
+                    src={col.image}
+                    alt={col.alt}
+                    className="w-full h-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-105"
+                    loading="lazy"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-primary/70 via-transparent to-transparent" />
+                  <div className="absolute top-4 left-4 bg-primary/90 backdrop-blur-md px-3 py-1 rounded">
+                    <span className="font-spec-code text-[11px] text-on-primary uppercase tracking-wider font-semibold">
+                      {col.badge}
+                    </span>
+                  </div>
+                  <div className="absolute bottom-4 left-4">
+                    <h3 className="font-headline-lg text-2xl font-bold text-white drop-shadow">
+                      {col.title}
+                    </h3>
+                  </div>
+                </div>
+
+                {/* Specs list */}
+                <div className="p-6 space-y-4">
+                  {col.specs.map((item, i) => (
+                    <div key={i} className="pb-3 border-b border-outline-variant/30 last:border-b-0">
+                      <span className="font-spec-code text-[11px] text-secondary font-bold uppercase tracking-wider block mb-1">
+                        {item.label}
+                      </span>
+                      <p className="font-body-md text-sm text-primary font-medium leading-relaxed">
+                        {item.value}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Card Footer Badge */}
+              <div className="px-6 pb-6 pt-2">
+                <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-surface-container text-xs font-semibold text-primary border border-outline-variant/30">
+                  <Icon name="verified" className="text-[16px] text-secondary" />
+                  <span>{col.highlight}</span>
+                </div>
+              </div>
+            </div>
           ))}
         </div>
 
-        {/* key → swatch terpilih ter-reset saat berpindah tab */}
-        <div ref={panelRef} data-reveal="card">
-          <SpecPanel key={activeTab.id} panel={activeTab.panel} />
+        {/* Sub-blok Sertifikasi & Kompetensi */}
+        <div
+          data-reveal
+          className="rounded-2xl bg-surface-container-lowest/90 backdrop-blur-md border border-outline-variant/50 p-8 sm:p-10 shadow-sm"
+        >
+          <div className="max-w-3xl mb-8">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/15 text-secondary text-xs font-bold uppercase tracking-wider mb-3">
+              <Icon name="workspace_premium" className="text-[16px]" />
+              <span>Standar Mutu & SDM</span>
+            </div>
+            <h3 className="font-headline-lg text-2xl sm:text-3xl font-bold text-primary mb-3">
+              {CERTIFICATION_BLOCK.title}
+            </h3>
+            <p className="font-body-md text-sm sm:text-base text-on-surface-variant leading-relaxed">
+              {CERTIFICATION_BLOCK.description}
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-4 border-t border-outline-variant/30">
+            {CERTIFICATION_BLOCK.points.map((pt) => (
+              <div key={pt.title} className="flex items-start gap-4">
+                <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary flex-none">
+                  <Icon name={pt.icon} className="text-[22px]" />
+                </div>
+                <div>
+                  <h4 className="font-headline-sm text-base font-bold text-primary mb-1">
+                    {pt.title}
+                  </h4>
+                  <p className="font-body-md text-xs sm:text-sm text-on-surface-variant leading-relaxed">
+                    {pt.desc}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
