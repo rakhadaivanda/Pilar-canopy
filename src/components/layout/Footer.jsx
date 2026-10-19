@@ -1,8 +1,9 @@
 import { SITE } from "../../data/site";
 import { FOOTER_LINKS } from "../../data/navigation";
 import Icon from "../ui/Icon";
+import logoPcp from "../../assets/images/materials/pcp-logo.jpg";
 
-/* DIUBAH: Footer resmi dengan logo, tagline "Innovate. Build. Solve.", tautan cepat 4 item, Instagram, dan copyright © 2026 PT. Rezeki Barokah Jaya. All rights reserved. */
+/* DIUBAH: Footer resmi dengan logo PCP (materials/pcp.jpg) di samping PT. REZEKI BAROKAH JAYA, tagline "Innovate. Build. Solve.", tautan cepat (termasuk menu "Back to Menu —> Ke Web RBJ"), Instagram, dan copyright © 2026 PT. Rezeki Barokah Jaya. All rights reserved. */
 export default function Footer() {
   return (
     <footer className="w-full bg-primary text-on-primary border-t border-secondary/40">
@@ -11,10 +12,10 @@ export default function Footer() {
           {/* Kolom 1: Logo, Nama Perusahaan & Tagline */}
           <div className="md:col-span-6 flex flex-col gap-4">
             <div className="flex items-center gap-4">
-              <div className="p-2.5 rounded-xl bg-white/95 shadow-md flex items-center justify-center">
+              <div className="p-2.5 rounded-xl bg-white/95 shadow-md flex items-center justify-center flex-none">
                 <img
-                  src={SITE.logo}
-                  alt={SITE.name}
+                  src={logoPcp}
+                  alt={SITE.legalName}
                   className="h-10 sm:h-12 w-auto object-contain"
                 />
               </div>
@@ -47,10 +48,15 @@ export default function Footer() {
               {FOOTER_LINKS.map((link) => (
                 <a
                   key={link.label}
-                  className="link-underline self-start text-on-primary-container hover:text-on-primary transition-colors duration-300"
+                  className="link-underline self-start text-on-primary-container hover:text-on-primary transition-colors duration-300 inline-flex items-center gap-1.5"
                   href={link.href}
+                  target={link.external ? "_blank" : undefined}
+                  rel={link.external ? "noopener noreferrer" : undefined}
                 >
-                  {link.label}
+                  <span>{link.label}</span>
+                  {link.external && (
+                    <Icon name="open_in_new" className="text-[13px] text-secondary" />
+                  )}
                 </a>
               ))}
             </div>

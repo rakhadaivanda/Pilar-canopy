@@ -182,8 +182,13 @@ export default function Navbar() {
                       : "text-on-surface-variant hover:text-primary"
                   }`}
                   href={link.href}
+                  target={link.external ? "_blank" : undefined}
+                  rel={link.external ? "noopener noreferrer" : undefined}
                 >
                   {link.label}
+                  {link.external && (
+                    <Icon name="open_in_new" className="text-[13px] ml-1.5 inline-block align-[-1px]" />
+                  )}
                   {isActive && (
                     <span className="absolute bottom-0 left-0 right-0 h-[2px] bg-secondary rounded-full animate-fade-in" />
                   )}
@@ -281,9 +286,16 @@ export default function Navbar() {
                       : "text-on-surface hover:text-primary"
                   }`}
                   href={link.href}
+                  target={link.external ? "_blank" : undefined}
+                  rel={link.external ? "noopener noreferrer" : undefined}
                   onClick={closeMenu}
                 >
-                  {link.label}
+                  <span className="inline-flex items-center gap-2">
+                    {link.label}
+                    {link.external && (
+                      <Icon name="open_in_new" className="text-[15px] text-secondary" />
+                    )}
+                  </span>
                 </a>
               );
             })}

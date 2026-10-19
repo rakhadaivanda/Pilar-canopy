@@ -92,7 +92,7 @@ export default function Cursor() {
     <div
       ref={wrap}
       aria-hidden="true"
-      className="pointer-events-none fixed left-0 top-0 z-[120] will-change-transform"
+      className="pointer-events-none fixed left-0 top-0 z-[999999] will-change-transform"
     >
       <div
         ref={disc}

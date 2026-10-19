@@ -97,7 +97,7 @@ export default function ProjectDetailModal({ project, onClose }) {
       {/* Backdrop */}
       <div
         ref={overlayRef}
-        className="absolute inset-0 bg-primary/85 backdrop-blur-md cursor-pointer"
+        className="absolute inset-0 bg-primary/85 backdrop-blur-md"
         onClick={animateClose}
         aria-hidden="true"
       />
