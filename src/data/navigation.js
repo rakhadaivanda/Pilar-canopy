@@ -1,11 +1,12 @@
 // /* DIUBAH */ Navigasi utama HANYA 4 item sesuai aturan struktur:
 // Beranda, Tentang Kami, Layanan, Kontak (ditambah tombol CTA "Hubungi Kami").
-// Ditambah 1 menu eksternal: "Back to Menu —> Ke Web RBJ" → https://rezekibarokahjaya.net
+// Menu eksternal "back <--" → https://rezekibarokahjaya.net ditampilkan sebagai
+// pill di pojok kiri navbar (sebelah kiri logo) + entry di drawer mobile.
 
 export const RBJ_URL = "https://rezekibarokahjaya.net";
 
 export const BACK_TO_MENU_LINK = {
-  label: "Back to Menu —> Ke Web RBJ",
+  label: "<-- Back",
   href: RBJ_URL,
   id: "rbj",
   external: true,
@@ -53,7 +54,6 @@ export const NAV_LINKS = [
     children: SERVICE_DROPDOWN_LINKS,
   },
   { label: "Kontak", href: "#kontak", id: "kontak" },
-  BACK_TO_MENU_LINK,
 ];
 
 export const MOBILE_LINKS = [

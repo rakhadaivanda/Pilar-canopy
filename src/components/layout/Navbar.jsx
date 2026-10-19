@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import Icon from "../ui/Icon";
 import useScrolled from "../../hooks/useScrolled";
-import { NAV_LINKS, MOBILE_LINKS } from "../../data/navigation";
+import { NAV_LINKS, MOBILE_LINKS, RBJ_URL } from "../../data/navigation";
 import { SITE } from "../../data/site";
 import { buildWhatsAppUrl } from "../../lib/whatsapp";
 
@@ -78,7 +78,24 @@ export default function Navbar() {
         className={`${scrolled ? "h-16" : "h-20"} transition-[height] duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] w-full max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between gap-8`}
       >
         {/* Brand Logo & Title */}
-        <div className="flex items-center gap-8 flex-1">
+        <div className="flex items-center gap-4 xl:gap-8 flex-1">
+          {/* Tombol "back <--" ke web RBJ — pojok kiri, di sebelah kiri logo */}
+          <a
+            href={RBJ_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Back to menu - website RBJ"
+            className="group hidden sm:inline-flex flex-none items-center gap-1.5 rounded-full border border-outline-variant/60 bg-surface-container-low/70 hover:bg-secondary hover:border-secondary hover:shadow-md hover:-translate-y-0.5 px-3 py-1.5 font-spec-code text-[11px] leading-none tracking-[0.14em] text-on-surface-variant hover:text-on-secondary transition-all duration-300 active:scale-95"
+          >
+            <span
+              aria-hidden="true"
+              className="text-secondary group-hover:text-on-secondary transition-all duration-300 group-hover:-translate-x-0.5"
+            >
+              {"<--"}
+            </span>
+            <span className="font-semibold">Back</span>
+          </a>
+
           <a className="flex items-center gap-3 group py-1" href="#beranda" aria-label={SITE.name}>
             <img
               src={SITE.logo}
