@@ -70,11 +70,10 @@ export const MOBILE_LINKS = [
   BACK_TO_MENU_LINK,
 ];
 
-// /* DIUBAH */ Link Tautan Cepat di footer mengikuti menu navbar (termasuk menu eksternal RBJ)
+// /* DIUBAH */ Link Tautan Cepat di footer mengikuti menu navbar
 export const FOOTER_LINKS = [
   { label: "Beranda", href: "#beranda" },
   { label: "Tentang Kami", href: "#tentang" },
   { label: "Layanan", href: "#layanan" },
   { label: "Kontak", href: "#kontak" },
-  { label: "Back to Menu —> Ke Web RBJ", href: RBJ_URL, external: true },
 ];
