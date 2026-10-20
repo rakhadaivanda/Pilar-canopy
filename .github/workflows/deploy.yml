@@ -1,0 +1,35 @@
+name: Deploy to Company VPS
+
+on:
+  push:
+    branches: [ "main" ] # Sesuaikan jika branch utama Kakak "master"
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v4
+
+    - name: Executing remote SSH deployment
+      uses: appleboy/ssh-action@v1.0.3
+      with:
+        host: ${{ secrets.VPS_HOST }}
+        username: ${{ secrets.VPS_USERNAME }}
+        key: ${{ secrets.VPS_SSH_KEY }}
+        script: |
+          # 1. Masuk ke direktori project di VPS (ubah path ini sesuai direktori aslinya)
+          cd /var/www/rezekibarokahjaya # Contoh path, sesuaikan di VPS Kakak!
+
+          # 2. Ambil update kode terbaru dari GitHub
+          git pull origin main
+
+          # 3. Install dependencies & build frontend/backend (sesuaikan perintahnya)
+          # Jika project-nya monorepo atau terpisah, sesuaikan path foldernya
+          npm install
+          npm run build
+
+          # 4. Restart aplikasi menggunakan PM2
+          # Ganti 'all' atau sesuaikan dengan nama app di PM2 Kakak (misal: pm2 restart rbj-app)
+          pm2 restart all
