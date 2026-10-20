@@ -19,17 +19,15 @@ jobs:
         username: ${{ secrets.VPS_USERNAME }}
         key: ${{ secrets.VPS_SSH_KEY }}
         script: |
-          # 1. Masuk ke direktori project di VPS (ubah path ini sesuai direktori aslinya)
-          cd /var/www/rezekibarokahjaya # Contoh path, sesuaikan di VPS Kakak!
+          # 1. Masuk ke direktori project yang benar di VPS
+          cd /var/www/dashboard-canopy
 
           # 2. Ambil update kode terbaru dari GitHub
           git pull origin main
 
-          # 3. Install dependencies & build frontend/backend (sesuaikan perintahnya)
-          # Jika project-nya monorepo atau terpisah, sesuaikan path foldernya
+          # 3. Install dependencies & build project
           npm install
           npm run build
 
           # 4. Restart aplikasi menggunakan PM2
-          # Ganti 'all' atau sesuaikan dengan nama app di PM2 Kakak (misal: pm2 restart rbj-app)
           pm2 restart all
