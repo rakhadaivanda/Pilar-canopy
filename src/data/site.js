@@ -29,7 +29,7 @@ export const SITE = {
     whatsapp: "https://wa.me/6281188088036",
     instagram: "https://instagram.com/pilarcanopy",
   },
-  website: "www.pilarcanopy.com",
+  website: "canopy.rezekibarokahjaya.net",
   instagram: "@pilarcanopy",
   instagramUrl: "https://instagram.com/pilarcanopy",
   copyright: "© 2026 PT. Rezeki Barokah Jaya. All rights reserved.",

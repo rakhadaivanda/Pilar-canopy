@@ -26,8 +26,8 @@ export const CONTACT_DATA = {
   ],
   website: {
     label: "Website",
-    url: "https://www.pilarcanopy.com",
-    display: "www.pilarcanopy.com",
+    url: "https://canopy.rezekibarokahjaya.net",
+    display: "canopy.rezekibarokahjaya.net",
   },
   instagram: {
     label: "Instagram",
