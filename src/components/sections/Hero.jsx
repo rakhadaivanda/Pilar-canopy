@@ -103,19 +103,6 @@ export default function Hero() {
               <Icon name="chat" className="text-[18px]" />
               <span>{HERO.primaryBtn.label}</span>
             </a>
-
-            {/* Tombol: "Lihat Portofolio" (anchor ke #portofolio) */}
-            <a
-              data-hero-cta
-              data-magnetic
-              data-cursor="EXPLORE"
-              style={{ "--fill": "#401D47" }}
-              className="btn-fill inline-flex items-center justify-center gap-2 bg-surface-container-lowest/95 border border-primary/40 hover:border-primary text-primary hover:text-on-primary px-6 sm:px-7 py-3 sm:py-3.5 rounded-full font-label-caps text-label-caps uppercase tracking-wider transition-all duration-300 shadow-sm hover:shadow-md font-semibold active:scale-95 text-[11px] xs:text-xs sm:text-sm w-full sm:w-auto"
-              href={HERO.secondaryBtn.href}
-            >
-              <span>{HERO.secondaryBtn.label}</span>
-              <Icon name="arrow_downward" className="text-[16px]" />
-            </a>
           </div>
 
           {/* Integrated Trust Strip Bar */}
@@ -123,20 +110,6 @@ export default function Hero() {
             data-hero-fade
             className="inline-flex flex-wrap items-center justify-center sm:justify-start gap-2.5 sm:gap-6 px-4 sm:px-5 py-3 rounded-2xl bg-surface-container-lowest/90 backdrop-blur-md border border-outline-variant/50 shadow-sm w-full sm:w-auto"
           >
-            <div className="flex items-center gap-2">
-              <Icon name="verified" className="text-secondary text-[18px]" />
-              <span className="font-spec-code text-xs sm:text-sm font-bold text-primary">Quality Material</span>
-            </div>
-            <span className="w-1.5 h-1.5 rounded-full bg-outline-variant hidden sm:block" />
-            <div className="flex items-center gap-2">
-              <Icon name="design_services" className="text-secondary text-[18px]" />
-              <span className="font-spec-code text-xs sm:text-sm font-medium text-on-surface-variant">Custom Design</span>
-            </div>
-            <span className="w-1.5 h-1.5 rounded-full bg-outline-variant hidden sm:block" />
-            <div className="flex items-center gap-2">
-              <Icon name="engineering" className="text-secondary text-[18px]" />
-              <span className="font-spec-code text-xs sm:text-sm font-medium text-on-surface-variant">Professional Installation</span>
-            </div>
           </div>
         </div>
       </div>
