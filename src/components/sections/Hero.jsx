@@ -57,7 +57,7 @@ export default function Hero() {
         {/* Grand Headline with SplitText Animation */}
         <div className="max-w-4xl mb-5 mt-2">
           <span className="font-spec-code text-xs sm:text-sm uppercase tracking-[0.22em] text-secondary font-bold block mb-2">
-            PT. Rezeki Barokah Jaya
+            Pilar Canopy Perkasa
           </span>
           <h1
             data-hero-title
