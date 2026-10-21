@@ -63,10 +63,6 @@ export default function Hero() {
             <span className="font-label-caps text-label-caps uppercase text-primary tracking-wider font-bold text-xs sm:text-sm">
               {HERO.badge}
             </span>
-            <Icon
-              name="north_east"
-              className="text-[16px] text-secondary transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-0.5"
-            />
           </a>
         </div>
 
