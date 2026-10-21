@@ -1,3 +1,4 @@
+import "dotenv/config";
 import express from "express";
 import crypto from "node:crypto";
 import path from "node:path";
@@ -13,6 +14,11 @@ const SHEET_ID =
   process.env.SHEET_ID || "1TTxOa5Ax4W-7GZY4hWVWrTUk87gXObbYx-0QR0UzSrQ";
 const SHEET_RANGE = process.env.SHEET_RANGE || "Akun Login";
 const SECRET = process.env.SESSION_SECRET || "pilar-canopy-dev-secret-change-me";
+if (!process.env.SESSION_SECRET) {
+  console.warn(
+    "[pilar-canopy] PERINGATAN: SESSION_SECRET belum di-set. Set di .env / environment VPS dengan string acak panjang."
+  );
+}
 const SESSION_COOKIE = "pc_session";
 const SESSION_TTL_MS = 1000 * 60 * 60 * 12; // 12 jam
 
