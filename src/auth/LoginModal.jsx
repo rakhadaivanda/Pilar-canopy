@@ -57,7 +57,7 @@ export default function LoginModal({ open, onClose }) {
       <div
         role="dialog"
         aria-modal="true"
-        aria-label="Login ERP"
+        aria-label="Login Karyawan"
         className="relative w-full max-w-4xl overflow-hidden rounded-3xl bg-surface-container-lowest shadow-[0_30px_80px_-20px_rgba(46,22,54,0.6)] border border-outline-variant/30 grid md:grid-cols-[0.9fr_1.1fr] max-h-[94vh] animate-[fadeSlideUp_0.35s_cubic-bezier(0.22,1,0.36,1)_both]"
       >
         {/* Panel brand (desktop) */}
@@ -76,16 +76,16 @@ export default function LoginModal({ open, onClose }) {
               <img src={SITE.logo} alt={SITE.name} className="h-10 w-auto object-contain" />
             </div>
             <p className="mt-6 font-spec-code text-[11px] uppercase tracking-[0.22em] text-secondary-fixed font-bold">
-              Enterprise Resource Planning
+              Portal Karyawan
             </p>
             <h2 className="mt-2 font-headline-lg text-3xl leading-tight font-extrabold tracking-tight">
-              Masuk ke
+              Login
               <br />
-              Sistem ERP
+              Karyawan
             </h2>
             <p className="mt-3 text-sm text-on-primary-container leading-relaxed max-w-xs">
-              Akses dashboard operasional {SITE.name}. Gunakan akun yang terdaftar
-              untuk melanjutkan.
+              Khusus karyawan {SITE.name}. Gunakan akun yang terdaftar untuk
+              melanjutkan.
             </p>
           </div>
 
@@ -108,7 +108,7 @@ export default function LoginModal({ open, onClose }) {
               </div>
               <div>
                 <p className="font-label-caps text-[10px] uppercase tracking-wider text-secondary font-bold">
-                  Login ERP
+                  Login Karyawan
                 </p>
                 <p className="font-headline-sm text-sm text-primary font-bold">
                   {SITE.name}
@@ -117,7 +117,7 @@ export default function LoginModal({ open, onClose }) {
             </div>
             <div className="hidden md:block">
               <p className="font-label-caps text-label-caps uppercase tracking-wider text-secondary font-bold">
-                Login ERP
+                Login Karyawan
               </p>
               <h3 className="font-headline-sm text-xl text-primary font-bold mt-1">
                 Selamat datang kembali
@@ -230,7 +230,7 @@ export default function LoginModal({ open, onClose }) {
               Lupa password? Hubungi admin untuk reset akun.
             </p>
             <a
-              href={buildWhatsAppUrl("Halo Admin, saya ingin reset password akun ERP Pilar Canopy.")}
+              href={buildWhatsAppUrl("Halo Admin, saya ingin reset password akun karyawan Pilar Canopy.")}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-1.5 self-start sm:self-auto px-3 py-1.5 rounded-full border border-outline-variant/50 text-[11px] font-semibold text-primary hover:bg-secondary hover:border-secondary hover:text-on-secondary transition-colors"
