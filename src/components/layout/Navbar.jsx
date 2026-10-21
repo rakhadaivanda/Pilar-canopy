@@ -4,6 +4,8 @@ import useScrolled from "../../hooks/useScrolled";
 import { NAV_LINKS, MOBILE_LINKS } from "../../data/navigation";
 import { SITE } from "../../data/site";
 import { buildWhatsAppUrl } from "../../lib/whatsapp";
+import { useAuth } from "../../auth/AuthContext";
+import LoginModal from "../../auth/LoginModal";
 
 /* DIUBAH: Navbar dengan 4 item utama, Dropdown interaktif pada menu Layanan (Layanan Kami, Material & Spesifikasi, Portofolio & Pengalaman Proyek, Katalog), tombol CTA "Hubungi Kami" ke WhatsApp, dan Scrollspy cerdas */
 export default function Navbar() {
@@ -14,6 +16,8 @@ export default function Navbar() {
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [mobileDropdownOpen, setMobileDropdownOpen] = useState(true);
   const dropdownTimeoutRef = useRef(null);
+  const { user, logout } = useAuth();
+  const [showLogin, setShowLogin] = useState(false);
 
   const closeMenu = () => setMenuOpen(false);
 
@@ -199,17 +203,47 @@ export default function Navbar() {
         </div>
 
         {/* Action CTA: Tombol "Hubungi Kami" ke WhatsApp */}
-          <div className="flex items-center gap-2 sm:gap-3">
-            <a
-              className="inline-flex items-center justify-center bg-secondary text-on-secondary hover:brightness-110 px-4 sm:px-5 py-2 sm:py-2.5 rounded-full font-label-caps text-label-caps uppercase tracking-wider shadow-md hover:shadow-lg transition-all duration-300 active:scale-95 text-[10px] xs:text-[11px] sm:text-xs"
-              href={buildWhatsAppUrl("Halo Pilar Canopy, saya ingin konsultasi mengenai canopy membrane. Bisa minta info estimasi & jadwal survei?")}
-              rel="noopener noreferrer"
-              target="_blank"
+        <div className="flex items-center gap-2 sm:gap-3">
+          {user ? (
+            <div className="hidden sm:flex items-center gap-2">
+              <a
+                className="inline-flex items-center justify-center bg-primary text-on-primary hover:brightness-110 px-4 sm:px-5 py-2 sm:py-2.5 rounded-full font-label-caps text-label-caps uppercase tracking-wider shadow-md hover:shadow-lg transition-all duration-300 active:scale-95 text-[10px] xs:text-[11px] sm:text-xs"
+                href="https://erp.rezekibarokahjaya.net/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Icon name="grid_view" className="text-[16px] sm:text-[18px] mr-1.5 sm:mr-2" />
+                <span>ERP</span>
+              </a>
+              <button
+                type="button"
+                onClick={logout}
+                className="inline-flex items-center justify-center bg-surface-container-highest text-primary hover:bg-surface-container px-4 sm:px-5 py-2 sm:py-2.5 rounded-full font-label-caps text-label-caps uppercase tracking-wider shadow-sm transition-all duration-300 active:scale-95 text-[10px] xs:text-[11px] sm:text-xs"
+                title={user.nama}
+              >
+                <Icon name="logout" className="text-[16px] sm:text-[18px] mr-1.5 sm:mr-2" />
+                <span>Logout</span>
+              </button>
+            </div>
+          ) : (
+            <button
+              type="button"
+              onClick={() => setShowLogin(true)}
+              className="hidden sm:inline-flex items-center justify-center bg-surface-container-highest text-primary hover:bg-secondary hover:text-on-secondary px-4 sm:px-5 py-2 sm:py-2.5 rounded-full font-label-caps text-label-caps uppercase tracking-wider shadow-sm transition-all duration-300 active:scale-95 text-[10px] xs:text-[11px] sm:text-xs"
             >
+              <Icon name="login" className="text-[16px] sm:text-[18px] mr-1.5 sm:mr-2" />
+              <span>Login</span>
+            </button>
+          )}
+          <a
+            className="inline-flex items-center justify-center bg-secondary text-on-secondary hover:brightness-110 px-4 sm:px-5 py-2 sm:py-2.5 rounded-full font-label-caps text-label-caps uppercase tracking-wider shadow-md hover:shadow-lg transition-all duration-300 active:scale-95 text-[10px] xs:text-[11px] sm:text-xs"
+            href={buildWhatsAppUrl("Halo Pilar Canopy, saya ingin konsultasi mengenai canopy membrane. Bisa minta info estimasi & jadwal survei?")}
+            rel="noopener noreferrer"
+            target="_blank"
+          >
               <Icon name="chat" className="text-[16px] sm:text-[18px] mr-1.5 sm:mr-2" />
               <span className="hidden xs:inline sm:inline">Hubungi Kami</span>
-              <span className="xs:hidden sm:hidden">Hubungi</span>
-            </a>
+          </a>
 
           {/* Hamburger button */}
           <button
@@ -223,6 +257,8 @@ export default function Navbar() {
           </button>
         </div>
       </div>
+
+      <LoginModal open={showLogin} onClose={() => setShowLogin(false)} />
 
       {/* Mobile Navigation Drawer: Termasuk Dropdown / Sub-menu Layanan */}
       {menuOpen && (
@@ -301,8 +337,46 @@ export default function Navbar() {
               );
             })}
 
+            {user ? (
+              <div className="mt-4 space-y-2">
+                <a
+                  className="flex items-center justify-center gap-2 text-center bg-primary text-on-primary py-3 rounded-full shadow-md font-semibold"
+                  href="https://erp.rezekibarokahjaya.net/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={closeMenu}
+                >
+                  <Icon name="grid_view" className="text-[18px]" />
+                  <span>ERP</span>
+                </a>
+                <button
+                  type="button"
+                  onClick={() => {
+                    logout();
+                    closeMenu();
+                  }}
+                  className="w-full flex items-center justify-center gap-2 text-center bg-surface-container-highest text-primary py-3 rounded-full font-semibold"
+                >
+                  <Icon name="logout" className="text-[18px]" />
+                  <span>Logout ({user.nama?.split(" ")[0] || user.username})</span>
+                </button>
+              </div>
+            ) : (
+              <button
+                type="button"
+                onClick={() => {
+                  closeMenu();
+                  setShowLogin(true);
+                }}
+                className="mt-4 w-full flex items-center justify-center gap-2 text-center bg-surface-container-highest text-primary py-3 rounded-full font-semibold"
+              >
+                <Icon name="login" className="text-[18px]" />
+                <span>Login</span>
+              </button>
+            )}
+
             <a
-              className="mt-3 flex items-center justify-center gap-2 text-center bg-secondary text-on-secondary py-3 rounded-full shadow-md font-semibold"
+              className="mt-2 flex items-center justify-center gap-2 text-center bg-secondary text-on-secondary py-3 rounded-full shadow-md font-semibold"
               href={buildWhatsAppUrl("Halo Pilar Canopy, saya ingin konsultasi canopy membrane. Mohon bantuannya ya.")}
               target="_blank"
               rel="noopener noreferrer"
@@ -314,6 +388,8 @@ export default function Navbar() {
           </div>
         </div>
       )}
+
+      <LoginModal open={showLogin} onClose={() => setShowLogin(false)} />
     </header>
   );
 }
