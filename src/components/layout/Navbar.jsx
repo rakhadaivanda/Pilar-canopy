@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import Icon from "../ui/Icon";
 import useScrolled from "../../hooks/useScrolled";
-import { NAV_LINKS, MOBILE_LINKS, RBJ_URL } from "../../data/navigation";
+import { NAV_LINKS, MOBILE_LINKS } from "../../data/navigation";
 import { SITE } from "../../data/site";
 import { buildWhatsAppUrl } from "../../lib/whatsapp";
 
@@ -79,23 +79,6 @@ export default function Navbar() {
       >
         {/* Brand Logo & Title */}
         <div className="flex items-center gap-4 xl:gap-8 flex-1">
-          {/* Tombol "back <--" ke web RBJ — pojok kiri, di sebelah kiri logo */}
-          <a
-            href={RBJ_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Back to menu - website RBJ"
-            className="group hidden sm:inline-flex flex-none items-center gap-1.5 rounded-full border border-outline-variant/60 bg-surface-container-low/70 hover:bg-secondary hover:border-secondary hover:shadow-md hover:-translate-y-0.5 px-3 py-1.5 font-spec-code text-[11px] leading-none tracking-[0.14em] text-on-surface-variant hover:text-on-secondary transition-all duration-300 active:scale-95"
-          >
-            <span
-              aria-hidden="true"
-              className="text-secondary group-hover:text-on-secondary transition-all duration-300 group-hover:-translate-x-0.5"
-            >
-              {"<--"}
-            </span>
-            <span className="font-semibold">Back</span>
-          </a>
-
           <a className="flex items-center gap-3 group py-1" href="#beranda" aria-label={SITE.name}>
             <img
               src={SITE.logo}
@@ -216,16 +199,17 @@ export default function Navbar() {
         </div>
 
         {/* Action CTA: Tombol "Hubungi Kami" ke WhatsApp */}
-        <div className="flex items-center gap-3">
-          <a
-            className="inline-flex items-center justify-center bg-secondary text-on-secondary hover:brightness-110 px-5 py-2.5 rounded-full font-label-caps text-label-caps uppercase tracking-wider shadow-md hover:shadow-lg transition-all duration-300 active:scale-95"
-            href={buildWhatsAppUrl("Halo Pilar Canopy, saya ingin konsultasi mengenai canopy membrane.")}
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            <Icon name="chat" className="text-[18px] mr-2" />
-            <span>Hubungi Kami</span>
-          </a>
+          <div className="flex items-center gap-2 sm:gap-3">
+            <a
+              className="inline-flex items-center justify-center bg-secondary text-on-secondary hover:brightness-110 px-4 sm:px-5 py-2 sm:py-2.5 rounded-full font-label-caps text-label-caps uppercase tracking-wider shadow-md hover:shadow-lg transition-all duration-300 active:scale-95 text-[10px] xs:text-[11px] sm:text-xs"
+              href={buildWhatsAppUrl("Halo Pilar Canopy, saya ingin konsultasi mengenai canopy membrane.")}
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <Icon name="chat" className="text-[16px] sm:text-[18px] mr-1.5 sm:mr-2" />
+              <span className="hidden xs:inline sm:inline">Hubungi Kami</span>
+              <span className="xs:hidden sm:hidden">Hubungi</span>
+            </a>
 
           {/* Hamburger button */}
           <button

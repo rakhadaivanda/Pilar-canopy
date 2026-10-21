@@ -1,9 +1,9 @@
 import { SITE } from "../../data/site";
-import { FOOTER_LINKS } from "../../data/navigation";
+import { FOOTER_LINKS, RBJ_VISIT_LINK } from "../../data/navigation";
 import Icon from "../ui/Icon";
 import logoPcp from "../../assets/images/materials/pcp-logo.jpg";
 
-/* DIUBAH: Footer resmi dengan logo PCP (materials/pcp.jpg) di samping PT. REZEKI BAROKAH JAYA, tagline "Innovate. Build. Solve.", tautan cepat (termasuk menu "Back to Menu —> Ke Web RBJ"), Instagram, dan copyright © 2026 PT. Rezeki Barokah Jaya. All rights reserved. */
+/* DIUBAH: Footer resmi dengan logo PCP (materials/pcp.jpg) di samping PT. REZEKI BAROKAH JAYA, tagline "Innovate. Build. Solve.", tautan cepat, list terpisah "Kunjungi → Rezeki Barokah Jaya" → https://canopy.rezekibarokahjaya.net/, Instagram, dan copyright © 2026 PT. Rezeki Barokah Jaya. All rights reserved. */
 export default function Footer() {
   return (
     <footer className="w-full bg-primary text-on-primary border-t border-secondary/40">
@@ -59,6 +59,27 @@ export default function Footer() {
                   )}
                 </a>
               ))}
+            </div>
+
+            {/* List terpisah: Kunjungi → Rezeki Barokah Jaya (mobile: bar full-width, desktop: seperti list lainnya) */}
+            <div className="flex flex-col gap-3 pt-5 mt-2 border-t border-white/10">
+              <span className="font-label-caps text-label-caps uppercase tracking-wider text-secondary-fixed font-bold text-xs sm:text-sm">
+                {RBJ_VISIT_LINK.heading}
+              </span>
+              <a
+                className="link-underline group inline-flex items-center justify-between gap-3 w-full sm:w-auto sm:self-start rounded-xl sm:rounded-none border border-white/15 sm:border-transparent bg-white/10 sm:bg-transparent hover:bg-white/15 sm:hover:bg-transparent px-4 sm:px-0 py-3 sm:py-0 text-sm font-semibold sm:font-normal text-on-primary sm:text-on-primary-container sm:hover:text-on-primary transition-all duration-300 active:scale-[0.99]"
+                href={RBJ_VISIT_LINK.href}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span className="inline-flex items-center gap-1.5">
+                  {RBJ_VISIT_LINK.label}
+                </span>
+                <Icon
+                  name="open_in_new"
+                  className="text-[15px] sm:text-[13px] text-secondary flex-none"
+                />
+              </a>
             </div>
           </div>
 

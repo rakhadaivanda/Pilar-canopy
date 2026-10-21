@@ -51,7 +51,7 @@ export default function Hero() {
       {/* Hero content */}
       <div
         data-hero-content
-        className="relative z-10 max-w-7xl mx-auto px-6 lg:px-12 w-full flex flex-col items-start justify-center"
+        className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 w-full flex flex-col items-start justify-center"
       >
         {/* Announcement pill with pulse dot: "Spesialis Canopy Membrane 2026" */}
         <div data-hero-fade className="mb-5 inline-block">
@@ -72,12 +72,9 @@ export default function Hero() {
 
         {/* Grand Headline with SplitText Animation */}
         <div className="max-w-4xl mb-5">
-          <span className="font-spec-code text-xs sm:text-sm uppercase tracking-[0.22em] text-secondary font-bold block mb-2">
-            PT. Rezeki Barokah Jaya
-          </span>
           <h1
             data-hero-title
-            className="font-display-hero text-5xl sm:text-6xl md:text-7xl lg:text-[76px] xl:text-[86px] leading-[1.04] tracking-tight font-extrabold text-primary"
+            className="font-display-hero text-[clamp(2.75rem,9vw,5.375rem)] sm:text-6xl md:text-7xl lg:text-[76px] xl:text-[86px] leading-[1.04] tracking-tight font-extrabold text-primary"
           >
             Innovate. <span className="font-normal italic text-secondary font-serif">Build.</span> Solve.
           </h1>
@@ -87,18 +84,18 @@ export default function Hero() {
         <div className="max-w-3xl w-full">
           <p
             data-hero-fade
-            className="font-body-lg text-base sm:text-lg lg:text-xl text-primary/85 font-medium leading-relaxed mb-7 max-w-2xl"
+            className="font-body-lg text-sm sm:text-base lg:text-xl text-primary/85 font-medium leading-relaxed mb-7 max-w-2xl"
           >
             {HERO.subjudul}
           </p>
 
-          <div className="flex flex-wrap items-center gap-4 mb-7">
+          <div className="flex flex-col w-full sm:flex-row flex-wrap items-stretch sm:items-center gap-3 sm:gap-4 mb-7">
             {/* Tombol: "Konsultasi Gratis" (WhatsApp) */}
             <a
               data-hero-cta
               data-magnetic
               data-cursor="EXPLORE"
-              className="btn-fill inline-flex items-center justify-center gap-2.5 bg-secondary text-on-secondary hover:brightness-110 px-7 py-3.5 rounded-full font-label-caps text-label-caps uppercase tracking-wider shadow-lg hover:shadow-xl transition-all duration-300 font-bold active:scale-95 text-xs sm:text-sm"
+              className="btn-fill inline-flex items-center justify-center gap-2.5 bg-secondary text-on-secondary hover:brightness-110 px-6 sm:px-7 py-3 sm:py-3.5 rounded-full font-label-caps text-label-caps uppercase tracking-wider shadow-lg hover:shadow-xl transition-all duration-300 font-bold active:scale-95 text-[11px] xs:text-xs sm:text-sm w-full sm:w-auto"
               href={HERO.primaryBtn.href}
               target="_blank"
               rel="noopener noreferrer"
@@ -113,7 +110,7 @@ export default function Hero() {
               data-magnetic
               data-cursor="EXPLORE"
               style={{ "--fill": "#401D47" }}
-              className="btn-fill inline-flex items-center justify-center gap-2 bg-surface-container-lowest/95 border border-primary/40 hover:border-primary text-primary hover:text-on-primary px-7 py-3.5 rounded-full font-label-caps text-label-caps uppercase tracking-wider transition-all duration-300 shadow-sm hover:shadow-md font-semibold active:scale-95 text-xs sm:text-sm"
+              className="btn-fill inline-flex items-center justify-center gap-2 bg-surface-container-lowest/95 border border-primary/40 hover:border-primary text-primary hover:text-on-primary px-6 sm:px-7 py-3 sm:py-3.5 rounded-full font-label-caps text-label-caps uppercase tracking-wider transition-all duration-300 shadow-sm hover:shadow-md font-semibold active:scale-95 text-[11px] xs:text-xs sm:text-sm w-full sm:w-auto"
               href={HERO.secondaryBtn.href}
             >
               <span>{HERO.secondaryBtn.label}</span>
@@ -124,7 +121,7 @@ export default function Hero() {
           {/* Integrated Trust Strip Bar */}
           <div
             data-hero-fade
-            className="inline-flex flex-wrap items-center gap-3 sm:gap-6 px-5 py-3 rounded-2xl bg-surface-container-lowest/90 backdrop-blur-md border border-outline-variant/50 shadow-sm"
+            className="inline-flex flex-wrap items-center justify-center sm:justify-start gap-2.5 sm:gap-6 px-4 sm:px-5 py-3 rounded-2xl bg-surface-container-lowest/90 backdrop-blur-md border border-outline-variant/50 shadow-sm w-full sm:w-auto"
           >
             <div className="flex items-center gap-2">
               <Icon name="verified" className="text-secondary text-[18px]" />

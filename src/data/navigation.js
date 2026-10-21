@@ -1,16 +1,6 @@
 // /* DIUBAH */ Navigasi utama HANYA 4 item sesuai aturan struktur:
 // Beranda, Tentang Kami, Layanan, Kontak (ditambah tombol CTA "Hubungi Kami").
-// Menu eksternal "back <--" → https://rezekibarokahjaya.net ditampilkan sebagai
-// pill di pojok kiri navbar (sebelah kiri logo) + entry di drawer mobile.
-
-export const RBJ_URL = "https://rezekibarokahjaya.net";
-
-export const BACK_TO_MENU_LINK = {
-  label: "<-- Back",
-  href: RBJ_URL,
-  id: "rbj",
-  external: true,
-};
+// Link eksternal ke web RBJ ditampilkan terpisah di footer (list "Kunjungi").
 
 export const SERVICE_DROPDOWN_LINKS = [
   {
@@ -67,7 +57,6 @@ export const MOBILE_LINKS = [
     children: SERVICE_DROPDOWN_LINKS,
   },
   { label: "Kontak", href: "#kontak", id: "kontak" },
-  BACK_TO_MENU_LINK,
 ];
 
 // /* DIUBAH */ Link Tautan Cepat di footer mengikuti menu navbar
@@ -77,3 +66,12 @@ export const FOOTER_LINKS = [
   { label: "Layanan", href: "#layanan" },
   { label: "Kontak", href: "#kontak" },
 ];
+
+// /* DIUBAH */ Link terpisah di footer (bukan bagian dari Tautan Cepat):
+// heading "Kunjungi" di atas, label "Rezeki Barokah Jaya" langsung ke web canopy
+export const RBJ_VISIT_LINK = {
+  heading: "Kunjungi",
+  label: "Rezeki Barokah Jaya",
+  href: "https://canopy.rezekibarokahjaya.net/",
+  external: true,
+};
