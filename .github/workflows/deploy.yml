@@ -29,5 +29,10 @@ jobs:
           npm install
           npm run build
 
-          # 4. Restart aplikasi menggunakan PM2
+          # 4. Pastikan service auth (login/ERP) jalan, lalu restart
+          pm2 describe canopy-auth > /dev/null 2>&1 \
+            && pm2 restart canopy-auth --update-env \
+            || pm2 start server/index.js --name canopy-auth --update-env
+
+          # 5. Restart aplikasi lain yang sudah ada
           pm2 restart all

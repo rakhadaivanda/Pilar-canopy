@@ -12,12 +12,36 @@ const PORT = process.env.PORT || 3001;
 const SHEET_ID =
   process.env.SHEET_ID || "1TTxOa5Ax4W-7GZY4hWVWrTUk87gXObbYx-0QR0UzSrQ";
 const SHEET_RANGE = process.env.SHEET_RANGE || "Akun Login";
-const KEY_FILE =
-  process.env.GOOGLE_SERVICE_ACCOUNT ||
-  path.resolve(ROOT, "..", "pillar-canopy-5d25712dd970.json");
 const SECRET = process.env.SESSION_SECRET || "pilar-canopy-dev-secret-change-me";
 const SESSION_COOKIE = "pc_session";
 const SESSION_TTL_MS = 1000 * 60 * 60 * 12; // 12 jam
+
+/* Service account bisa dari env (JSON/base64) atau file di beberapa lokasi umum.
+   Di VPS: taruh file key di /var/www/ atau set GOOGLE_SERVICE_ACCOUNT_JSON. */
+function loadCredentials() {
+  const inline = process.env.GOOGLE_SERVICE_ACCOUNT_JSON;
+  if (inline) {
+    const raw = inline.trim().startsWith("{")
+      ? inline
+      : Buffer.from(inline, "base64").toString("utf8");
+    return JSON.parse(raw);
+  }
+
+  const candidates = [
+    process.env.GOOGLE_SERVICE_ACCOUNT,
+    path.resolve(ROOT, "..", "pillar-canopy-5d25712dd970.json"),
+    path.resolve(ROOT, "pillar-canopy-5d25712dd970.json"),
+    "/var/www/pillar-canopy-5d25712dd970.json",
+    "/var/www/dashboard-canopy/pillar-canopy-5d25712dd970.json",
+  ].filter(Boolean);
+
+  for (const file of candidates) {
+    if (fs.existsSync(file)) {
+      return JSON.parse(fs.readFileSync(file, "utf8"));
+    }
+  }
+  return null;
+}
 
 const app = express();
 app.use(express.json({ limit: "1mb" }));
@@ -32,8 +56,15 @@ async function fetchAccounts() {
     return accountsCache.rows;
   }
 
+  const credentials = loadCredentials();
+  if (!credentials) {
+    throw new Error(
+      "Service account tidak ditemukan. Set GOOGLE_SERVICE_ACCOUNT_JSON (isi file key) atau taruh file key di /var/www/."
+    );
+  }
+
   const auth = new GoogleAuth({
-    keyFile: KEY_FILE,
+    credentials,
     scopes: ["https://www.googleapis.com/auth/spreadsheets.readonly"],
   });
   const client = await auth.getClient();
@@ -220,7 +251,9 @@ if (fs.existsSync(distDir)) {
 
 app.listen(PORT, () => {
   console.log(`[pilar-canopy] server auth jalan di http://localhost:${PORT}`);
-  if (!fs.existsSync(KEY_FILE)) {
-    console.warn(`[pilar-canopy] PERINGATAN: service account tidak ditemukan: ${KEY_FILE}`);
+  if (!loadCredentials()) {
+    console.warn(
+      "[pilar-canopy] PERINGATAN: service account tidak ditemukan. Set GOOGLE_SERVICE_ACCOUNT_JSON atau taruh file key di /var/www/."
+    );
   }
 });
