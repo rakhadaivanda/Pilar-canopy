@@ -68,10 +68,10 @@ export const FOOTER_LINKS = [
 ];
 
 // /* DIUBAH */ Link terpisah di footer (bukan bagian dari Tautan Cepat):
-// heading "Kunjungi" di atas, label "Rezeki Barokah Jaya" langsung ke web canopy
+// heading "Kunjungi" di atas, label "Rezeki Barokah Jaya" langsung ke web
 export const RBJ_VISIT_LINK = {
   heading: "Kunjungi",
   label: "Rezeki Barokah Jaya",
-  href: "https://canopy.rezekibarokahjaya.net/",
+  href: "https://rezekibarokahjaya.net/",
   external: true,
 };
