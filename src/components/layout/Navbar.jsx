@@ -128,7 +128,7 @@ export default function Navbar() {
 
                     {/* Dropdown Menu Popup */}
                     <div
-                      className={`absolute top-full left-0 mt-1 w-80 bg-surface-container-lowest/98 backdrop-blur-2xl rounded-2xl border border-outline-variant/40 shadow-2xl p-2.5 transition-all duration-300 origin-top ${
+                      className={`absolute top-full left-0 mt-1 w-80 bg-surface-container-lowest rounded-2xl border border-outline-variant/50 shadow-[0_18px_50px_-12px_rgba(46,22,54,0.35)] p-2.5 transition-all duration-300 origin-top ${
                         dropdownOpen
                           ? "opacity-100 scale-100 pointer-events-auto translate-y-0"
                           : "opacity-0 scale-95 pointer-events-none -translate-y-2"
@@ -148,7 +148,7 @@ export default function Navbar() {
                               className={`flex items-start gap-3 p-2.5 rounded-xl transition-all duration-200 group/item ${
                                 isSubActive
                                   ? "bg-secondary/10 text-secondary"
-                                  : "hover:bg-surface-container/70 text-primary"
+                                  : "hover:bg-surface-container text-primary"
                               }`}
                             >
                               <div
