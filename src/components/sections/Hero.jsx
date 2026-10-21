@@ -53,11 +53,11 @@ export default function Hero() {
         data-hero-content
         className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 w-full flex flex-col items-start justify-center"
       >
-        {/* Announcement pill with pulse dot: "Spesialis Canopy Membrane 2026" */}
+        {/* Tombol: "Konsultasikan Kebutuhan Anda" (WhatsApp) */}
         <div data-hero-fade className="mb-5 inline-block">
           <a
             className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-surface-container-lowest/90 border border-secondary/40 backdrop-blur-md shadow-sm transition-all duration-300 hover:border-secondary hover:shadow hover:-translate-y-0.5 group"
-            href="#portofolio"
+            href="#beranda"
           >
             <span className="w-2.5 h-2.5 rounded-full bg-secondary animate-pulse-dot"></span>
             <span className="font-label-caps text-label-caps uppercase text-primary tracking-wider font-bold text-xs sm:text-sm">
@@ -90,7 +90,7 @@ export default function Hero() {
           </p>
 
           <div className="flex flex-col w-full sm:flex-row flex-wrap items-stretch sm:items-center gap-3 sm:gap-4 mb-7">
-            {/* Tombol: "Konsultasi Gratis" (WhatsApp) */}
+            {/* Tombol: "Konsultasikan Kebutuhan Anda" (WhatsApp) */}
             <a
               data-hero-cta
               data-magnetic
@@ -105,12 +105,7 @@ export default function Hero() {
             </a>
           </div>
 
-          {/* Integrated Trust Strip Bar */}
-          <div
-            data-hero-fade
-            className="inline-flex flex-wrap items-center justify-center sm:justify-start gap-2.5 sm:gap-6 px-4 sm:px-5 py-3 rounded-2xl bg-surface-container-lowest/90 backdrop-blur-md border border-outline-variant/50 shadow-sm w-full sm:w-auto"
-          >
-          </div>
+          {/* Trust Strip Bar - dihapus */}
         </div>
       </div>
     </section>

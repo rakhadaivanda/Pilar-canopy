@@ -11,9 +11,8 @@ export const HERO = {
   subjudul:
     "Solusi canopy membrane modern, kokoh, dan berkualitas, dari konsep, desain, fabrikasi, hingga instalasi di lapangan.",
   primaryBtn: {
-    label: "Konsultasi Gratis",
-    href: buildWhatsAppUrl("Halo Pilar Canopy, saya ingin konsultasi gratis mengenai proyek canopy membrane."),
-    isExternal: true,
+    label: "Konsultasikan Kebutuhan Anda",
+    href: buildWhatsAppUrl("Halo Pilar Canopy, saya ingin konsultasikan kebutuhan canopy membrane untuk proyek saya. Bisa minta info estimasi & jadwal survei ya?"),
   },
   secondaryBtn: {
     label: "Lihat Portofolio",
