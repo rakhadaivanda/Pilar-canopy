@@ -202,7 +202,7 @@ export default function Navbar() {
           <div className="flex items-center gap-2 sm:gap-3">
             <a
               className="inline-flex items-center justify-center bg-secondary text-on-secondary hover:brightness-110 px-4 sm:px-5 py-2 sm:py-2.5 rounded-full font-label-caps text-label-caps uppercase tracking-wider shadow-md hover:shadow-lg transition-all duration-300 active:scale-95 text-[10px] xs:text-[11px] sm:text-xs"
-              href={buildWhatsAppUrl("Halo Pilar Canopy, saya ingin konsultasi mengenai canopy membrane.")}
+              href={buildWhatsAppUrl("Halo Pilar Canopy, saya ingin konsultasi mengenai canopy membrane. Bisa minta info estimasi & jadwal survei?")}
               rel="noopener noreferrer"
               target="_blank"
             >
@@ -303,7 +303,7 @@ export default function Navbar() {
 
             <a
               className="mt-3 flex items-center justify-center gap-2 text-center bg-secondary text-on-secondary py-3 rounded-full shadow-md font-semibold"
-              href={buildWhatsAppUrl("Halo Pilar Canopy, saya ingin konsultasi.")}
+              href={buildWhatsAppUrl("Halo Pilar Canopy, saya ingin konsultasi canopy membrane. Mohon bantuannya ya.")}
               target="_blank"
               rel="noopener noreferrer"
               onClick={closeMenu}
