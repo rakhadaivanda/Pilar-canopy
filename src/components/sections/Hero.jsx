@@ -53,21 +53,12 @@ export default function Hero() {
         data-hero-content
         className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 w-full flex flex-col items-start justify-center"
       >
-        {/* Tombol: "Konsultasikan Kebutuhan Anda" (WhatsApp) */}
-        <div data-hero-fade className="mb-5 inline-block">
-          <a
-            className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-surface-container-lowest/90 border border-secondary/40 backdrop-blur-md shadow-sm transition-all duration-300 hover:border-secondary hover:shadow hover:-translate-y-0.5 group"
-            href="#beranda"
-          >
-            <span className="w-2.5 h-2.5 rounded-full bg-secondary animate-pulse-dot"></span>
-            <span className="font-label-caps text-label-caps uppercase text-primary tracking-wider font-bold text-xs sm:text-sm">
-              {HERO.badge}
-            </span>
-          </a>
-        </div>
 
         {/* Grand Headline with SplitText Animation */}
-        <div className="max-w-4xl mb-5">
+        <div className="max-w-4xl mb-5 mt-2">
+          <span className="font-spec-code text-xs sm:text-sm uppercase tracking-[0.22em] text-secondary font-bold block mb-2">
+            PT. Rezeki Barokah Jaya
+          </span>
           <h1
             data-hero-title
             className="font-display-hero text-[clamp(2.75rem,9vw,5.375rem)] sm:text-6xl md:text-7xl lg:text-[76px] xl:text-[86px] leading-[1.04] tracking-tight font-extrabold text-primary"
