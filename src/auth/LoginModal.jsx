@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { createPortal } from "react-dom";
 import { useAuth } from "./AuthContext";
 import { SITE } from "../data/site";
 import { buildWhatsAppUrl } from "../lib/whatsapp";
@@ -45,7 +46,7 @@ export default function LoginModal({ open, onClose }) {
     }
   };
 
-  return (
+  return createPortal(
     <div className="fixed inset-0 z-[100000] flex items-center justify-center p-3 sm:p-6">
       <div
         className="absolute inset-0 bg-primary/80 backdrop-blur-md animate-[fadeSlideUp_0.25s_ease-out_both]"
@@ -240,6 +241,7 @@ export default function LoginModal({ open, onClose }) {
           </div>
         </section>
       </div>
-    </div>
+    </div>,
+    document.body
   );
 }
