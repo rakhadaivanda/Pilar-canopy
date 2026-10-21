@@ -1,38 +1,46 @@
-name: Deploy to Company VPS
+name: Deploy Canopy to VPS
 
 on:
   push:
-    branches: [ "main" ] # Sesuaikan jika branch utama Kakak "master"
+    branches: [ "main" ]
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout Code
-      uses: actions/checkout@v4
+      - name: Checkout Code
+        uses: actions/checkout@v4
 
-    - name: Executing remote SSH deployment
-      uses: appleboy/ssh-action@v1.0.3
-      with:
-        host: ${{ secrets.VPS_HOST }}
-        username: ${{ secrets.VPS_USERNAME }}
-        key: ${{ secrets.VPS_SSH_KEY }}
-        script: |
-          # 1. Masuk ke direktori project yang benar di VPS
-          cd /var/www/dashboard-canopy
+      - name: Executing remote SSH deployment
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.VPS_HOST }}
+          username: ${{ secrets.VPS_USERNAME }}
+          key: ${{ secrets.VPS_SSH_KEY }}
+          script: |
+            # 1. Masuk ke direktori project di VPS
+            cd /var/www/dashboard-canopy
 
-          # 2. Ambil update kode terbaru dari GitHub
-          git pull origin main
+            # 2. Ambil update kode terbaru dari GitHub
+            git pull origin main
 
-          # 3. Install dependencies & build project
-          npm install
-          npm run build
+            # 3. Install dependencies untuk Backend (folder server)
+            echo "--- Installing Backend Dependencies ---"
+            cd server
+            npm install
+            cd ..
 
-          # 4. Pastikan service auth (login/ERP) jalan, lalu restart
-          pm2 describe canopy-auth > /dev/null 2>&1 \
-            && pm2 restart canopy-auth --update-env \
-            || pm2 start server/index.js --name canopy-auth --update-env
+            # 4. Install dependencies & build Frontend (di root project)
+            echo "--- Building Frontend ---"
+            npm install
+            npm run build
 
-          # 5. Restart aplikasi lain yang sudah ada
-          pm2 restart all
+            # 5. Kelola PM2 untuk Backend Auth/Server
+            pm2 describe canopy-auth > /dev/null 2>&1 \
+              && pm2 restart canopy-auth --update-env \
+              || pm2 start server/index.js --name canopy-auth --update-env
+
+            # 6. Set ulang hak akses folder agar bisa dibaca Nginx
+            sudo chown -R www-data:www-data /var/www/dashboard-canopy
+            sudo chmod -R 755 /var/www/dashboard-canopy
