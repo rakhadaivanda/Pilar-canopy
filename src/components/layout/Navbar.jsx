@@ -208,7 +208,7 @@ export default function Navbar() {
             <div className="hidden sm:flex items-center gap-2">
               <a
                 className="inline-flex items-center justify-center bg-primary text-on-primary hover:brightness-110 px-4 sm:px-5 py-2 sm:py-2.5 rounded-full font-label-caps text-label-caps uppercase tracking-wider shadow-md hover:shadow-lg transition-all duration-300 active:scale-95 text-[10px] xs:text-[11px] sm:text-xs"
-                href="https://erp.rezekibarokahjaya.net/"
+                href="https://erp.canopy.rezekibarokahjaya.net/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -341,7 +341,7 @@ export default function Navbar() {
               <div className="mt-4 space-y-2">
                 <a
                   className="flex items-center justify-center gap-2 text-center bg-primary text-on-primary py-3 rounded-full shadow-md font-semibold"
-                  href="https://erp.rezekibarokahjaya.net/"
+                  href="https://erp.canopy.rezekibarokahjaya.net/"
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={closeMenu}
