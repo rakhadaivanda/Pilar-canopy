@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Google Image & General Sitemap
+Sitemap: https://canopy.rezekibarokahjaya.net/sitemap.xml
