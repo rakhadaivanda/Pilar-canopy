@@ -71,9 +71,10 @@ export default function ProjectDetailModal({ project, onClose }) {
     image,
     alt,
     badge,
-    place,
-    client,
-    title,
+    place,
+    client,
+    title,
+    category = "",
     description,
     chips = [],
     year,
@@ -86,7 +87,7 @@ export default function ProjectDetailModal({ project, onClose }) {
   const photos = images && images.length > 0 ? images : image ? [image] : [];
 
   const waBase = SITE.social?.whatsapp || SITE.phones?.[0]?.waUrl || "https://wa.me/6281188088036";
-  const waMessage = encodeURIComponent(`Halo Pilar Canopy, saya tertarik dengan proyek "${title}" di ${location || "-"} (${category}). Bisa minta estimasi harga, spesifikasi & jadwal survei ya?`);
+  const waMessage = encodeURIComponent(`Halo Pilar Canopy, saya tertarik dengan proyek "${title}" di ${place || "-"} (${category}). Bisa minta estimasi harga, spesifikasi & jadwal survei ya?`);
   const waUrl = `${waBase}?text=${waMessage}`;
 
   return createPortal(
