@@ -162,3 +162,4 @@ export default function ImageLightbox({ images = [], initialIndex = 0, onClose, 
     document.body
   );
 }
+
