@@ -5,6 +5,7 @@ import Icon from "../../ui/Icon";
 import { CATALOG_HEADER, CATALOG_ITEMS } from "../../../data/catalog";
 import { buildWhatsAppUrl } from "../../../lib/whatsapp";
 import catalogBg from "../../../assets/images/materials/background(4).png";
+import ImageLightbox from "../../ui/ImageLightbox";
 
 /* ─── Auto-Slideshow Card untuk Katalog ───────────────────────────────────── */
 function CatalogCard({ item, onClick }) {
@@ -132,6 +133,7 @@ function CatalogCard({ item, onClick }) {
 function CatalogModal({ item, onClose }) {
   const overlayRef = useRef(null);
   const [activePhoto, setActivePhoto] = useState(0);
+  const [lightboxOpen, setLightboxOpen] = useState(false);
   const { images = [], name, category, desc } = item;
 
   // Block scroll
@@ -201,15 +203,30 @@ function CatalogModal({ item, onClose }) {
           ))}
           <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/20 to-transparent pointer-events-none" />
 
+          {/* Klik gambar untuk buka lightbox */}
+          <button
+            type="button"
+            onClick={() => setLightboxOpen(true)}
+            className="absolute inset-0 z-10 w-full h-full cursor-zoom-in group"
+            aria-label="Buka foto fullscreen"
+          >
+            <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 flex items-center justify-center">
+              <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/60 backdrop-blur-sm text-white px-4 py-2 rounded-full flex items-center gap-2 shadow-xl">
+                <Icon name="fullscreen" className="text-[20px]" />
+                <span className="font-spec-code text-xs uppercase tracking-wider font-semibold">Lihat Fullscreen</span>
+              </div>
+            </div>
+          </button>
+
           {/* Category badge */}
-          <div className="absolute top-4 left-4 bg-primary/90 backdrop-blur-md px-3 py-1.5 rounded-lg border border-white/10 z-10">
+          <div className="absolute top-4 left-4 bg-primary/90 backdrop-blur-md px-3 py-1.5 rounded-lg border border-white/10 z-20">
             <span className="font-spec-code text-xs text-on-primary uppercase tracking-wider font-semibold">{category}</span>
           </div>
 
           {/* Title */}
-          <div className="absolute bottom-4 left-4 right-4 z-10">
+          <div className="absolute bottom-4 left-4 right-4 z-20">
             <h2 className="font-headline-lg text-xl sm:text-2xl text-white font-bold drop-shadow-md">{name}</h2>
-            <p className="font-spec-code text-xs text-white/70 mt-1">{images.length} foto tersedia</p>
+            <p className="font-spec-code text-xs text-white/70 mt-1">{images.length} foto tersedia • Klik gambar untuk fullscreen</p>
           </div>
 
           {/* Prev / Next */}
@@ -234,6 +251,16 @@ function CatalogModal({ item, onClose }) {
             </>
           )}
         </div>
+
+        {/* Lightbox */}
+        {lightboxOpen && (
+          <ImageLightbox
+            images={images}
+            initialIndex={activePhoto}
+            title={name}
+            onClose={() => setLightboxOpen(false)}
+          />
+        )}
 
         {/* Thumbnail strip */}
         {images.length > 1 && (

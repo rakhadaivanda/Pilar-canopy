@@ -3,6 +3,7 @@ import { createPortal } from "react-dom";
 import { gsap } from "../../../motion/gsap";
 import Icon from "../../ui/Icon";
 import { SITE } from "../../../data/site";
+import ImageLightbox from "../../ui/ImageLightbox";
 
 /**
  * Modal detail proyek — galeri foto penuh, spesifikasi, dan highlight.
@@ -12,6 +13,7 @@ export default function ProjectDetailModal({ project, onClose }) {
   const overlayRef = useRef(null);
   const panelRef = useRef(null);
   const [activePhoto, setActivePhoto] = useState(0);
+  const [lightboxOpen, setLightboxOpen] = useState(false);
 
   const animateClose = useCallback(() => {
     const overlay = overlayRef.current;
@@ -135,27 +137,42 @@ export default function ProjectDetailModal({ project, onClose }) {
           ))}
           <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/25 to-transparent pointer-events-none" />
 
+          {/* Klik gambar untuk buka lightbox */}
+          <button
+            type="button"
+            onClick={() => setLightboxOpen(true)}
+            className="absolute inset-0 z-10 w-full h-full cursor-zoom-in group"
+            aria-label="Buka foto fullscreen"
+          >
+            <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 flex items-center justify-center">
+              <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/60 backdrop-blur-sm text-white px-4 py-2 rounded-full flex items-center gap-2 shadow-xl">
+                <Icon name="fullscreen" className="text-[20px]" />
+                <span className="font-spec-code text-xs uppercase tracking-wider font-semibold">Lihat Fullscreen</span>
+              </div>
+            </div>
+          </button>
+
           {/* Badge */}
-          <div className="absolute top-4 left-4 bg-primary/90 backdrop-blur-md px-3 py-1.5 rounded-lg border border-white/10 z-10">
+          <div className="absolute top-4 left-4 bg-primary/90 backdrop-blur-md px-3 py-1.5 rounded-lg border border-white/10 z-20">
             <span className="font-spec-code text-xs text-on-primary uppercase tracking-wider font-semibold">
               {badge}
             </span>
           </div>
 
           {/* Place */}
-          <div className="absolute top-4 right-16 bg-surface-container-lowest/90 backdrop-blur-md px-3 py-1.5 rounded-lg shadow-sm border border-outline-variant/20 z-10">
+          <div className="absolute top-4 right-16 bg-surface-container-lowest/90 backdrop-blur-md px-3 py-1.5 rounded-lg shadow-sm border border-outline-variant/20 z-20">
             <span className="font-spec-code text-xs text-secondary font-bold uppercase">
               {place}
             </span>
           </div>
 
           {/* Title on image */}
-          <div className="absolute bottom-4 left-4 right-4 z-10">
+          <div className="absolute bottom-4 left-4 right-4 z-20">
             <h2 className="font-headline-lg text-xl sm:text-2xl lg:text-3xl text-white font-bold drop-shadow-md leading-tight">
               {title}
             </h2>
             <p className="font-spec-code text-xs text-white/70 mt-1">
-              {photos.length} foto tersedia • Gunakan tombol panah atau thumbnail untuk navigasi
+              {photos.length} foto tersedia • Klik gambar untuk fullscreen
             </p>
           </div>
 
@@ -181,6 +198,16 @@ export default function ProjectDetailModal({ project, onClose }) {
             </>
           )}
         </div>
+
+        {/* Lightbox */}
+        {lightboxOpen && (
+          <ImageLightbox
+            images={photos}
+            initialIndex={activePhoto}
+            title={title}
+            onClose={() => setLightboxOpen(false)}
+          />
+        )}
 
         {/* ── Thumbnail Strip ─────────────────────────────────────── */}
         {photos.length > 1 && (
