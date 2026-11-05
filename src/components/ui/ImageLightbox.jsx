@@ -47,7 +47,7 @@ export default function ImageLightbox({ images = [], initialIndex = 0, onClose, 
 
   return createPortal(
     <div
-      className="fixed inset-0 z-[999999] flex flex-col bg-black/95 backdrop-blur-sm"
+      className="fixed inset-0 z-[99999] flex flex-col bg-black/95 backdrop-blur-sm"
       data-lenis-prevent
     >
       {/* Top Bar */}

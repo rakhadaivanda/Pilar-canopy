@@ -45,7 +45,7 @@ export default function Cursor() {
         width: size,
         height: size,
         backgroundColor: next === "ring" ? "rgba(224,109,44,0.16)" : "#401D47",
-        borderColor: next === "ring" ? "#E06D2C" : "transparent",
+        borderColor: next === "ring" ? "#E06D2C" : "rgba(255,255,255,0.4)",
         duration: 0.45,
         ease: "power3.out",
         overwrite: "auto",
@@ -92,7 +92,7 @@ export default function Cursor() {
     <div
       ref={wrap}
       aria-hidden="true"
-      className="pointer-events-none fixed left-0 top-0 z-[999999] will-change-transform"
+      className="pointer-events-none fixed left-0 top-0 z-[10000000] will-change-transform"
     >
       <div
         ref={disc}
