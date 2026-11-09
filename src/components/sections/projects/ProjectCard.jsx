@@ -74,7 +74,9 @@ export default function ProjectCard({ project, onClick }) {
           <img
             key={`prev-${prevIdx}`}
             src={photos[prevIdx]}
-            alt={alt}
+            alt={`${alt} foto ${prevIdx + 1}`}
+            title={`${alt} foto ${prevIdx + 1}`}
+            decoding="async"
             className="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-600"
           />
         )}
@@ -85,6 +87,8 @@ export default function ProjectCard({ project, onClick }) {
             key={idx}
             src={src}
             alt={`${alt} foto ${idx + 1}`}
+            title={`${alt} foto ${idx + 1}`}
+            decoding="async"
             className={`absolute inset-0 w-full h-full object-cover transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] ${
               idx === activeIdx
                 ? "opacity-100 scale-100"

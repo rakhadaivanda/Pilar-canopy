@@ -10,7 +10,7 @@ import Icon from "./Icon";
  *  - onClose: callback ketika lightbox ditutup
  *  - title: judul opsional
  */
-export default function ImageLightbox({ images = [], initialIndex = 0, onClose, title }) {
+export default function ImageLightbox({ images = [], initialIndex = 0, onClose, title, alt }) {
   const [activeIdx, setActiveIdx] = useState(initialIndex);
 
   const handleClose = useCallback(() => {
@@ -44,6 +44,8 @@ export default function ImageLightbox({ images = [], initialIndex = 0, onClose, 
   }, []);
 
   if (!images.length) return null;
+
+  const altBase = alt || title || "Gambar proyek";
 
   return createPortal(
     <div
@@ -94,7 +96,8 @@ export default function ImageLightbox({ images = [], initialIndex = 0, onClose, 
             <img
               key={idx}
               src={src}
-              alt={`${title ? title + " - " : ""}Foto ${idx + 1}`}
+              alt={`${altBase} foto ${idx + 1}`}
+              title={`${altBase} foto ${idx + 1}`}
               className={`absolute max-w-full max-h-full object-contain rounded-lg transition-all duration-500 select-none ${
                 idx === activeIdx
                   ? "opacity-100 scale-100"
@@ -102,6 +105,7 @@ export default function ImageLightbox({ images = [], initialIndex = 0, onClose, 
               }`}
               draggable={false}
               loading={idx === 0 ? "eager" : "lazy"}
+              decoding="async"
             />
           ))}
         </div>
@@ -149,9 +153,11 @@ export default function ImageLightbox({ images = [], initialIndex = 0, onClose, 
               >
                 <img
                   src={src}
-                  alt={`Thumbnail ${idx + 1}`}
+                  alt={`${altBase} foto ${idx + 1}`}
+                  title={`${altBase} foto ${idx + 1}`}
                   className="w-full h-full object-cover"
                   loading="lazy"
+                  decoding="async"
                 />
               </button>
             ))}

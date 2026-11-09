@@ -1,48 +1,53 @@
 // /* DIUBAH */ Data Portofolio & Pengalaman Proyek Resmi Pilar Canopy (8 Proyek Utama)
 // Hanya menampilkan proyek nyata klien, terpisah dari Katalog Produk.
 
-// ── UNPAD ────────────────────────────────────────────────────────────────────
-import unpad1 from "../assets/images/projects/portofolio/unpad(1).jpg";
-import unpad2 from "../assets/images/projects/portofolio/unpad(2).png";
-import unpad3 from "../assets/images/projects/portofolio/unpad(3).png";
-import unpad4 from "../assets/images/projects/portofolio/unpad(4).png";
+const PORTFOLIO_IMAGE_BASE = "/images/portofolio";
 
-// ── PITSTOP ──────────────────────────────────────────────────────────────────
-import pitstop1 from "../assets/images/projects/portofolio/pitstop(1).jpg";
-import pitstop2 from "../assets/images/projects/portofolio/pitstop(2).png";
-import pitstop3 from "../assets/images/projects/portofolio/pitstop(3).png";
-import pitstop4 from "../assets/images/projects/portofolio/pitstop(4).png";
-
-// ── GLAMPING (TechnoPark) ─────────────────────────────────────────────────────
-import glamping1 from "../assets/images/projects/portofolio/glamping(1).jpg";
-import glamping2 from "../assets/images/projects/portofolio/glamping(2).png";
-import glamping3 from "../assets/images/projects/portofolio/glamping(3).png";
-import glamping4 from "../assets/images/projects/portofolio/glamping(4).png";
-
-// ── PADEL ────────────────────────────────────────────────────────────────────
-import padel1 from "../assets/images/projects/portofolio/padel(1).png";
-import padel2 from "../assets/images/projects/portofolio/padel(2).png";
-import padel3 from "../assets/images/projects/portofolio/padel(3).png";
-import padel4 from "../assets/images/projects/portofolio/padel(4).png";
-
-// ── CGV ──────────────────────────────────────────────────────────────────────
-import cgv1 from "../assets/images/projects/portofolio/cgv(1).png";
-import cgv2 from "../assets/images/projects/portofolio/cgv(2).png";
-import cgv3 from "../assets/images/projects/portofolio/cgv(3).png";
-import cgv4 from "../assets/images/projects/portofolio/cgv(4).png";
-
-// ── WALAT ─────────────────────────────────────────────────────────────────────
-import walat1 from "../assets/images/projects/portofolio/walat(1).png";
-import walat2 from "../assets/images/projects/portofolio/walat(2).png";
-import walat3 from "../assets/images/projects/portofolio/walat(3).png";
-import walat4 from "../assets/images/projects/portofolio/walat(4).png";
-
-// ── PUSHPUL ───────────────────────────────────────────────────────────────────
-import pushpul1 from "../assets/images/projects/portofolio/pushpul(1).png";
-
-// ── RUMAH & CAFE ──────────────────────────────────────────────────────────────
-import rumahcafe1 from "../assets/images/projects/portofolio/rumah&cafe(1).png";
-import rumahcafe2 from "../assets/images/projects/portofolio/rumah&cafe(2).png";
+const portfolioImages = {
+  unpad: [
+    `${PORTFOLIO_IMAGE_BASE}/kanopi-membrane-lapang-serbaguna-fisip-unpad-bandung-1.jpg`,
+    `${PORTFOLIO_IMAGE_BASE}/kanopi-membrane-lapang-serbaguna-fisip-unpad-bandung-2.png`,
+    `${PORTFOLIO_IMAGE_BASE}/kanopi-membrane-lapang-serbaguna-fisip-unpad-bandung-3.png`,
+    `${PORTFOLIO_IMAGE_BASE}/kanopi-membrane-lapang-serbaguna-fisip-unpad-bandung-4.png`,
+  ],
+  pitstop: [
+    `${PORTFOLIO_IMAGE_BASE}/kanopi-membrane-pit-stop-fuel-bsi-trustone-jawa-timur-1.jpg`,
+    `${PORTFOLIO_IMAGE_BASE}/kanopi-membrane-pit-stop-fuel-bsi-trustone-jawa-timur-2.png`,
+    `${PORTFOLIO_IMAGE_BASE}/kanopi-membrane-pit-stop-fuel-bsi-trustone-jawa-timur-3.png`,
+    `${PORTFOLIO_IMAGE_BASE}/kanopi-membrane-pit-stop-fuel-bsi-trustone-jawa-timur-4.png`,
+  ],
+  glamping: [
+    `${PORTFOLIO_IMAGE_BASE}/glamping-dome-geodesik-gunadarma-technopark-cianjur-1.jpg`,
+    `${PORTFOLIO_IMAGE_BASE}/glamping-dome-geodesik-gunadarma-technopark-cianjur-2.png`,
+    `${PORTFOLIO_IMAGE_BASE}/glamping-dome-geodesik-gunadarma-technopark-cianjur-3.png`,
+    `${PORTFOLIO_IMAGE_BASE}/glamping-dome-geodesik-gunadarma-technopark-cianjur-4.png`,
+  ],
+  padel: [
+    `${PORTFOLIO_IMAGE_BASE}/kanopi-membrane-lapangan-padel-bintaro-1.png`,
+    `${PORTFOLIO_IMAGE_BASE}/kanopi-membrane-lapangan-padel-bintaro-2.png`,
+    `${PORTFOLIO_IMAGE_BASE}/kanopi-membrane-lapangan-padel-bintaro-3.png`,
+    `${PORTFOLIO_IMAGE_BASE}/kanopi-membrane-lapangan-padel-bintaro-4.png`,
+  ],
+  cgv: [
+    `${PORTFOLIO_IMAGE_BASE}/canopy-slide-otomatis-cgv-cinemas-padang-1.png`,
+    `${PORTFOLIO_IMAGE_BASE}/canopy-slide-otomatis-cgv-cinemas-padang-2.png`,
+    `${PORTFOLIO_IMAGE_BASE}/canopy-slide-otomatis-cgv-cinemas-padang-3.png`,
+    `${PORTFOLIO_IMAGE_BASE}/canopy-slide-otomatis-cgv-cinemas-padang-4.png`,
+  ],
+  walat: [
+    `${PORTFOLIO_IMAGE_BASE}/glamping-cabin-pvc-alderon-gunung-walat-sukabumi-1.png`,
+    `${PORTFOLIO_IMAGE_BASE}/glamping-cabin-pvc-alderon-gunung-walat-sukabumi-2.png`,
+    `${PORTFOLIO_IMAGE_BASE}/glamping-cabin-pvc-alderon-gunung-walat-sukabumi-3.png`,
+    `${PORTFOLIO_IMAGE_BASE}/glamping-cabin-pvc-alderon-gunung-walat-sukabumi-4.png`,
+  ],
+  pushpul: [
+    `${PORTFOLIO_IMAGE_BASE}/tenda-push-pull-retractable-kogen-dairy-bandung-1.png`,
+  ],
+  rumahcafe: [
+    `${PORTFOLIO_IMAGE_BASE}/kanopi-membrane-carport-rumah-cafe-jabodetabek-jawa-barat-1.png`,
+    `${PORTFOLIO_IMAGE_BASE}/kanopi-membrane-carport-rumah-cafe-jabodetabek-jawa-barat-2.png`,
+  ],
+};
 
 export const PROJECTS_HEADER = {
   eyebrow: "Portofolio & Pengalaman Proyek",
@@ -69,9 +74,9 @@ export const PROJECTS = [
     tahun: "2026",
     badge: "PROYEK 01 / LAPANG SERBAGUNA",
     place: "BANDUNG • 2026",
-    images: [unpad1, unpad2, unpad3, unpad4],
-    image: unpad1,
-    alt: "Lapang Serbaguna FISIP Universitas Padjadjaran Bandung",
+    images: portfolioImages.unpad,
+    image: portfolioImages.unpad[0],
+    alt: "Kanopi membrane lapang serbaguna FISIP Universitas Padjadjaran Bandung",
     description:
       "Pekerjaan lapang serbaguna Universitas Padjadjaran (FISIP) di Bandung dengan struktur rangka pipa baja lengkung bentang lebar dan penutup membrane tensile.",
     chips: ["Lapang Serbaguna", "Tensile Membrane", "Bandung"],
@@ -100,9 +105,9 @@ export const PROJECTS = [
     tahun: "2026",
     badge: "PROYEK 02 / PIT STOP FUEL",
     place: "JAWA TIMUR • 2026",
-    images: [pitstop1, pitstop2, pitstop3, pitstop4],
-    image: pitstop1,
-    alt: "Pit Stop Fuel PT. BSI PT. Trustone Jawa Timur",
+    images: portfolioImages.pitstop,
+    image: portfolioImages.pitstop[0],
+    alt: "Kanopi membrane pit stop fuel PT. BSI Trustone Jawa Timur",
     description:
       "Pekerjaan fasilitas pit stop fuel untuk PT. BSI / PT. Trustone di Jawa Timur, mencakup pekerjaan pondasi sipil, erection rangka baja, dan penutup membrane payung ganda.",
     chips: ["Pit Stop Fuel", "Struktur Baja", "Jawa Timur"],
@@ -131,9 +136,9 @@ export const PROJECTS = [
     tahun: "2025",
     badge: "PROYEK 03 / GLAMPING DOME",
     place: "CIANJUR • 2025",
-    images: [glamping1, glamping2, glamping3, glamping4],
-    image: glamping1,
-    alt: "Glamping Dome 10 unit Universitas Gunadarma UG-TechnoPark Cianjur",
+    images: portfolioImages.glamping,
+    image: portfolioImages.glamping[0],
+    alt: "Glamping dome geodesik 10 unit Universitas Gunadarma UG-TechnoPark Cianjur",
     description:
       "Pengerjaan 10 unit glamping dome geodesic untuk UG-TechnoPark Universitas Gunadarma di Cianjur sebagai fasilitas edu-wisata teknologi dan riset alam.",
     chips: ["10 Unit Dome", "Geodesic Frame", "Cianjur"],
@@ -162,9 +167,9 @@ export const PROJECTS = [
     tahun: "2025",
     badge: "PROYEK 04 / LAPANG PADEL",
     place: "BINTARO • 2025",
-    images: [padel1, padel2, padel3, padel4],
-    image: padel1,
-    alt: "Lapang Padel Perorangan Milik Pribadi Bintaro",
+    images: portfolioImages.padel,
+    image: portfolioImages.padel[0],
+    alt: "Kanopi membrane lapangan padel tennis pribadi Bintaro",
     description:
       "Pekerjaan penutup struktur lapangan padel tennis pribadi di Bintaro dengan rangka lengkung pipa tubular estetis dan membrane anti-bising.",
     chips: ["Lapang Padel", "Rangka Lengkung", "Bintaro"],
@@ -193,9 +198,9 @@ export const PROJECTS = [
     tahun: "2026",
     badge: "PROYEK 05 / CANOPY SLIDE",
     place: "PADANG • 2026",
-    images: [cgv1, cgv2, cgv3, cgv4],
-    image: cgv1,
-    alt: "Canopy Slide Otomatis CGV Cinemas Indonesia Padang",
+    images: portfolioImages.cgv,
+    image: portfolioImages.cgv[0],
+    alt: "Canopy slide otomatis retractable CGV Cinemas Indonesia Padang",
     description:
       "Pekerjaan canopy slide otomatis (motorized retractable) untuk area drop-off dan lobi outdoor CGV Cinemas dengan kontrol remote cerdas.",
     chips: ["Canopy Slide", "Motorized Remote", "Padang"],
@@ -224,9 +229,9 @@ export const PROJECTS = [
     tahun: "2025",
     badge: "PROYEK 06 / GLAMPING CABIN",
     place: "SUKABUMI • 2025",
-    images: [walat1, walat2, walat3, walat4],
-    image: walat1,
-    alt: "Glamping PVC Alderon PT. Wandri Jaya Gunung Walat Park Sukabumi",
+    images: portfolioImages.walat,
+    image: portfolioImages.walat[0],
+    alt: "Glamping cabin PVC Alderon PT. Wandri Jaya Gunung Walat Park Sukabumi",
     description:
       "Pekerjaan pembangunan glamping cabin resort untuk PT. Wandri Jaya di kawasan hutan pendidikan Gunung Walat, Sukabumi menggunakan kombinasi PVC Alderon dan membrane.",
     chips: ["Glamping Cabin", "PVC Alderon", "Sukabumi"],
@@ -255,9 +260,9 @@ export const PROJECTS = [
     tahun: "2026",
     badge: "PROYEK 07 / RETRACTABLE TENT",
     place: "BANDUNG • 2026",
-    images: [pushpul1],
-    image: pushpul1,
-    alt: "Push Pull Retractable Tent PT. ABC Kogen Dairy Milk Bandung",
+    images: portfolioImages.pushpul,
+    image: portfolioImages.pushpul[0],
+    alt: "Tenda push pull retractable loading dock PT. ABC Kogen Dairy Milk Bandung",
     description:
       "Pekerjaan fabrikasi dan instalasi tenda push-pull lipat industri untuk area bongkar muat logistik PT. ABC Kogen Dairy Milk di Bandung.",
     chips: ["Push-Pull Tent", "Loading Dock", "Bandung"],
@@ -286,9 +291,9 @@ export const PROJECTS = [
     tahun: "2025 sampai 2026",
     badge: "PROYEK 08 / RUMAH & CAFE",
     place: "JABODETABEK & JABAR • 2025–2026",
-    images: [rumahcafe1, rumahcafe2],
-    image: rumahcafe1,
-    alt: "Canopy Rumah Tinggal & Cafe Jabodetabek & Jawa Barat",
+    images: portfolioImages.rumahcafe,
+    image: portfolioImages.rumahcafe[0],
+    alt: "Kanopi membrane carport rumah tinggal dan cafe Jabodetabek Jawa Barat",
     description:
       "Rangkaian instalasi kanopi carport rumah tinggal mewah dan outdoor cafe di wilayah Jabodetabek dan Jawa Barat dengan model tensile membrane custom.",
     chips: ["Canopy Residensial", "Tensile Carport", "Jabodetabek"],

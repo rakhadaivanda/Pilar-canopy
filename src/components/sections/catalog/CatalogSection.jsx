@@ -9,7 +9,7 @@ import ImageLightbox from "../../ui/ImageLightbox";
 
 /* ─── Auto-Slideshow Card untuk Katalog ───────────────────────────────────── */
 function CatalogCard({ item, onClick }) {
-  const { images = [], name, category, desc } = item;
+  const { images = [], name, category, alt, desc } = item;
   const [activeIdx, setActiveIdx] = useState(0);
   const timerRef = useRef(null);
 
@@ -43,7 +43,9 @@ function CatalogCard({ item, onClick }) {
           <img
             key={idx}
             src={src}
-            alt={`${name} variasi ${idx + 1}`}
+            alt={`${alt || name} foto ${idx + 1}`}
+            title={`${alt || name} foto ${idx + 1}`}
+            decoding="async"
             className={`absolute inset-0 w-full h-full object-cover transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] ${
               idx === activeIdx ? "opacity-100 scale-100" : "opacity-0 scale-105"
             }`}
@@ -134,7 +136,7 @@ function CatalogModal({ item, onClose }) {
   const overlayRef = useRef(null);
   const [activePhoto, setActivePhoto] = useState(0);
   const [lightboxOpen, setLightboxOpen] = useState(false);
-  const { images = [], name, category, desc } = item;
+  const { images = [], name, category, alt, desc } = item;
 
   // Block scroll
   useEffect(() => {
@@ -194,7 +196,9 @@ function CatalogModal({ item, onClose }) {
             <img
               key={idx}
               src={src}
-              alt={`${name} foto ${idx + 1}`}
+              alt={`${alt || name} foto ${idx + 1}`}
+              title={`${alt || name} foto ${idx + 1}`}
+              decoding="async"
               className={`absolute inset-0 w-full h-full object-cover transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] ${
                 idx === activePhoto ? "opacity-100 scale-100" : "opacity-0 scale-105"
               }`}
@@ -258,6 +262,7 @@ function CatalogModal({ item, onClose }) {
             images={images}
             initialIndex={activePhoto}
             title={name}
+            alt={alt}
             onClose={() => setLightboxOpen(false)}
           />
         )}
@@ -276,7 +281,14 @@ function CatalogModal({ item, onClose }) {
                     : "border-outline-variant/30 hover:border-secondary/60 opacity-70 hover:opacity-100"
                 }`}
               >
-                <img src={src} alt={`Thumbnail ${idx + 1}`} className="w-full h-full object-cover" loading="lazy" />
+                <img
+                  src={src}
+                  alt={`${alt || name} foto ${idx + 1}`}
+                  title={`${alt || name} foto ${idx + 1}`}
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                  decoding="async"
+                />
               </button>
             ))}
           </div>
@@ -332,6 +344,7 @@ export default function CatalogSection() {
         data-section
         className="relative w-full overflow-hidden bg-sand py-20 sm:py-28"
         id="katalog"
+        aria-labelledby="katalog-heading"
       >
         {/* Background Graphic: background(4).png */}
         <div className="absolute inset-0 z-0 pointer-events-none select-none">
@@ -339,6 +352,8 @@ export default function CatalogSection() {
             src={catalogBg}
             alt=""
             aria-hidden="true"
+            loading="lazy"
+            decoding="async"
             className="w-full h-full object-cover object-right-bottom sm:object-center opacity-60 mix-blend-multiply"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-sand/80 via-sand/45 to-sand/85" />
@@ -348,7 +363,10 @@ export default function CatalogSection() {
           {/* Header */}
           <div data-reveal-group className="max-w-3xl mb-14">
             <SectionEyebrow className="mb-3">{CATALOG_HEADER.eyebrow}</SectionEyebrow>
-            <h2 className="font-headline-lg text-2xl sm:text-3xl lg:text-4xl text-primary font-bold tracking-tight">
+            <h2
+              id="katalog-heading"
+              className="font-headline-lg text-2xl sm:text-3xl lg:text-4xl text-primary font-bold tracking-tight"
+            >
               {CATALOG_HEADER.heading}
             </h2>
             <p className="font-body-md text-base text-on-surface-variant mt-2 leading-relaxed">

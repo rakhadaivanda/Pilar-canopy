@@ -130,6 +130,8 @@ export default function ProjectDetailModal({ project, onClose }) {
               key={idx}
               src={src}
               alt={`${alt || title} foto ${idx + 1}`}
+              title={`${alt || title} foto ${idx + 1}`}
+              decoding="async"
               className={`absolute inset-0 w-full h-full object-cover transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] ${
                 idx === activePhoto ? "opacity-100 scale-100" : "opacity-0 scale-105"
               }`}
@@ -206,6 +208,7 @@ export default function ProjectDetailModal({ project, onClose }) {
             images={photos}
             initialIndex={activePhoto}
             title={title}
+            alt={alt}
             onClose={() => setLightboxOpen(false)}
           />
         )}
@@ -224,7 +227,14 @@ export default function ProjectDetailModal({ project, onClose }) {
                     : "border-outline-variant/30 hover:border-secondary/60 opacity-70 hover:opacity-100"
                 }`}
               >
-                <img src={src} alt={`Thumbnail ${idx + 1}`} className="w-full h-full object-cover" loading="lazy" />
+                <img
+                  src={src}
+                  alt={`${alt || title} foto ${idx + 1}`}
+                  title={`${alt || title} foto ${idx + 1}`}
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                  decoding="async"
+                />
               </button>
             ))}
           </div>
