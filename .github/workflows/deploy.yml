@@ -36,6 +36,11 @@ jobs:
             npm install
             npm run build
 
+            echo "--- Verifying Static SEO Files ---"
+            test -f dist/sitemap.xml
+            test -f dist/robots.txt
+            grep -q "<urlset" dist/sitemap.xml
+
             # 5. Kelola PM2 untuk Backend Auth/Server
             pm2 describe canopy-auth > /dev/null 2>&1 \
               && pm2 restart canopy-auth --update-env \

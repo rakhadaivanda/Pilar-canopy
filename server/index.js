@@ -247,10 +247,44 @@ app.post("/api/auth/refresh", async (req, res) => {
 
 /* ─── Static build (production) ──────────────────────────────────────────── */
 const distDir = path.join(ROOT, "dist");
+
+function findPublicMetaFile(name) {
+  const builtFile = path.join(distDir, name);
+  if (fs.existsSync(builtFile)) return builtFile;
+  const sourceFile = path.join(ROOT, "public", name);
+  return fs.existsSync(sourceFile) ? sourceFile : null;
+}
+
+const metaFiles = {
+  "sitemap.xml": "application/xml; charset=utf-8",
+  "robots.txt": "text/plain; charset=utf-8",
+};
+for (const [name, contentType] of Object.entries(metaFiles)) {
+  app.get(`/${name}`, (req, res) => {
+    const file = findPublicMetaFile(name);
+    if (!file) {
+      return res.status(404).type("text/plain; charset=utf-8").send(`${name} tidak ditemukan`);
+    }
+    res.setHeader("Content-Type", contentType);
+    res.setHeader("Cache-Control", "public, max-age=3600");
+    res.sendFile(file);
+  });
+}
+
 if (fs.existsSync(distDir)) {
-  app.use(express.static(distDir));
+  app.use(
+    express.static(distDir, {
+      setHeaders(res, filePath) {
+        if (filePath.endsWith(".xml")) {
+          res.setHeader("Content-Type", "application/xml; charset=utf-8");
+        }
+      },
+    })
+  );
   app.use((req, res, next) => {
-    if (req.method !== "GET" || req.path.startsWith("/api/")) return next();
+    if (req.method !== "GET" && req.method !== "HEAD") return next();
+    if (req.path.startsWith("/api/")) return next();
+    if (path.extname(req.path)) return next();
     res.sendFile(path.join(distDir, "index.html"));
   });
 }
