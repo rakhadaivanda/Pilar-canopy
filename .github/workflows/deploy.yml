@@ -22,7 +22,8 @@ jobs:
             # 1. Masuk ke direktori project di VPS
             cd /var/www/dashboard-canopy
 
-            # 2. Ambil update kode terbaru dari GitHub
+            # 2. Reset lokal perubahan yang tidak sengaja ter-modify & ambil update terbaru
+            git reset --hard origin/main
             git pull origin main
 
             # 3. Install dependencies untuk Backend (folder server)
