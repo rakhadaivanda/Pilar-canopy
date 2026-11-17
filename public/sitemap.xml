@@ -1,23 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
-  <!-- Halaman Utama Pilar Canopy Perkasa -->
+  <!-- Situs satu halaman: semua section (#portofolio, #katalog) berada di URL beranda. -->
+  <!-- Google mengabaikan fragment (#), jadi semua gambar didaftarkan di bawah satu URL ini. -->
   <url>
     <loc>https://canopy.rezekibarokahjaya.net/</loc>
+    <lastmod>2026-11-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <!-- Logo -->
     <image:image>
       <image:loc>https://canopy.rezekibarokahjaya.net/logo.png</image:loc>
       <image:title>Logo Resmi Pilar Canopy Perkasa PT Rezeki Barokah Jaya</image:title>
       <image:caption>Spesialis Canopy Membrane Struktur Rangka Baja dan Tenda Glamping Indonesia</image:caption>
     </image:image>
-  </url>
-
-  <!-- Bagian Portofolio & Pengalaman Proyek -->
-  <url>
-    <loc>https://canopy.rezekibarokahjaya.net/#portofolio</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <!-- Portofolio & Pengalaman Proyek -->
     <image:image>
       <image:loc>https://canopy.rezekibarokahjaya.net/images/portofolio/kanopi-membrane-lapang-serbaguna-fisip-unpad-bandung-1.jpg</image:loc>
       <image:title>Lapang Serbaguna FISIP Universitas Padjadjaran - Foto 1</image:title>
@@ -153,13 +150,7 @@
       <image:title>Canopy Membrane Carport Rumah Mewah dan Cafe Aesthetic - Foto 2</image:title>
       <image:caption>Pemasangan kanopi carport membrane hunian mewah dan outdoor cafe modern di Jabodetabek dan Jawa Barat (Foto 2)</image:caption>
     </image:image>
-  </url>
-
-  <!-- Bagian Katalog Produk Kanopi Membrane & Glamping -->
-  <url>
-    <loc>https://canopy.rezekibarokahjaya.net/#katalog</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <!-- Katalog Produk -->
     <image:image>
       <image:loc>https://canopy.rezekibarokahjaya.net/images/katalog/kanopi-membrane-tensile/kanopi-membrane-tensile-1.png</image:loc>
       <image:title>Katalog 01 - Tension Membrane Structure - Variasi 1</image:title>
