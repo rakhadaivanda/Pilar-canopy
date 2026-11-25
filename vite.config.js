@@ -1,6 +1,6 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
-import { copyFileSync, existsSync, mkdirSync } from 'node:fs'
+import { copyFileSync, existsSync, mkdirSync, createReadStream } from 'node:fs'
 import { dirname, resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
@@ -28,8 +28,39 @@ function copyPublicMetaFiles() {
   }
 }
 
+// Middleware agar request /images/katalog/<slug>/... otomatis membaca dari src/assets/images/projects/katalog/ jika belum ada di public
+function serveCatalogAssetsFallback() {
+  return {
+    name: 'serve-catalog-assets-fallback',
+    configureServer(server) {
+      server.middlewares.use((req, res, next) => {
+        if (req.url && req.url.startsWith('/images/katalog/')) {
+          const subPath = req.url.replace(/^\/images\/katalog\//, '').split('?')[0];
+          const assetCandidate = resolve(rootDir, 'src/assets/images/projects/katalog', subPath);
+          if (existsSync(assetCandidate)) {
+            const ext = assetCandidate.split('.').pop()?.toLowerCase();
+            const mimeTypes = {
+              png: 'image/png',
+              jpg: 'image/jpeg',
+              jpeg: 'image/jpeg',
+              webp: 'image/webp',
+              svg: 'image/svg+xml',
+            };
+            if (mimeTypes[ext]) {
+              res.setHeader('Content-Type', mimeTypes[ext]);
+            }
+            createReadStream(assetCandidate).pipe(res);
+            return;
+          }
+        }
+        next();
+      });
+    },
+  };
+}
+
 export default defineConfig({
-  plugins: [react(), copyPublicMetaFiles()],
+  plugins: [react(), copyPublicMetaFiles(), serveCatalogAssetsFallback()],
   publicDir: 'public',
   build: {
     copyPublicDir: true,
