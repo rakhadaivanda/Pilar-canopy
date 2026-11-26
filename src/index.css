@@ -94,15 +94,6 @@ html.lenis body {
   overflow: hidden;
 }
 
-/* Custom cursor */
-html.has-cursor,
-html.has-cursor a,
-html.has-cursor button,
-html.has-cursor label,
-html.has-cursor select {
-  cursor: none;
-}
-
 /* Hero line */
 .hero-line {
   padding-bottom: 0.16em;

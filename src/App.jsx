@@ -9,7 +9,6 @@ import CatalogSection from "./components/sections/catalog/CatalogSection";
 import ClosingCtaSection from "./components/sections/cta/ClosingCtaSection";
 import ContactSection from "./components/sections/contact/ContactSection";
 import Preloader from "./motion/Preloader";
-import Cursor from "./motion/Cursor";
 import ScrollProgress from "./motion/ScrollProgress";
 import useMotion from "./motion/useMotion";
 
@@ -32,7 +31,6 @@ export default function App() {
   return (
     <>
       <Preloader />
-      <Cursor />
       <ScrollProgress />
       {/* 1. Navbar */}
       <Navbar />
