@@ -33,9 +33,9 @@ const catalogImages = (slug, count) => {
 
 export const CATALOG_HEADER = {
   eyebrow: "Katalog Resmi 2025–2026",
-  heading: "Katalog Kanopi Membrane, Glamping Dome & Awning Modern",
+  heading: "Berbagai Pilihan Canopy untuk Kebutuhan Anda",
   description:
-    "Jelajahi koleksi kanopi membrane, carport, tenda glamping dome, dan awning gulung retractable Pilar Canopy. Pilih varian warna yang diinginkan dan tekan Tanya Harga untuk estimasi biaya serta konsultasi teknis.",
+    "Jelajahi canopy membrane, canopy carport, dan canopy outdoor untuk hunian, bisnis, serta area komersial. Pilih varian warna yang diinginkan dan tekan Tanya Harga untuk estimasi biaya serta konsultasi teknis.",
 };
 
 export const DEFAULT_CATALOG_COLORS = [
@@ -100,7 +100,7 @@ export const CATALOG_ITEMS = [
     id: "katalog-kanopi-kain",
     name: "Kanopi Kain",
     category: "Awning",
-    alt: "Kanopi awning model tombak klasik penutup jendela exterior Pilar Canopy",
+    alt: "Kanopi kain peneduh teras dan jendela Pilar Canopy",
     priceAmount: "600.000",
     priceUnit: "/m",
     specs: {

@@ -63,7 +63,9 @@ export default function Hero() {
             data-hero-title
             className="font-display-hero text-[clamp(2.75rem,9vw,5.375rem)] sm:text-6xl md:text-7xl lg:text-[76px] xl:text-[86px] leading-[1.04] tracking-tight font-extrabold text-primary"
           >
-            Innovate. <span className="font-normal italic text-secondary font-serif">Build.</span> Solve.
+            Canopy Berkualitas dengan{" "}
+            <span className="font-normal italic text-secondary font-serif">Harga Terjangkau</span>{" "}
+            untuk Berbagai Kebutuhan
           </h1>
         </div>
 

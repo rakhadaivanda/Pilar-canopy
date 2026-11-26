@@ -7,9 +7,9 @@ export const HERO = {
   videoUrl:
     "https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260820_010308_b1636845-4c15-4ab6-b0c9-9a29bfb0c6e3.mp4",
   badge: "",
-  headline: "Innovate. Build. Solve.",
+  headline: "Canopy Berkualitas dengan Harga Terjangkau untuk Berbagai Kebutuhan",
   subjudul:
-    "Solusi canopy membrane modern, kokoh, dan berkualitas, dari konsep, desain, fabrikasi, hingga instalasi di lapangan.",
+    "Temukan pilihan canopy membrane, canopy carport, dan canopy outdoor dengan desain modern untuk hunian, bisnis, serta area komersial.",
   primaryBtn: {
     label: "Konsultasikan Kebutuhan Anda",
     href: buildWhatsAppUrl("Halo Pilar Canopy, saya ingin konsultasikan kebutuhan canopy membrane untuk proyek saya. Bisa minta info estimasi & jadwal survei ya?"),

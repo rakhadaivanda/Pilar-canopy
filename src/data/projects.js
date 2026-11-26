@@ -51,9 +51,9 @@ const portfolioImages = {
 
 export const PROJECTS_HEADER = {
   eyebrow: "Portofolio & Pengalaman Proyek",
-  heading: "Karya Struktur & Pengalaman Proyek",
+  heading: "Portofolio Canopy Membrane, Carport, dan Area Outdoor",
   description:
-    "Dokumentasi proyek pengerjaan canopy membrane, fasilitas publik, komersial, dan glamping oleh tim engineering Pilar Canopy Perkasa. Klik kartu untuk melihat foto resolusi tinggi, spesifikasi teknis, keunggulan, dan lingkup pekerjaan.",
+    "Dokumentasi proyek canopy membrane, canopy carport, tenda glamping, dan sistem retractable untuk fasilitas publik, area komersial, serta hunian oleh tim Pilar Canopy Perkasa. Klik kartu untuk melihat foto resolusi tinggi, spesifikasi teknis, keunggulan, dan lingkup pekerjaan.",
 };
 
 export const PROJECT_CATEGORIES = [
