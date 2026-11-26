@@ -3,6 +3,7 @@ import { createPortal } from "react-dom";
 import SectionEyebrow from "../../ui/SectionEyebrow";
 import Icon from "../../ui/Icon";
 import { CATALOG_HEADER, CATALOG_ITEMS } from "../../../data/catalog";
+import { fetchCmsContent } from "../../../lib/cmsClient";
 import { buildWhatsAppUrl } from "../../../lib/whatsapp";
 import catalogBg from "../../../assets/images/materials/background(4).png";
 import ImageLightbox from "../../ui/ImageLightbox";
@@ -482,21 +483,59 @@ function CatalogModal({ item, onClose }) {
 
 /* ─── CatalogSection ──────────────────────────────────────────────────────── */
 export default function CatalogSection() {
+  const [catalogItems, setCatalogItems] = useState(CATALOG_ITEMS);
+  const [catalogHeader, setCatalogHeader] = useState(CATALOG_HEADER);
   const [selectedItem, setSelectedItem] = useState(null);
   const [activeCategory, setActiveCategory] = useState("all");
 
+  useEffect(() => {
+    let cancelled = false;
+    fetchCmsContent()
+      .then((data) => {
+        if (cancelled) return;
+        if (Array.isArray(data?.catalog) && data.catalog.length > 0) {
+          setCatalogItems(data.catalog);
+        }
+        if (data?.settings?.catalogHeader) {
+          setCatalogHeader(data.settings.catalogHeader);
+        }
+      })
+      .catch(() => {
+        // Fallback ke data statis jika backend belum jalan
+      });
+
+    const handleCmsUpdate = (e) => {
+      const data = e.detail;
+      if (Array.isArray(data?.catalog)) setCatalogItems(data.catalog);
+      if (data?.settings?.catalogHeader) setCatalogHeader(data.settings.catalogHeader);
+    };
+    window.addEventListener("cms-updated", handleCmsUpdate);
+    return () => {
+      cancelled = true;
+      window.removeEventListener("cms-updated", handleCmsUpdate);
+    };
+  }, []);
+
+  const categories = useMemo(() => {
+    const set = new Set(CATALOG_CATEGORIES);
+    catalogItems.forEach((item) => {
+      if (item.category) set.add(item.category);
+    });
+    return Array.from(set);
+  }, [catalogItems]);
+
   const categoryCounts = useMemo(() => {
-    const counts = { all: CATALOG_ITEMS.length };
-    CATALOG_ITEMS.forEach((item) => {
+    const counts = { all: catalogItems.length };
+    catalogItems.forEach((item) => {
       counts[item.category] = (counts[item.category] || 0) + 1;
     });
     return counts;
-  }, []);
+  }, [catalogItems]);
 
   const filteredItems = useMemo(() => {
-    if (activeCategory === "all") return CATALOG_ITEMS;
-    return CATALOG_ITEMS.filter((item) => item.category === activeCategory);
-  }, [activeCategory]);
+    if (activeCategory === "all") return catalogItems;
+    return catalogItems.filter((item) => item.category === activeCategory);
+  }, [activeCategory, catalogItems]);
 
   return (
     <>
@@ -522,21 +561,21 @@ export default function CatalogSection() {
         <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-12">
           {/* Header */}
           <div data-reveal-group className="max-w-3xl mb-14">
-            <SectionEyebrow className="mb-3">{CATALOG_HEADER.eyebrow}</SectionEyebrow>
+            <SectionEyebrow className="mb-3">{catalogHeader.eyebrow}</SectionEyebrow>
             <h2
               id="katalog-heading"
               className="font-headline-lg text-2xl sm:text-3xl lg:text-4xl text-primary font-bold tracking-tight"
             >
-              {CATALOG_HEADER.heading}
+              {catalogHeader.heading}
             </h2>
             <p className="font-body-md text-base text-on-surface-variant mt-2 leading-relaxed">
-              {CATALOG_HEADER.description}
+              {catalogHeader.description}
             </p>
           </div>
 
           {/* Filter Kategori */}
           <div className="flex items-center gap-2 overflow-x-auto no-scrollbar pb-3 mb-8 border-b border-outline-variant/30">
-            {[{ id: "all", label: "Semua" }, ...CATALOG_CATEGORIES.map((c) => ({ id: c, label: c }))].map(
+            {[{ id: "all", label: "Semua" }, ...categories.map((c) => ({ id: c, label: c }))].map(
               (cat) => {
                 const count = categoryCounts[cat.id] || 0;
                 const isActive = activeCategory === cat.id;

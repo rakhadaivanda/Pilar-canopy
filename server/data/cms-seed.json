@@ -1,0 +1,2624 @@
+{
+  "settings": {
+    "catalogHeader": {
+      "eyebrow": "Katalog Resmi 2025–2026",
+      "heading": "Katalog Kanopi Membrane, Glamping Dome & Awning Modern",
+      "description": "Jelajahi koleksi kanopi membrane, carport, tenda glamping dome, dan awning gulung retractable Pilar Canopy. Pilih varian warna yang diinginkan dan tekan Tanya Harga untuk estimasi biaya serta konsultasi teknis."
+    },
+    "projectsHeader": {
+      "eyebrow": "Portofolio & Pengalaman Proyek",
+      "heading": "Karya Struktur & Pengalaman Proyek",
+      "description": "Dokumentasi proyek pengerjaan canopy membrane, fasilitas publik, komersial, dan glamping oleh tim engineering Pilar Canopy Perkasa. Klik kartu untuk melihat foto resolusi tinggi, spesifikasi teknis, keunggulan, dan lingkup pekerjaan."
+    }
+  },
+  "defaultColors": [
+    {
+      "id": "darkgreen",
+      "name": "Dark Green",
+      "hex": "#043205",
+      "label": "Dark Green"
+    },
+    {
+      "id": "warmpeach",
+      "name": "Warm Peach",
+      "hex": "#ffc877",
+      "label": "Warm Peach"
+    },
+    {
+      "id": "white",
+      "name": "Bright White",
+      "hex": "#ffffff",
+      "border": true,
+      "label": "Bright White"
+    },
+    {
+      "id": "royalblue",
+      "name": "Royal Blue",
+      "hex": "#0d00ff",
+      "label": "Royal Blue"
+    },
+    {
+      "id": "khaki",
+      "name": "Khaki Brown",
+      "hex": "#95815c",
+      "label": "Khaki Brown"
+    },
+    {
+      "id": "maroon",
+      "name": "Maroon Red",
+      "hex": "#7c1a22",
+      "label": "Maroon Red"
+    }
+  ],
+  "projectCategories": [
+    {
+      "id": "all",
+      "label": "Semua Proyek"
+    },
+    {
+      "id": "membrane",
+      "label": "Tensile Membrane"
+    },
+    {
+      "id": "glamping",
+      "label": "Tenda Glamping"
+    },
+    {
+      "id": "retractable",
+      "label": "Retractable System"
+    }
+  ],
+  "catalog": [
+    {
+      "id": "katalog-awning-gulung",
+      "name": "AWNING GULUNG",
+      "category": "Awning",
+      "alt": "Awning gulung lipat kanopi outdoor teras Pilar Canopy",
+      "priceAmount": "1.200.000",
+      "priceUnit": "/m",
+      "specs": {
+        "rangka": "Besi Galvanis , Aluminium Alloys",
+        "dimension": "P 1m x L 1m (Lebar Max 3M)",
+        "kain": "Sunbrela/ RACASSEN / Dikcson / Paratampotes"
+      },
+      "colors": [
+        {
+          "id": "darkgreen",
+          "name": "Dark Green",
+          "hex": "#043205",
+          "label": "Dark Green"
+        },
+        {
+          "id": "warmpeach",
+          "name": "Warm Peach",
+          "hex": "#ffc877",
+          "label": "Warm Peach"
+        },
+        {
+          "id": "white",
+          "name": "Bright White",
+          "hex": "#ffffff",
+          "border": true,
+          "label": "Bright White"
+        },
+        {
+          "id": "royalblue",
+          "name": "Royal Blue",
+          "hex": "#0d00ff",
+          "label": "Royal Blue"
+        },
+        {
+          "id": "khaki",
+          "name": "Khaki Brown",
+          "hex": "#95815c",
+          "label": "Khaki Brown"
+        },
+        {
+          "id": "maroon",
+          "name": "Maroon Red",
+          "hex": "#7c1a22",
+          "label": "Maroon Red"
+        }
+      ],
+      "images": [
+        "/images/katalog/awning-gulung/awning-gulung-1.png"
+      ],
+      "desc": "Awning lipat gulung modern penahan sinar matahari & tempias air hujan dengan sistem manual / motorized untuk teras, kafe, dan balkon."
+    },
+    {
+      "id": "katalog-classic-vase",
+      "name": "CLASSIC VASE",
+      "category": "Awning",
+      "alt": "Kanopi awning klasik lengkung penutup jendela exterior Pilar Canopy",
+      "priceAmount": "600.000",
+      "priceUnit": "/m",
+      "specs": {
+        "rangka": "Besi Galvanis",
+        "dimension": "P 1m x L 1m",
+        "kain": "Sunbrela / RACASSEN / Dickson / Paratampotes"
+      },
+      "colors": [
+        {
+          "id": "darkgreen",
+          "name": "Dark Green",
+          "hex": "#043205",
+          "label": "Dark Green"
+        },
+        {
+          "id": "warmpeach",
+          "name": "Warm Peach",
+          "hex": "#ffc877",
+          "label": "Warm Peach"
+        },
+        {
+          "id": "white",
+          "name": "Bright White",
+          "hex": "#ffffff",
+          "border": true,
+          "label": "Bright White"
+        },
+        {
+          "id": "royalblue",
+          "name": "Royal Blue",
+          "hex": "#0d00ff",
+          "label": "Royal Blue"
+        },
+        {
+          "id": "khaki",
+          "name": "Khaki Brown",
+          "hex": "#95815c",
+          "label": "Khaki Brown"
+        },
+        {
+          "id": "maroon",
+          "name": "Maroon Red",
+          "hex": "#7c1a22",
+          "label": "Maroon Red"
+        }
+      ],
+      "images": [
+        "/images/katalog/classic-vase-revisi/classic-vase-revisi-1.png"
+      ],
+      "desc": "Kanopi awning model klasik lengkung elegan untuk mempercantik eksterior jendela dan pintu bangunan bergaya eropa atau minimalis."
+    },
+    {
+      "id": "katalog-awning-tombak",
+      "name": "AWNING TOMBAK",
+      "category": "Awning",
+      "alt": "Kanopi awning model tombak klasik penutup jendela exterior Pilar Canopy",
+      "priceAmount": "600.000",
+      "priceUnit": "/m",
+      "specs": {
+        "rangka": "Besi Galvanis",
+        "dimension": "P 1m x L 1m",
+        "kain": "Sunbrela / RACASSEN / Dickson / Paratampotes"
+      },
+      "colors": [
+        {
+          "id": "darkgreen",
+          "name": "Dark Green",
+          "hex": "#043205",
+          "label": "Dark Green"
+        },
+        {
+          "id": "warmpeach",
+          "name": "Warm Peach",
+          "hex": "#ffc877",
+          "label": "Warm Peach"
+        },
+        {
+          "id": "white",
+          "name": "Bright White",
+          "hex": "#ffffff",
+          "border": true,
+          "label": "Bright White"
+        },
+        {
+          "id": "royalblue",
+          "name": "Royal Blue",
+          "hex": "#0d00ff",
+          "label": "Royal Blue"
+        },
+        {
+          "id": "khaki",
+          "name": "Khaki Brown",
+          "hex": "#95815c",
+          "label": "Khaki Brown"
+        },
+        {
+          "id": "maroon",
+          "name": "Maroon Red",
+          "hex": "#7c1a22",
+          "label": "Maroon Red"
+        }
+      ],
+      "images": [
+        "/images/katalog/awning-tombak/awning-tombak-1.png"
+      ],
+      "desc": "Kanopi awning model tombak klasik elegan untuk mempercantik eksterior jendela dan pintu bangunan bergaya eropa atau minimalis."
+    },
+    {
+      "id": "katalog-kanopi-kain",
+      "name": "Kanopi Kain",
+      "category": "Awning",
+      "alt": "Kanopi awning model tombak klasik penutup jendela exterior Pilar Canopy",
+      "priceAmount": "600.000",
+      "priceUnit": "/m",
+      "specs": {
+        "rangka": "Besi Galvanis",
+        "dimension": "P 1m x L 1m",
+        "kain": "Sunbrela / RACASSEN / Dickson / Paratampotes"
+      },
+      "colors": [
+        {
+          "id": "darkgreen",
+          "name": "Dark Green",
+          "hex": "#043205",
+          "label": "Dark Green"
+        },
+        {
+          "id": "warmpeach",
+          "name": "Warm Peach",
+          "hex": "#ffc877",
+          "label": "Warm Peach"
+        },
+        {
+          "id": "white",
+          "name": "Bright White",
+          "hex": "#ffffff",
+          "border": true,
+          "label": "Bright White"
+        },
+        {
+          "id": "royalblue",
+          "name": "Royal Blue",
+          "hex": "#0d00ff",
+          "label": "Royal Blue"
+        },
+        {
+          "id": "khaki",
+          "name": "Khaki Brown",
+          "hex": "#95815c",
+          "label": "Khaki Brown"
+        },
+        {
+          "id": "maroon",
+          "name": "Maroon Red",
+          "hex": "#7c1a22",
+          "label": "Maroon Red"
+        }
+      ],
+      "images": [
+        "/images/katalog/kanopi-kain/kanopi-kain-1.png",
+        "/images/katalog/kanopi-kain/kanopi-kain-2.png",
+        "/images/katalog/kanopi-kain/kanopi-kain-3.png"
+      ],
+      "desc": "Kanopi awning model tombak klasik elegan untuk mempercantik eksterior jendela dan pintu bangunan bergaya eropa atau minimalis."
+    },
+    {
+      "id": "double-wing",
+      "name": "Canopy Membrane Double Wing Pavilion",
+      "category": "Kanopi",
+      "alt": "Canopy Membrane Double Wing Pavilion model gazebo lengkung outdoor Pilar Canopy",
+      "priceAmount": "550.000",
+      "priceUnit": "/m",
+      "specs": {
+        "rangka": "Besi Hitam / Galvanis Tebal 2,8 mm",
+        "atap": "Membrane 650 gsm",
+        "finishing": "Cat Dasar + Cat Duco",
+        "volume": "32 m",
+        "dimension": "Tinggi 3m L 7 m x P 4 m"
+      },
+      "colors": [
+        {
+          "id": "darkgreen",
+          "name": "Dark Green",
+          "hex": "#043205",
+          "label": "Dark Green"
+        },
+        {
+          "id": "warmpeach",
+          "name": "Warm Peach",
+          "hex": "#ffc877",
+          "label": "Warm Peach"
+        },
+        {
+          "id": "white",
+          "name": "Bright White",
+          "hex": "#ffffff",
+          "border": true,
+          "label": "Bright White"
+        },
+        {
+          "id": "royalblue",
+          "name": "Royal Blue",
+          "hex": "#0d00ff",
+          "label": "Royal Blue"
+        },
+        {
+          "id": "khaki",
+          "name": "Khaki Brown",
+          "hex": "#95815c",
+          "label": "Khaki Brown"
+        },
+        {
+          "id": "maroon",
+          "name": "Maroon Red",
+          "hex": "#7c1a22",
+          "label": "Maroon Red"
+        }
+      ],
+      "images": [
+        "/images/katalog/double-wing/double-wing-1.png"
+      ],
+      "desc": "Canopy Membrane Double Wing Pavilion dengan desain estetis dan elegan, tahan segala cuaca, mudah dibersihkan, serta tahan lama 10–20 tahun untuk area outdoor dan taman."
+    },
+    {
+      "id": "glamping-dome",
+      "name": "Glamping Dome",
+      "category": "Glamping",
+      "alt": "Tenda Glamping Dome struktur membrane lengkung modern Pilar Canopy",
+      "priceAmount": "45.500.000",
+      "priceUnit": "",
+      "specs": {
+        "rangka": "Besi Hitam Galvanis Tebal 2,8 mm",
+        "atap": "Membrane 650 gsm",
+        "kusen": "Aluminium",
+        "volume": "70 m",
+        "dimension": "Tinggi 3m L 4 m x P 6 m"
+      },
+      "colors": [
+        {
+          "name": "Hijau Tua",
+          "hex": "#004d00"
+        },
+        {
+          "name": "Krem",
+          "hex": "#ffcc80"
+        },
+        {
+          "name": "Merah",
+          "hex": "#ff0000"
+        },
+        {
+          "name": "Biru",
+          "hex": "#0000ff"
+        },
+        {
+          "name": "Coklat Tua",
+          "hex": "#594a33"
+        }
+      ],
+      "images": [
+        "/images/katalog/glamping-dome/glamping%20dome.png"
+      ],
+      "desc": "Glamping Dome modern dengan rangka besi hitam galvanis kokoh, atap membrane 650 gsm tahan cuaca, dan kusen aluminium untuk kebutuhan penginapan glamping maupun resort outdoor."
+    },
+    {
+      "id": "glamping-membrane-safari",
+      "name": "Glamping Membrane Safari",
+      "category": "Glamping",
+      "alt": "Tenda Glamping Membrane Safari dengan struktur rangka kokoh Pilar Canopy",
+      "priceAmount": "93.500.000",
+      "priceUnit": "",
+      "specs": {
+        "rangka": "Besi Hitam Galvanis Tebal 2,8 mm",
+        "atap": "Membrane 650 gsm",
+        "kusen": "Aluminium",
+        "volume": "144 m",
+        "dimension": "Tinggi 3m L 7 m x P 9 m"
+      },
+      "colors": [
+        {
+          "name": "Hijau Tua",
+          "hex": "#004d00"
+        },
+        {
+          "name": "Krem",
+          "hex": "#ffcc80"
+        },
+        {
+          "name": "Putih",
+          "hex": "#ffffff"
+        },
+        {
+          "name": "Biru",
+          "hex": "#0000ff"
+        },
+        {
+          "name": "Coklat Tua",
+          "hex": "#8c7853"
+        }
+      ],
+      "images": [
+        "/images/katalog/glamping-membrane-safari/glamping-membrane-safari.png"
+      ],
+      "desc": "Glamping Membrane Safari eksklusif dengan rangka besi hitam galvanis tebal, atap membrane 650 gsm tahan cuaca, serta dimensi luas yang ideal untuk resor dan penginapan alam terbuka."
+    },
+    {
+      "id": "glamping-doble-dome",
+      "name": "Glamping Doble Dome",
+      "category": "Glamping",
+      "alt": "Tenda Glamping Doble Dome dengan struktur rangka kokoh Pilar Canopy",
+      "priceAmount": "63.700.000",
+      "priceUnit": "",
+      "specs": {
+        "rangka": "Besi Hitam Galvanis Tebal 2,8 mm",
+        "atap": "Membrane 650 gsm",
+        "kusen": "Aluminium",
+        "volume": "98 m",
+        "dimension": "Tinggi 3m L 4 m x P 6 m"
+      },
+      "colors": [
+        {
+          "name": "Pink Muda",
+          "hex": "#fcdcd2"
+        },
+        {
+          "name": "Coklat Abu",
+          "hex": "#8c7853"
+        },
+        {
+          "name": "Krem",
+          "hex": "#e5dcce"
+        },
+        {
+          "name": "Coklat Tua",
+          "hex": "#4a4033"
+        }
+      ],
+      "images": [
+        "/images/katalog/glamping-doble-dome/glamping-doble-dome-1.png"
+      ],
+      "desc": "Glamping Doble Dome berkualitas tinggi dengan rangka besi hitam galvanis tebal, atap membrane 650 gsm tahan cuaca, serta dimensi yang luas untuk area resort dan penginapan alam."
+    },
+    {
+      "id": "glamping-membran-cabin-wrap",
+      "name": "Glamping Membran Cabin Wrap",
+      "category": "Glamping",
+      "alt": "Tenda Glamping Membran Cabin Wrap dengan struktur rangka kokoh Pilar Canopy",
+      "priceAmount": "48.750.000",
+      "priceUnit": "",
+      "specs": {
+        "rangka": "Besi Hitam Galvanis Tebal 2,8 mm",
+        "atap": "Membrane 650 gsm",
+        "kusen": "Aluminium",
+        "volume": "75 m",
+        "dimension": "Tinggi 3m L 4 m x 6 m"
+      },
+      "colors": [
+        {
+          "name": "Pink Muda",
+          "hex": "#fcdcd2"
+        },
+        {
+          "name": "Coklat Abu",
+          "hex": "#8c7853"
+        },
+        {
+          "name": "Krem",
+          "hex": "#dcd6c6"
+        },
+        {
+          "name": "Coklat Tua",
+          "hex": "#4a4033"
+        }
+      ],
+      "images": [
+        "/images/katalog/glamping-membran-cabin-wrap/Screenshot%202026-11-12%20at%2013.42.20.png"
+      ],
+      "desc": "Glamping Membran Cabin Wrap dengan rangka besi hitam galvanis tebal dan atap membrane 650 gsm yang kokoh, ideal untuk penginapan kabin bergaya modern di alam terbuka."
+    },
+    {
+      "id": "geodesic-hybrid-shell",
+      "name": "Geodesic Hybrid Shell",
+      "category": "Glamping",
+      "alt": "Struktur Geodesic Hybrid Shell dengan desain modern dan kokoh Pilar Canopy",
+      "priceAmount": "650.000",
+      "priceUnit": "/m",
+      "specs": {
+        "rangka": "Besi Hitam Galvanis Tebal 2,8 mm",
+        "atap": "Membrane 650 gsm",
+        "kusen": "Aluminium",
+        "volume": "-",
+        "dimension": "Custom"
+      },
+      "colors": [
+        {
+          "name": "Hijau Tua",
+          "hex": "#004d00"
+        },
+        {
+          "name": "Krem",
+          "hex": "#ffcc80"
+        },
+        {
+          "name": "Putih",
+          "hex": "#ffffff"
+        },
+        {
+          "name": "Biru",
+          "hex": "#0000ff"
+        },
+        {
+          "name": "Coklat Tua",
+          "hex": "#8c7853"
+        }
+      ],
+      "images": [
+        "/images/katalog/geodesic-hybrid-shell/geodesic-hybrid-shell-1.png"
+      ],
+      "desc": "Geodesic Hybrid Shell dengan rangka besi hitam galvanis tebal dan atap membrane 650 gsm, menghadirkan desain struktur hibrida modern yang elegan dan berukuran custom."
+    },
+    {
+      "id": "glamping-barrel-arch-cabin",
+      "name": "Glamping Barrel Arch Cabin",
+      "category": "Glamping",
+      "alt": "Tenda Glamping Barrel Arch Cabin dengan struktur rangka kokoh Pilar Canopy",
+      "priceAmount": "69.000.000",
+      "priceUnit": "",
+      "specs": {
+        "rangka": "Besi Hitam Galvanis Tebal 2,8 mm",
+        "atap": "Membrane 650 gsm",
+        "kusen": "Aluminium",
+        "dimension": "107 m",
+        "luasArea": "L 4m x P 6m x Tinggi 4 m"
+      },
+      "colors": [
+        {
+          "name": "Hijau Tua",
+          "hex": "#004d00"
+        },
+        {
+          "name": "Krem",
+          "hex": "#ffcc80"
+        },
+        {
+          "name": "Putih",
+          "hex": "#ffffff"
+        },
+        {
+          "name": "Biru",
+          "hex": "#0000ff"
+        },
+        {
+          "name": "Coklat Tua",
+          "hex": "#8c7853"
+        }
+      ],
+      "images": [
+        "/images/katalog/glamping-barrel-arch-cabin/glamping-barrel-arch-cabin.png"
+      ],
+      "desc": "Glamping Barrel Arch Cabin eksklusif dengan rangka besi hitam galvanis tebal dan atap membrane 650 gsm, dirancang kokoh dan elegan untuk resort atau penginapan alam."
+    },
+    {
+      "id": "umbrella-canopy-custom",
+      "name": "Umbrella Canopy Custom",
+      "category": "Kanopi",
+      "alt": "Umbrella Canopy Custom dengan struktur kokoh dan desain elegan Pilar Canopy",
+      "priceAmount": "6.000.000",
+      "priceUnit": "/Unit Custom",
+      "specs": {
+        "keunggulan": "Garansi, Strong Structure, Precision, On-Time, After Sales",
+        "layananGratis": "Konsultasi, Design, Survey"
+      },
+      "colors": [
+        {
+          "id": "darkgreen",
+          "name": "Dark Green",
+          "hex": "#043205",
+          "label": "Dark Green"
+        },
+        {
+          "id": "warmpeach",
+          "name": "Warm Peach",
+          "hex": "#ffc877",
+          "label": "Warm Peach"
+        },
+        {
+          "id": "white",
+          "name": "Bright White",
+          "hex": "#ffffff",
+          "border": true,
+          "label": "Bright White"
+        },
+        {
+          "id": "royalblue",
+          "name": "Royal Blue",
+          "hex": "#0d00ff",
+          "label": "Royal Blue"
+        },
+        {
+          "id": "khaki",
+          "name": "Khaki Brown",
+          "hex": "#95815c",
+          "label": "Khaki Brown"
+        },
+        {
+          "id": "maroon",
+          "name": "Maroon Red",
+          "hex": "#7c1a22",
+          "label": "Maroon Red"
+        }
+      ],
+      "images": [
+        "/images/katalog/umbrella-canopy-custom/umbrella-canopy-custom-1.png",
+        "/images/katalog/umbrella-canopy-custom/umbrella-canopy-custom-2.png",
+        "/images/katalog/umbrella-canopy-custom/umbrella-canopy-custom-3.png"
+      ],
+      "desc": "Umbrella Canopy Custom berkualitas tinggi dengan struktur yang kuat, presisi, serta layanan gratis konsultasi, desain, dan survei untuk area outdoor Anda."
+    },
+    {
+      "id": "walkway-arch-tunnel",
+      "name": "Walkway Arch Tunnel",
+      "category": "Kanopi",
+      "alt": "Walkway Arch Tunnel struktur terowongan kanopi membrane lengkung Pilar Canopy",
+      "priceAmount": "17.500.000",
+      "priceUnit": "",
+      "specs": {
+        "rangka": "Besi Hiam / Galvanis Tebal 2,8 mm",
+        "atap": "Membrane 650 gsm",
+        "volume": "27 m",
+        "dimension": "L 4m x P 6m x Tinggi 3,5 m"
+      },
+      "colors": [
+        {
+          "name": "Hijau Tua",
+          "hex": "#004d00"
+        },
+        {
+          "name": "Krem",
+          "hex": "#ffcc80"
+        },
+        {
+          "name": "Putih",
+          "hex": "#ffffff"
+        },
+        {
+          "name": "Biru",
+          "hex": "#0000ff"
+        },
+        {
+          "name": "Coklat Tua",
+          "hex": "#8c7853"
+        }
+      ],
+      "images": [
+        "/images/katalog/walkway-arch-tunnel/Screenshot%202026-11-12%20at%2014.24.12.png"
+      ],
+      "desc": "Walkway Arch Tunnel dengan rangka besi hitam/galvanis tebal dan atap membrane 650 gsm, dirancang khusus untuk jalur pejalan kaki yang elegan dan tahan cuaca."
+    },
+    {
+      "id": "wave-cantilever-carport",
+      "name": "Wave Cantilever Carport",
+      "category": "Carport",
+      "alt": "Wave Cantilever Carport struktur kanopi carport membrane bergelombang Pilar Canopy",
+      "priceAmount": "16.900.000",
+      "priceUnit": "",
+      "specs": {
+        "rangka": "Besi Hiam / Galvanis Tebal 2,8 mm",
+        "atap": "Membrane 650 gsm",
+        "volume": "26 m",
+        "dimension": "P 6m x L 3m Tinggi 3m"
+      },
+      "colors": [
+        {
+          "name": "Hijau Tua",
+          "hex": "#004d00"
+        },
+        {
+          "name": "Krem",
+          "hex": "#ffcc80"
+        },
+        {
+          "name": "Putih",
+          "hex": "#ffffff"
+        },
+        {
+          "name": "Biru",
+          "hex": "#0000ff"
+        },
+        {
+          "name": "Coklat Tua",
+          "hex": "#8c7853"
+        }
+      ],
+      "images": [
+        "/images/katalog/wave-cantilever-carport/wave-cantilever-carport-1.png"
+      ],
+      "desc": "Wave Cantilever Carport dengan rangka besi hitam/galvanis tebal dan atap membrane 650 gsm, menghadirkan desain struktur carport bergelombang yang kokoh, elegan, dan fungsional."
+    },
+    {
+      "id": "curved-arch-carport",
+      "name": "Curved Arch Carport",
+      "category": "Carport",
+      "alt": "Curved Arch Carport struktur kanopi carport lengkung membrane Pilar Canopy",
+      "priceAmount": "13.950.000",
+      "priceUnit": "",
+      "specs": {
+        "rangka": "Besi Hiam / Galvanis Tebal 2,8 mm",
+        "atap": "Membrane 650 gsm",
+        "volume": "21,5 m",
+        "dimension": "P 4m x L 4,5m Tinggi 3,5m"
+      },
+      "colors": [
+        {
+          "name": "Hijau Tua",
+          "hex": "#004d00"
+        },
+        {
+          "name": "Krem",
+          "hex": "#ffcc80"
+        },
+        {
+          "name": "Putih",
+          "hex": "#ffffff"
+        },
+        {
+          "name": "Biru",
+          "hex": "#0000ff"
+        },
+        {
+          "name": "Coklat Tua",
+          "hex": "#8c7853"
+        }
+      ],
+      "images": [
+        "/images/katalog/curved-arch-carport/curved-arch-carport-1.png"
+      ],
+      "desc": "Curved Arch Carport dengan rangka besi hitam/galvanis tebal dan atap membrane 650 gsm, menghadirkan desain struktur carport lengkung yang elegan, kokoh, dan tahan lama."
+    },
+    {
+      "id": "model-double-cantilever-parking",
+      "name": "Model Double Cantilever Parking",
+      "category": "Carport",
+      "alt": "Model Double Cantilever Parking struktur kanopi parkir ganda membrane Pilar Canopy",
+      "priceAmount": "20.150.000",
+      "priceUnit": "",
+      "specs": {
+        "rangka": "Besi Hiam / Galvanis Tebal 2,8 mm",
+        "atap": "Membrane 650 gsm",
+        "volume": "31 m",
+        "dimension": "P 4m x L 7m Tinggi 3,5m"
+      },
+      "colors": [
+        {
+          "name": "Hijau Tua",
+          "hex": "#004d00"
+        },
+        {
+          "name": "Krem",
+          "hex": "#ffcc80"
+        },
+        {
+          "name": "Putih",
+          "hex": "#ffffff"
+        },
+        {
+          "name": "Biru",
+          "hex": "#0000ff"
+        },
+        {
+          "name": "Coklat Tua",
+          "hex": "#8c7853"
+        }
+      ],
+      "images": [
+        "/images/katalog/model-double-cantilever-parking/model-double-cantilever-parking.png"
+      ],
+      "desc": "Model Double Cantilever Parking dengan rangka besi hitam/galvanis tebal dan atap membrane 650 gsm, dirancang kokoh dan luas untuk area parkir kendaraan modern."
+    },
+    {
+      "id": "cantilever-luxury-parking",
+      "name": "Cantilever Luxury Parking",
+      "category": "Carport",
+      "alt": "Cantilever Luxury Parking struktur kanopi parkir mewah beratap membrane Pilar Canopy",
+      "priceAmount": "15.500.000",
+      "priceUnit": "",
+      "specs": {
+        "rangka": "Besi Hiam / Galvanis Tebal 2,8 mm",
+        "atap": "Membrane 650 gsm",
+        "volume": "24 m",
+        "dimension": "P 6m x L 4m Tinggi 3,5m"
+      },
+      "colors": [
+        {
+          "name": "Putih",
+          "hex": "#ffffff"
+        },
+        {
+          "name": "Pink Muda",
+          "hex": "#fcdcd2"
+        },
+        {
+          "name": "Coklat Tua",
+          "hex": "#8c7853"
+        },
+        {
+          "name": "Krem",
+          "hex": "#dcd6c6"
+        },
+        {
+          "name": "Hijau Tua",
+          "hex": "#004d00"
+        }
+      ],
+      "images": [
+        "/images/katalog/cantilever-luxury-parking/cantilever-luxury-parking-1.png"
+      ],
+      "desc": "Cantilever Luxury Parking dengan rangka besi hitam/galvanis tebal dan atap membrane 650 gsm, menghadirkan struktur kanopi parkir mewah yang elegan, kokoh, dan berkelas untuk area komersial maupun hunian."
+    },
+    {
+      "id": "butterfly-luxury-parking",
+      "name": "Butterfly Luxury Parking",
+      "category": "Carport",
+      "alt": "Butterfly Luxury Parking struktur kanopi parkir mewah berbentuk kupu-kupu beratap membrane Pilar Canopy",
+      "priceAmount": "22.000.000",
+      "priceUnit": "",
+      "specs": {
+        "rangka": "Besi Hiam / Galvanis Tebal 2,8 mm",
+        "atap": "Membrane 650 gsm",
+        "volume": "34 m",
+        "dimension": "P 4m x L 8m Tinggi 3,5m"
+      },
+      "colors": [
+        {
+          "name": "Putih",
+          "hex": "#ffffff"
+        },
+        {
+          "name": "Pink Muda",
+          "hex": "#fcdcd2"
+        },
+        {
+          "name": "Coklat Tua",
+          "hex": "#8c7853"
+        },
+        {
+          "name": "Krem",
+          "hex": "#dcd6c6"
+        },
+        {
+          "name": "Hijau Tua",
+          "hex": "#004d00"
+        }
+      ],
+      "images": [
+        "/images/katalog/butterfly-luxury-parking/butterfly-luxury-parking.png"
+      ],
+      "desc": "Butterfly Luxury Parking dengan rangka besi hitam/galvanis tebal dan atap membrane 650 gsm, menghadirkan desain struktur kanopi parkir mewah model kupu-kupu yang megah dan elegan."
+    },
+    {
+      "id": "canopy-membrane-lapangan-serbaguna",
+      "name": "Canopy Membrane Lapangan Serbaguna",
+      "category": "Lapangan",
+      "alt": "Canopy Membrane Lapangan Serbaguna struktur bentang lebar untuk lapangan olahraga Pilar Canopy Perkasa",
+      "priceAmount": "90.750.000",
+      "priceUnit": "",
+      "specs": {
+        "rangka": "Besi Hiam / Galvanis Tebal 2,8 mm",
+        "atap": "Membrane 750 gsm",
+        "volume": "121 m",
+        "dimension": "P 11m x L 10m Tinggi 6m[cite: 16]"
+      },
+      "colors": [
+        {
+          "id": "darkgreen",
+          "name": "Dark Green",
+          "hex": "#043205",
+          "label": "Dark Green"
+        },
+        {
+          "id": "warmpeach",
+          "name": "Warm Peach",
+          "hex": "#ffc877",
+          "label": "Warm Peach"
+        },
+        {
+          "id": "white",
+          "name": "Bright White",
+          "hex": "#ffffff",
+          "border": true,
+          "label": "Bright White"
+        },
+        {
+          "id": "royalblue",
+          "name": "Royal Blue",
+          "hex": "#0d00ff",
+          "label": "Royal Blue"
+        },
+        {
+          "id": "khaki",
+          "name": "Khaki Brown",
+          "hex": "#95815c",
+          "label": "Khaki Brown"
+        },
+        {
+          "id": "maroon",
+          "name": "Maroon Red",
+          "hex": "#7c1a22",
+          "label": "Maroon Red"
+        }
+      ],
+      "images": [
+        "/images/katalog/canopy-membrane-lapangan-serbaguna/Screenshot%202026-11-12%20at%2015.04.59.png"
+      ],
+      "desc": "Canopy Membrane Lapangan Serbaguna dengan rangka besi hitam/galvanis tebal dan atap membrane 750 gsm, dirancang kokoh dengan bentang luas untuk lapangan olahraga dan area serbaguna[cite: 16]."
+    },
+    {
+      "id": "canopy-membrane-pool-shelter",
+      "name": "Canopy Membrane Pool Shelter",
+      "category": "Kanopi",
+      "alt": "Canopy Membrane Pool Shelter struktur penutup kolam renang beratap membrane Pilar Canopy",
+      "priceAmount": "71.500.000",
+      "priceUnit": "",
+      "specs": {
+        "rangka": "Galvanis Tebal 2,8 mm",
+        "atap": "Membrane 650 gsm",
+        "dimension": "10 m x 10 m x T 6 m"
+      },
+      "colors": [
+        {
+          "id": "darkgreen",
+          "name": "Dark Green",
+          "hex": "#043205",
+          "label": "Dark Green"
+        },
+        {
+          "id": "warmpeach",
+          "name": "Warm Peach",
+          "hex": "#ffc877",
+          "label": "Warm Peach"
+        },
+        {
+          "id": "white",
+          "name": "Bright White",
+          "hex": "#ffffff",
+          "border": true,
+          "label": "Bright White"
+        },
+        {
+          "id": "royalblue",
+          "name": "Royal Blue",
+          "hex": "#0d00ff",
+          "label": "Royal Blue"
+        },
+        {
+          "id": "khaki",
+          "name": "Khaki Brown",
+          "hex": "#95815c",
+          "label": "Khaki Brown"
+        },
+        {
+          "id": "maroon",
+          "name": "Maroon Red",
+          "hex": "#7c1a22",
+          "label": "Maroon Red"
+        }
+      ],
+      "images": [
+        "/images/katalog/canopy-membrane-pool-shelter/Screenshot%202026-11-12%20at%2015.11.42.png"
+      ],
+      "desc": "Canopy Membrane Pool Shelter dengan rangka galvanis tebal 2,8 mm dan atap membrane 650 gsm, dirancang kokoh dan luas untuk melindungi area kolam renang outdoor dengan elegan."
+    },
+    {
+      "id": "canopy-membrane-lengkung-single-frame",
+      "name": "Canopy Membrane Lengkung Single Frame",
+      "category": "Kanopi",
+      "alt": "Canopy Membrane Lengkung Single Frame struktur penutup area kolam beratap membrane Pilar Canopy",
+      "priceAmount": "36.200.000",
+      "priceUnit": "",
+      "specs": {
+        "rangka": "Galvanis Tebal 2,8 mm",
+        "atap": "Membrane 650 gsm",
+        "dimension": "6 m x 4 m x 2 unit"
+      },
+      "colors": [
+        {
+          "id": "darkgreen",
+          "name": "Dark Green",
+          "hex": "#043205",
+          "label": "Dark Green"
+        },
+        {
+          "id": "warmpeach",
+          "name": "Warm Peach",
+          "hex": "#ffc877",
+          "label": "Warm Peach"
+        },
+        {
+          "id": "white",
+          "name": "Bright White",
+          "hex": "#ffffff",
+          "border": true,
+          "label": "Bright White"
+        },
+        {
+          "id": "royalblue",
+          "name": "Royal Blue",
+          "hex": "#0d00ff",
+          "label": "Royal Blue"
+        },
+        {
+          "id": "khaki",
+          "name": "Khaki Brown",
+          "hex": "#95815c",
+          "label": "Khaki Brown"
+        },
+        {
+          "id": "maroon",
+          "name": "Maroon Red",
+          "hex": "#7c1a22",
+          "label": "Maroon Red"
+        }
+      ],
+      "images": [
+        "/images/katalog/canopy-membrane-lengkung-single-frame/Screenshot%202026-11-12%20at%2015.16.57.png"
+      ],
+      "desc": "Canopy Membrane Lengkung Single Frame dengan rangka galvanis tebal 2,8 mm dan atap membrane 650 gsm, dirancang kokoh dan elegan untuk perlindungan area outdoor seperti kolam renang[cite: 18]."
+    },
+    {
+      "id": "kanopi-membran-s-curve-luxury",
+      "name": "Kanopi Membran S-Curve Luxury",
+      "category": "Kanopi",
+      "alt": "Kanopi Membran S-Curve Luxury struktur kanopi lengkung mewah beratap membrane Pilar Canopy",
+      "priceAmount": "19.500.000",
+      "priceUnit": "",
+      "specs": {
+        "rangka": "Galvanis Tebal 2,8 mm",
+        "atap": "Membrane 650 gsm",
+        "dimension": "Tinggi 4m L 6 m x 4 m"
+      },
+      "colors": [
+        {
+          "id": "darkgreen",
+          "name": "Dark Green",
+          "hex": "#043205",
+          "label": "Dark Green"
+        },
+        {
+          "id": "warmpeach",
+          "name": "Warm Peach",
+          "hex": "#ffc877",
+          "label": "Warm Peach"
+        },
+        {
+          "id": "white",
+          "name": "Bright White",
+          "hex": "#ffffff",
+          "border": true,
+          "label": "Bright White"
+        },
+        {
+          "id": "royalblue",
+          "name": "Royal Blue",
+          "hex": "#0d00ff",
+          "label": "Royal Blue"
+        },
+        {
+          "id": "khaki",
+          "name": "Khaki Brown",
+          "hex": "#95815c",
+          "label": "Khaki Brown"
+        },
+        {
+          "id": "maroon",
+          "name": "Maroon Red",
+          "hex": "#7c1a22",
+          "label": "Maroon Red"
+        }
+      ],
+      "images": [
+        "/images/katalog/kanopi-membran-s-curve-luxury/kanopi-membran-s-curve-luxury-1.png"
+      ],
+      "desc": "Kanopi Membran S-Curve Luxury dengan rangka galvanis tebal 2,8 mm dan atap membrane 650 gsm, menghadirkan desain struktur kurva mewah yang elegan dan kokoh untuk area outdoor."
+    },
+    {
+      "id": "canopy-membrane-model-barrel-arch",
+      "name": "Canopy Membrane Model Barrel Arch",
+      "category": "Kanopi",
+      "alt": "Canopy Membrane Model Barrel Arch struktur kanopi lengkung terowongan beratap membrane Pilar Canopy",
+      "priceAmount": "18.200.000",
+      "priceUnit": "",
+      "specs": {
+        "rangka": "Galvanis Tebal 2,8 mm",
+        "atap": "Membrane 650 gsm",
+        "dimension": "Tinggi 4m L 6m x P 4m"
+      },
+      "colors": [
+        {
+          "id": "darkgreen",
+          "name": "Dark Green",
+          "hex": "#043205",
+          "label": "Dark Green"
+        },
+        {
+          "id": "warmpeach",
+          "name": "Warm Peach",
+          "hex": "#ffc877",
+          "label": "Warm Peach"
+        },
+        {
+          "id": "white",
+          "name": "Bright White",
+          "hex": "#ffffff",
+          "border": true,
+          "label": "Bright White"
+        },
+        {
+          "id": "royalblue",
+          "name": "Royal Blue",
+          "hex": "#0d00ff",
+          "label": "Royal Blue"
+        },
+        {
+          "id": "khaki",
+          "name": "Khaki Brown",
+          "hex": "#95815c",
+          "label": "Khaki Brown"
+        },
+        {
+          "id": "maroon",
+          "name": "Maroon Red",
+          "hex": "#7c1a22",
+          "label": "Maroon Red"
+        }
+      ],
+      "images": [
+        "/images/katalog/canopy-membrane-model-barrel-arch/canopy-membrane-model-barrel-arch-1.png"
+      ],
+      "desc": "Canopy Membrane Model Barrel Arch dengan rangka galvanis tebal 2,8 mm dan atap membrane 650 gsm, menghadirkan struktur kanopi lengkung model barrel arch yang kokoh, luas, dan elegan untuk area outdoor."
+    },
+    {
+      "id": "double-cantilever-gate",
+      "name": "Double Cantilever Gate",
+      "category": "Gerbang",
+      "alt": "Double Cantilever Gate struktur kanopi gerbang ganda beratap membrane Pilar Canopy",
+      "priceAmount": "35.000.000",
+      "priceUnit": "",
+      "specs": {
+        "rangka": "Galvanis Tebal 2,8 mm",
+        "atap": "Membrane 650 gsm",
+        "volume": "",
+        "dimension": "T 4m L 4m x P 4m (3 unit)"
+      },
+      "colors": [
+        {
+          "id": "darkgreen",
+          "name": "Dark Green",
+          "hex": "#043205",
+          "label": "Dark Green"
+        },
+        {
+          "id": "warmpeach",
+          "name": "Warm Peach",
+          "hex": "#ffc877",
+          "label": "Warm Peach"
+        },
+        {
+          "id": "white",
+          "name": "Bright White",
+          "hex": "#ffffff",
+          "border": true,
+          "label": "Bright White"
+        },
+        {
+          "id": "royalblue",
+          "name": "Royal Blue",
+          "hex": "#0d00ff",
+          "label": "Royal Blue"
+        },
+        {
+          "id": "khaki",
+          "name": "Khaki Brown",
+          "hex": "#95815c",
+          "label": "Khaki Brown"
+        },
+        {
+          "id": "maroon",
+          "name": "Maroon Red",
+          "hex": "#7c1a22",
+          "label": "Maroon Red"
+        }
+      ],
+      "images": [
+        "/images/katalog/double-cantilever-gate/Screenshot%202026-11-12%20at%2015.28.51.png"
+      ],
+      "desc": "Double Cantilever Gate dengan rangka galvanis tebal 2,8 mm dan atap membrane 650 gsm, dirancang kokoh dan elegan untuk struktur gerbang masuk atau area gerbang perumahan."
+    },
+    {
+      "id": "asymmetric-wave",
+      "name": "Asymmetric Wave",
+      "category": "Kanopi",
+      "alt": "Asymmetric Wave struktur kanopi membrane asimetris bergelombang Pilar Canopy",
+      "priceAmount": "24.700.000",
+      "priceUnit": "",
+      "specs": {
+        "rangka": "Galvanis Tebal 2,8 mm",
+        "atap": "Membrane 650 gsm",
+        "volume": "",
+        "dimension": "Tinggi 4m L 8m x P 4m"
+      },
+      "colors": [
+        {
+          "id": "darkgreen",
+          "name": "Dark Green",
+          "hex": "#043205",
+          "label": "Dark Green"
+        },
+        {
+          "id": "warmpeach",
+          "name": "Warm Peach",
+          "hex": "#ffc877",
+          "label": "Warm Peach"
+        },
+        {
+          "id": "white",
+          "name": "Bright White",
+          "hex": "#ffffff",
+          "border": true,
+          "label": "Bright White"
+        },
+        {
+          "id": "royalblue",
+          "name": "Royal Blue",
+          "hex": "#0d00ff",
+          "label": "Royal Blue"
+        },
+        {
+          "id": "khaki",
+          "name": "Khaki Brown",
+          "hex": "#95815c",
+          "label": "Khaki Brown"
+        },
+        {
+          "id": "maroon",
+          "name": "Maroon Red",
+          "hex": "#7c1a22",
+          "label": "Maroon Red"
+        }
+      ],
+      "images": [
+        "/images/katalog/asymmetric-wave/Screenshot%202026-11-13%20at%2009.01.49.png"
+      ],
+      "desc": "Asymmetric Wave dengan rangka galvanis tebal 2,8 mm dan atap membrane 650 gsm, menghadirkan struktur kanopi gelombang asimetris yang modern, kokoh, dan fungsional."
+    },
+    {
+      "id": "canopy-butterfly-arch",
+      "name": "Canopy Butterfly Arch",
+      "category": "Kanopi",
+      "alt": "Canopy Butterfly Arch struktur kanopi membrane model kupu-kupu Pilar Canopy",
+      "priceAmount": "23.000.000",
+      "priceUnit": "",
+      "specs": {
+        "rangka": "Besi Galvanis Tebal 2,8 mm",
+        "atap": "Membrane 650 gsm PVDF",
+        "volume": "",
+        "dimension": "Tinggi 4m L 8m x P 4m"
+      },
+      "colors": [
+        {
+          "id": "darkgreen",
+          "name": "Dark Green",
+          "hex": "#043205",
+          "label": "Dark Green"
+        },
+        {
+          "id": "warmpeach",
+          "name": "Warm Peach",
+          "hex": "#ffc877",
+          "label": "Warm Peach"
+        },
+        {
+          "id": "white",
+          "name": "Bright White",
+          "hex": "#ffffff",
+          "border": true,
+          "label": "Bright White"
+        },
+        {
+          "id": "royalblue",
+          "name": "Royal Blue",
+          "hex": "#0d00ff",
+          "label": "Royal Blue"
+        },
+        {
+          "id": "khaki",
+          "name": "Khaki Brown",
+          "hex": "#95815c",
+          "label": "Khaki Brown"
+        },
+        {
+          "id": "maroon",
+          "name": "Maroon Red",
+          "hex": "#7c1a22",
+          "label": "Maroon Red"
+        }
+      ],
+      "images": [
+        "/images/katalog/canopy-butterfly-arch/Screenshot%202026-11-13%20at%2009.03.58.png"
+      ],
+      "desc": "Canopy Butterfly Arch dengan rangka besi galvanis tebal 2,8 mm dan atap membrane 650 gsm PVDF, dirancang dengan struktur model kupu-kupu yang megah, kokoh, dan elegan untuk area outdoor."
+    },
+    {
+      "id": "canopy-teras",
+      "name": "Canopy Teras",
+      "category": "Kanopi",
+      "alt": "Canopy Teras struktur kanopi teras bangunan beratap membrane Pilar Canopy",
+      "priceAmount": "650.000",
+      "priceUnit": "/m",
+      "specs": {
+        "rangka": "Besi Galvanis Tebal 2,8 mm",
+        "atap": "Membrane 650 gsm PVDF",
+        "volume": "-",
+        "dimension": "Custom"
+      },
+      "colors": [
+        {
+          "id": "darkgreen",
+          "name": "Dark Green",
+          "hex": "#043205",
+          "label": "Dark Green"
+        },
+        {
+          "id": "warmpeach",
+          "name": "Warm Peach",
+          "hex": "#ffc877",
+          "label": "Warm Peach"
+        },
+        {
+          "id": "white",
+          "name": "Bright White",
+          "hex": "#ffffff",
+          "border": true,
+          "label": "Bright White"
+        },
+        {
+          "id": "royalblue",
+          "name": "Royal Blue",
+          "hex": "#0d00ff",
+          "label": "Royal Blue"
+        },
+        {
+          "id": "khaki",
+          "name": "Khaki Brown",
+          "hex": "#95815c",
+          "label": "Khaki Brown"
+        },
+        {
+          "id": "maroon",
+          "name": "Maroon Red",
+          "hex": "#7c1a22",
+          "label": "Maroon Red"
+        }
+      ],
+      "images": [
+        "/images/katalog/canopy-teras/Screenshot%202026-11-13%20at%2009.05.48.png"
+      ],
+      "desc": "Canopy Teras dengan rangka besi galvanis tebal 2,8 mm dan atap membrane 650 gsm PVDF, dirancang khusus untuk melindungi serta mempercantik area teras atau balkon bangunan dengan ukuran custom."
+    },
+    {
+      "id": "canopy-gelombang-sinus",
+      "name": "Canopy Gelombang Sinus",
+      "category": "Kanopi",
+      "alt": "Canopy Gelombang Sinus struktur kanopi beratap membrane bentuk gelombang sinus Pilar Canopy",
+      "priceAmount": "16.900.000",
+      "priceUnit": "",
+      "specs": {
+        "rangka": "Besi Galvanis Tebal 2,8 mm",
+        "atap": "Membrane 650 gsm PVDF",
+        "volume": "26 m",
+        "dimension": "Tinggi 3m L 6m x P 4m"
+      },
+      "colors": [
+        {
+          "id": "darkgreen",
+          "name": "Dark Green",
+          "hex": "#043205",
+          "label": "Dark Green"
+        },
+        {
+          "id": "warmpeach",
+          "name": "Warm Peach",
+          "hex": "#ffc877",
+          "label": "Warm Peach"
+        },
+        {
+          "id": "white",
+          "name": "Bright White",
+          "hex": "#ffffff",
+          "border": true,
+          "label": "Bright White"
+        },
+        {
+          "id": "royalblue",
+          "name": "Royal Blue",
+          "hex": "#0d00ff",
+          "label": "Royal Blue"
+        },
+        {
+          "id": "khaki",
+          "name": "Khaki Brown",
+          "hex": "#95815c",
+          "label": "Khaki Brown"
+        },
+        {
+          "id": "maroon",
+          "name": "Maroon Red",
+          "hex": "#7c1a22",
+          "label": "Maroon Red"
+        }
+      ],
+      "images": [
+        "/images/katalog/canopy-gelombang-sinus/Screenshot%202026-11-13%20at%2009.10.11.png"
+      ],
+      "desc": "Canopy Gelombang Sinus dengan rangka besi galvanis tebal 2,8 mm dan atap membrane 650 gsm PVDF, menghadirkan desain struktur gelombang yang unik, kokoh, dan elegan untuk area outdoor."
+    },
+    {
+      "id": "canopy-laser-cut-cantilever",
+      "name": "Canopy Laser Cut Cantilever",
+      "category": "Carport",
+      "alt": "Canopy Laser Cut Cantilever struktur kanopi cantilever dengan ornamen laser cut beratap membrane Pilar Canopy",
+      "priceAmount": "17.500.000",
+      "priceUnit": "",
+      "specs": {
+        "rangka": "Besi Galvanis Tebal 2,8 mm",
+        "atap": "Membrane 650 gsm PVDF",
+        "volume": "27 m",
+        "dimension": "Tinggi 3,5m L 4m x P 6m"
+      },
+      "colors": [
+        {
+          "id": "darkgreen",
+          "name": "Dark Green",
+          "hex": "#043205",
+          "label": "Dark Green"
+        },
+        {
+          "id": "warmpeach",
+          "name": "Warm Peach",
+          "hex": "#ffc877",
+          "label": "Warm Peach"
+        },
+        {
+          "id": "white",
+          "name": "Bright White",
+          "hex": "#ffffff",
+          "border": true,
+          "label": "Bright White"
+        },
+        {
+          "id": "royalblue",
+          "name": "Royal Blue",
+          "hex": "#0d00ff",
+          "label": "Royal Blue"
+        },
+        {
+          "id": "khaki",
+          "name": "Khaki Brown",
+          "hex": "#95815c",
+          "label": "Khaki Brown"
+        },
+        {
+          "id": "maroon",
+          "name": "Maroon Red",
+          "hex": "#7c1a22",
+          "label": "Maroon Red"
+        }
+      ],
+      "images": [
+        "/images/katalog/canopy-laser-cut-cantilever/Screenshot%202026-11-13%20at%2009.14.02.png"
+      ],
+      "desc": "Canopy Laser Cut Cantilever dengan rangka besi galvanis tebal 2,8 mm dan atap membrane 650 gsm PVDF, menghadirkan desain struktur cantilever modern berornamen laser cut yang artistik, kokoh, dan elegan."
+    },
+    {
+      "id": "canopy-perforated-cantilever",
+      "name": "Canopy Perforated Cantilever",
+      "category": "Carport",
+      "alt": "Canopy Perforated Cantilever struktur kanopi cantilever berlubang estetik beratap membrane Pilar Canopy",
+      "priceAmount": "27.000.000",
+      "priceUnit": "",
+      "specs": {
+        "rangka": "Besi Galvanis Tebal 2,8 mm",
+        "atap": "Membrane 650 gsm PVDF",
+        "volume": "41 m",
+        "dimension": "Tinggi 3m L 4m x P 9m"
+      },
+      "colors": [
+        {
+          "id": "darkgreen",
+          "name": "Dark Green",
+          "hex": "#043205",
+          "label": "Dark Green"
+        },
+        {
+          "id": "warmpeach",
+          "name": "Warm Peach",
+          "hex": "#ffc877",
+          "label": "Warm Peach"
+        },
+        {
+          "id": "white",
+          "name": "Bright White",
+          "hex": "#ffffff",
+          "border": true,
+          "label": "Bright White"
+        },
+        {
+          "id": "royalblue",
+          "name": "Royal Blue",
+          "hex": "#0d00ff",
+          "label": "Royal Blue"
+        },
+        {
+          "id": "khaki",
+          "name": "Khaki Brown",
+          "hex": "#95815c",
+          "label": "Khaki Brown"
+        },
+        {
+          "id": "maroon",
+          "name": "Maroon Red",
+          "hex": "#7c1a22",
+          "label": "Maroon Red"
+        }
+      ],
+      "images": [
+        "/images/katalog/canopy-perforated-cantilever/Screenshot%202026-11-13%20at%2009.27.56.png"
+      ],
+      "desc": "Canopy Perforated Cantilever dengan rangka besi galvanis tebal 2,8 mm dan atap membrane 650 gsm PVDF, menghadirkan desain struktur cantilever berlubang artistik yang kokoh, luas, dan elegan untuk area parkir."
+    },
+    {
+      "id": "canopy-pavilion-arch-series",
+      "name": "Canopy Pavilion Arch Series",
+      "category": "Kanopi",
+      "alt": "Canopy Pavilion Arch Series struktur kanopi lengkung model paviliun beratap membrane Pilar Canopy",
+      "priceAmount": "17.500.000",
+      "priceUnit": "",
+      "specs": {
+        "rangka": "Besi Galvanis Tebal 2,8 mm",
+        "atap": "Membrane 650 gsm PVDF",
+        "volume": "26,5m",
+        "dimension": "Tinggi 4m L 4m x P 5m"
+      },
+      "colors": [
+        {
+          "id": "darkgreen",
+          "name": "Dark Green",
+          "hex": "#043205",
+          "label": "Dark Green"
+        },
+        {
+          "id": "warmpeach",
+          "name": "Warm Peach",
+          "hex": "#ffc877",
+          "label": "Warm Peach"
+        },
+        {
+          "id": "white",
+          "name": "Bright White",
+          "hex": "#ffffff",
+          "border": true,
+          "label": "Bright White"
+        },
+        {
+          "id": "royalblue",
+          "name": "Royal Blue",
+          "hex": "#0d00ff",
+          "label": "Royal Blue"
+        },
+        {
+          "id": "khaki",
+          "name": "Khaki Brown",
+          "hex": "#95815c",
+          "label": "Khaki Brown"
+        },
+        {
+          "id": "maroon",
+          "name": "Maroon Red",
+          "hex": "#7c1a22",
+          "label": "Maroon Red"
+        }
+      ],
+      "images": [
+        "/images/katalog/canopy-pavilion-arch-series/Screenshot%202026-11-13%20at%2009.30.06.png"
+      ],
+      "desc": "Canopy Pavilion Arch Series dengan rangka besi galvanis tebal 2,8 mm dan atap membrane 650 gsm PVDF, menghadirkan desain struktur kanopi lengkung model paviliun yang kokoh, fungsional, dan elegan untuk area outdoor."
+    },
+    {
+      "id": "canopy-barrel-arch-truss-wide-span",
+      "name": "Canopy Barrel Arch Truss Wide Span",
+      "category": "Lapangan",
+      "alt": "Canopy Barrel Arch Truss Wide Span struktur kanopi bentang lebar beratap membrane Pilar Canopy",
+      "priceAmount": "78.650.000",
+      "priceUnit": "",
+      "specs": {
+        "rangka": "Besi Hiam / Galvanis Tebal 2,8 mm",
+        "atap": "Membrane 650 gsm",
+        "volume": "121 m",
+        "dimension": "P 10m x L 11m Tinggi 6m"
+      },
+      "colors": [
+        {
+          "id": "darkgreen",
+          "name": "Dark Green",
+          "hex": "#043205",
+          "label": "Dark Green"
+        },
+        {
+          "id": "warmpeach",
+          "name": "Warm Peach",
+          "hex": "#ffc877",
+          "label": "Warm Peach"
+        },
+        {
+          "id": "white",
+          "name": "Bright White",
+          "hex": "#ffffff",
+          "border": true,
+          "label": "Bright White"
+        },
+        {
+          "id": "royalblue",
+          "name": "Royal Blue",
+          "hex": "#0d00ff",
+          "label": "Royal Blue"
+        },
+        {
+          "id": "khaki",
+          "name": "Khaki Brown",
+          "hex": "#95815c",
+          "label": "Khaki Brown"
+        },
+        {
+          "id": "maroon",
+          "name": "Maroon Red",
+          "hex": "#7c1a22",
+          "label": "Maroon Red"
+        }
+      ],
+      "images": [
+        "/images/katalog/canopy-barrel-arch-truss-wide-span/Screenshot%202026-11-13%20at%2009.34.08.png"
+      ],
+      "desc": "Canopy Barrel Arch Truss Wide Span dengan rangka besi hitam/galvanis tebal 2,8 mm dan atap membrane 650 gsm, dirancang kokoh dengan bentang lebar untuk area lapangan atau fasilitas luas."
+    },
+    {
+      "id": "sports-court-canopy",
+      "name": "Sports Court Canopy",
+      "category": "Lapangan",
+      "alt": "Sports Court Canopy struktur kanopi lapangan olahraga beratap membrane Pilar Canopy",
+      "priceAmount": "137.900.000",
+      "priceUnit": "",
+      "specs": {
+        "rangka": "Besi Hiam / Galvanis Tebal 2,8 mm",
+        "atap": "Membrane 650 gsm",
+        "volume": "212 m",
+        "dimension": "P 11m x L 10m Tinggi 6m"
+      },
+      "colors": [
+        {
+          "id": "darkgreen",
+          "name": "Dark Green",
+          "hex": "#043205",
+          "label": "Dark Green"
+        },
+        {
+          "id": "warmpeach",
+          "name": "Warm Peach",
+          "hex": "#ffc877",
+          "label": "Warm Peach"
+        },
+        {
+          "id": "white",
+          "name": "Bright White",
+          "hex": "#ffffff",
+          "border": true,
+          "label": "Bright White"
+        },
+        {
+          "id": "royalblue",
+          "name": "Royal Blue",
+          "hex": "#0d00ff",
+          "label": "Royal Blue"
+        },
+        {
+          "id": "khaki",
+          "name": "Khaki Brown",
+          "hex": "#95815c",
+          "label": "Khaki Brown"
+        },
+        {
+          "id": "maroon",
+          "name": "Maroon Red",
+          "hex": "#7c1a22",
+          "label": "Maroon Red"
+        }
+      ],
+      "images": [
+        "/images/katalog/sports-court-canopy/Screenshot%202026-11-13%20at%2009.35.14.png"
+      ],
+      "desc": "Sports Court Canopy dengan rangka besi hitam/galvanis tebal 2,8 mm dan atap membrane 650 gsm, dirancang kokoh dan luas untuk melindungi area lapangan olahraga secara maksimal."
+    },
+    {
+      "id": "liceria-vase-set",
+      "name": "Liceria Vase Set",
+      "category": "Kanopi",
+      "alt": "Liceria Vase Set struktur kanopi besar beratap membrane Pilar Canopy",
+      "priceAmount": "145.000.000",
+      "priceUnit": "",
+      "specs": {
+        "rangka": "Galvanis Tebal 2,8 mm",
+        "atap": "Membrane 650 gsm",
+        "volume": "223 m",
+        "dimension": "P 10m x L 11m Tinggi 7,5m"
+      },
+      "colors": [
+        {
+          "id": "darkgreen",
+          "name": "Dark Green",
+          "hex": "#043205",
+          "label": "Dark Green"
+        },
+        {
+          "id": "warmpeach",
+          "name": "Warm Peach",
+          "hex": "#ffc877",
+          "label": "Warm Peach"
+        },
+        {
+          "id": "white",
+          "name": "Bright White",
+          "hex": "#ffffff",
+          "border": true,
+          "label": "Bright White"
+        },
+        {
+          "id": "royalblue",
+          "name": "Royal Blue",
+          "hex": "#0d00ff",
+          "label": "Royal Blue"
+        },
+        {
+          "id": "khaki",
+          "name": "Khaki Brown",
+          "hex": "#95815c",
+          "label": "Khaki Brown"
+        },
+        {
+          "id": "maroon",
+          "name": "Maroon Red",
+          "hex": "#7c1a22",
+          "label": "Maroon Red"
+        }
+      ],
+      "images": [
+        "/images/katalog/liceria-vase-set/Screenshot%202026-11-13%20at%2010.11.43.png"
+      ],
+      "desc": "Liceria Vase Set dengan rangka galvanis tebal 2,8 mm dan atap membrane 650 gsm, dirancang kokoh dengan bentang luas untuk perlindungan area fasilitas outdoor berukuran besar."
+    },
+    {
+      "id": "canopy-umbrella",
+      "name": "Canopy Umbrella",
+      "category": "Kanopi",
+      "alt": "Canopy Umbrella struktur kanopi payung besar beratap membrane Pilar Canopy",
+      "priceAmount": "75.000.000",
+      "priceUnit": "",
+      "specs": {
+        "rangka": "Besi Hiam / Galvanis Tebal 2,8 mm",
+        "atap": "Membrane 650 gsm",
+        "volume": "115 m",
+        "dimension": "Ø10 m tinggi 6 m"
+      },
+      "colors": [
+        {
+          "id": "darkgreen",
+          "name": "Dark Green",
+          "hex": "#043205",
+          "label": "Dark Green"
+        },
+        {
+          "id": "warmpeach",
+          "name": "Warm Peach",
+          "hex": "#ffc877",
+          "label": "Warm Peach"
+        },
+        {
+          "id": "white",
+          "name": "Bright White",
+          "hex": "#ffffff",
+          "border": true,
+          "label": "Bright White"
+        },
+        {
+          "id": "royalblue",
+          "name": "Royal Blue",
+          "hex": "#0d00ff",
+          "label": "Royal Blue"
+        },
+        {
+          "id": "khaki",
+          "name": "Khaki Brown",
+          "hex": "#95815c",
+          "label": "Khaki Brown"
+        },
+        {
+          "id": "maroon",
+          "name": "Maroon Red",
+          "hex": "#7c1a22",
+          "label": "Maroon Red"
+        }
+      ],
+      "images": [
+        "/images/katalog/canopy-umbrella/Screenshot%202026-11-13%20at%2009.39.29.png"
+      ],
+      "desc": "Canopy Umbrella dengan rangka besi hitam/galvanis tebal 2,8 mm dan atap membrane 650 gsm, dirancang dengan struktur payung yang luas, kokoh, dan estetik untuk area publik atau taman outdoor."
+    },
+    {
+      "id": "canopy-layang-layang",
+      "name": "Canopy Layang Layang",
+      "category": "Kanopi",
+      "alt": "Canopy Layang Layang struktur kanopi bentuk layang-layang beratap membrane Pilar Canopy",
+      "priceAmount": "750.000",
+      "priceUnit": "/ m",
+      "specs": {
+        "rangka": "Besi Hiam / Galvanis Tebal 3 mm",
+        "atap": "Membrane 750 gsm",
+        "volume": "",
+        "dimension": "custom"
+      },
+      "colors": [
+        {
+          "id": "darkgreen",
+          "name": "Dark Green",
+          "hex": "#043205",
+          "label": "Dark Green"
+        },
+        {
+          "id": "warmpeach",
+          "name": "Warm Peach",
+          "hex": "#ffc877",
+          "label": "Warm Peach"
+        },
+        {
+          "id": "white",
+          "name": "Bright White",
+          "hex": "#ffffff",
+          "border": true,
+          "label": "Bright White"
+        },
+        {
+          "id": "royalblue",
+          "name": "Royal Blue",
+          "hex": "#0d00ff",
+          "label": "Royal Blue"
+        },
+        {
+          "id": "khaki",
+          "name": "Khaki Brown",
+          "hex": "#95815c",
+          "label": "Khaki Brown"
+        },
+        {
+          "id": "maroon",
+          "name": "Maroon Red",
+          "hex": "#7c1a22",
+          "label": "Maroon Red"
+        }
+      ],
+      "images": [
+        "/images/katalog/canopy-layang-layang/Screenshot%202026-11-13%20at%2009.40.22.png"
+      ],
+      "desc": "Canopy Layang Layang dengan rangka besi hitam/galvanis tebal 3 mm dan atap membrane 750 gsm, menghadirkan desain struktur model layang-layang yang unik, artistik, dan megah untuk area outdoor."
+    },
+    {
+      "id": "hyperbolic-canopy",
+      "name": "Hyperbolic Canopy",
+      "category": "Kanopi",
+      "alt": "Hyperbolic Canopy struktur kanopi bentuk hiperbolik beratap membrane Pilar Canopy",
+      "priceAmount": "15.600.000",
+      "priceUnit": "",
+      "specs": {
+        "rangka": "Besi Hiam / Galvanis Tebal 2,8 mm",
+        "atap": "Membrane 650 gsm",
+        "volume": "24 m",
+        "dimension": "P 4m x L 6m Tinggi 3m"
+      },
+      "colors": [
+        {
+          "id": "darkgreen",
+          "name": "Dark Green",
+          "hex": "#043205",
+          "label": "Dark Green"
+        },
+        {
+          "id": "warmpeach",
+          "name": "Warm Peach",
+          "hex": "#ffc877",
+          "label": "Warm Peach"
+        },
+        {
+          "id": "white",
+          "name": "Bright White",
+          "hex": "#ffffff",
+          "border": true,
+          "label": "Bright White"
+        },
+        {
+          "id": "royalblue",
+          "name": "Royal Blue",
+          "hex": "#0d00ff",
+          "label": "Royal Blue"
+        },
+        {
+          "id": "khaki",
+          "name": "Khaki Brown",
+          "hex": "#95815c",
+          "label": "Khaki Brown"
+        },
+        {
+          "id": "maroon",
+          "name": "Maroon Red",
+          "hex": "#7c1a22",
+          "label": "Maroon Red"
+        }
+      ],
+      "images": [
+        "/images/katalog/hyperbolic-canopy/Screenshot%202026-11-13%20at%2009.42.34.png"
+      ],
+      "desc": "Hyperbolic Canopy dengan rangka besi hitam/galvanis tebal 2,8 mm dan atap membrane 650 gsm, menghadirkan desain struktur hiperbolik yang artistik, modern, dan kokoh untuk area outdoor."
+    },
+    {
+      "id": "grand-entrance-arch",
+      "name": "Grand Entrance Arch",
+      "category": "Gerbang",
+      "alt": "Grand Entrance Arch struktur kanopi lengkung pintu masuk utama beratap membrane Pilar Canopy",
+      "priceAmount": "13.650.000",
+      "priceUnit": "",
+      "specs": {
+        "rangka": "Besi Hiam / Galvanis Tebal 2,8 mm",
+        "atap": "Membrane 650 gsm",
+        "volume": "21 m",
+        "dimension": "P 6m x L 3m Tinggi 3m"
+      },
+      "colors": [
+        {
+          "id": "darkgreen",
+          "name": "Dark Green",
+          "hex": "#043205",
+          "label": "Dark Green"
+        },
+        {
+          "id": "warmpeach",
+          "name": "Warm Peach",
+          "hex": "#ffc877",
+          "label": "Warm Peach"
+        },
+        {
+          "id": "white",
+          "name": "Bright White",
+          "hex": "#ffffff",
+          "border": true,
+          "label": "Bright White"
+        },
+        {
+          "id": "royalblue",
+          "name": "Royal Blue",
+          "hex": "#0d00ff",
+          "label": "Royal Blue"
+        },
+        {
+          "id": "khaki",
+          "name": "Khaki Brown",
+          "hex": "#95815c",
+          "label": "Khaki Brown"
+        },
+        {
+          "id": "maroon",
+          "name": "Maroon Red",
+          "hex": "#7c1a22",
+          "label": "Maroon Red"
+        }
+      ],
+      "images": [
+        "/images/katalog/grand-entrance-arch/Screenshot%202026-11-13%20at%2009.43.41.png"
+      ],
+      "desc": "Grand Entrance Arch dengan rangka besi hitam/galvanis tebal 2,8 mm dan atap membrane 650 gsm, menghadirkan struktur kanopi lengkung yang megah dan elegan untuk area pintu masuk utama bangunan."
+    },
+    {
+      "id": "liceria-vase",
+      "name": "Liceria Vase",
+      "category": "Kanopi",
+      "alt": "Liceria Vase struktur kanopi carport atau teras beratap membrane Pilar Canopy",
+      "priceAmount": "",
+      "priceUnit": "",
+      "specs": {
+        "rangka": "Besi Hiam / Galvanis Tebal 2,8 mm",
+        "atap": "Membrane 750 gsm",
+        "volume": "16 m",
+        "dimension": "P 4m x L 4m Tinggi 3m"
+      },
+      "colors": [
+        {
+          "id": "darkgreen",
+          "name": "Dark Green",
+          "hex": "#043205",
+          "label": "Dark Green"
+        },
+        {
+          "id": "warmpeach",
+          "name": "Warm Peach",
+          "hex": "#ffc877",
+          "label": "Warm Peach"
+        },
+        {
+          "id": "white",
+          "name": "Bright White",
+          "hex": "#ffffff",
+          "border": true,
+          "label": "Bright White"
+        },
+        {
+          "id": "royalblue",
+          "name": "Royal Blue",
+          "hex": "#0d00ff",
+          "label": "Royal Blue"
+        },
+        {
+          "id": "khaki",
+          "name": "Khaki Brown",
+          "hex": "#95815c",
+          "label": "Khaki Brown"
+        },
+        {
+          "id": "maroon",
+          "name": "Maroon Red",
+          "hex": "#7c1a22",
+          "label": "Maroon Red"
+        }
+      ],
+      "images": [
+        "/images/katalog/liceria-vase/Screenshot%202026-11-13%20at%2009.46.05.png"
+      ],
+      "desc": "Liceria Vase dengan rangka besi hitam/galvanis tebal 2,8 mm dan atap membrane 750 gsm, menghadirkan struktur kanopi lengkung yang kokoh dan elegan untuk melindungi area teras atau carport bangunan."
+    },
+    {
+      "id": "liceria-vase-set-40",
+      "name": "Liceria Vase Set",
+      "category": "Kanopi",
+      "alt": "Liceria Vase Set struktur kanopi carport atau teras beratap membrane Pilar Canopy",
+      "priceAmount": "",
+      "priceUnit": "",
+      "specs": {
+        "rangka": "Besi Hiam / Galvanis Tebal 2,8 mm",
+        "atap": "Membrane 750 gsm",
+        "volume": "16 m",
+        "dimension": "P 4m x L 4m Tinggi 3m"
+      },
+      "colors": [
+        {
+          "id": "darkgreen",
+          "name": "Dark Green",
+          "hex": "#043205",
+          "label": "Dark Green"
+        },
+        {
+          "id": "warmpeach",
+          "name": "Warm Peach",
+          "hex": "#ffc877",
+          "label": "Warm Peach"
+        },
+        {
+          "id": "white",
+          "name": "Bright White",
+          "hex": "#ffffff",
+          "border": true,
+          "label": "Bright White"
+        },
+        {
+          "id": "royalblue",
+          "name": "Royal Blue",
+          "hex": "#0d00ff",
+          "label": "Royal Blue"
+        },
+        {
+          "id": "khaki",
+          "name": "Khaki Brown",
+          "hex": "#95815c",
+          "label": "Khaki Brown"
+        },
+        {
+          "id": "maroon",
+          "name": "Maroon Red",
+          "hex": "#7c1a22",
+          "label": "Maroon Red"
+        }
+      ],
+      "images": [
+        "/images/katalog/liceria-vase-set/Screenshot%202026-11-13%20at%2010.11.43.png",
+        "/images/katalog/liceria-vase-set/Screenshot%202026-11-13%20at%2010.13.22.png",
+        "/images/katalog/liceria-vase-set/Screenshot%202026-11-13%20at%2010.13.50.png"
+      ],
+      "desc": "Liceria Vase Set dengan rangka besi hitam/galvanis tebal 2,8 mm dan atap membrane 750 gsm, menghadirkan struktur kanopi lengkung yang kokoh dan elegan untuk melindungi area teras atau carport bangunan."
+    },
+    {
+      "id": "tribun-canopy-membrane",
+      "name": "Tribun Canopy Membrane",
+      "category": "Tribun",
+      "alt": "Tribun Canopy Membrane struktur kanopi tribun lapangan beratap membrane Pilar Canopy",
+      "priceAmount": "225.000.000",
+      "priceUnit": "",
+      "specs": {
+        "rangka": "Besi Hiam / Galvanis Tebal 3 mm",
+        "atap": "Membrane 750 gsm",
+        "volume": "300 m",
+        "dimension": "P 20m x L 12,5m Tinggi 9m"
+      },
+      "colors": [
+        {
+          "id": "darkgreen",
+          "name": "Dark Green",
+          "hex": "#043205",
+          "label": "Dark Green"
+        },
+        {
+          "id": "warmpeach",
+          "name": "Warm Peach",
+          "hex": "#ffc877",
+          "label": "Warm Peach"
+        },
+        {
+          "id": "white",
+          "name": "Bright White",
+          "hex": "#ffffff",
+          "border": true,
+          "label": "Bright White"
+        },
+        {
+          "id": "royalblue",
+          "name": "Royal Blue",
+          "hex": "#0d00ff",
+          "label": "Royal Blue"
+        },
+        {
+          "id": "khaki",
+          "name": "Khaki Brown",
+          "hex": "#95815c",
+          "label": "Khaki Brown"
+        },
+        {
+          "id": "maroon",
+          "name": "Maroon Red",
+          "hex": "#7c1a22",
+          "label": "Maroon Red"
+        }
+      ],
+      "images": [
+        "/images/katalog/tribun-canopy-membrane/Screenshot%202026-11-13%20at%2010.15.43.png"
+      ],
+      "desc": "Tribun Canopy Membrane dengan rangka besi hitam/galvanis tebal 3 mm dan atap membrane 750 gsm, menghadirkan struktur kanopi tribun yang sangat kokoh, luas, dan megah untuk fasilitas lapangan olahraga."
+    },
+    {
+      "id": "track-and-field-tribune",
+      "name": "Track & Field Tribune",
+      "category": "Tribun",
+      "alt": "Track & Field Tribune struktur kanopi tribun lintasan lari beratap membrane Pilar Canopy",
+      "priceAmount": "135.000.000",
+      "priceUnit": "",
+      "specs": {
+        "rangka": "Besi Hiam / Galvanis Tebal 3 mm",
+        "atap": "Membrane 750 gsm",
+        "volume": "180 m",
+        "dimension": "P 20m x L 8m Tinggi 6m"
+      },
+      "colors": [
+        {
+          "id": "darkgreen",
+          "name": "Dark Green",
+          "hex": "#043205",
+          "label": "Dark Green"
+        },
+        {
+          "id": "warmpeach",
+          "name": "Warm Peach",
+          "hex": "#ffc877",
+          "label": "Warm Peach"
+        },
+        {
+          "id": "white",
+          "name": "Bright White",
+          "hex": "#ffffff",
+          "border": true,
+          "label": "Bright White"
+        },
+        {
+          "id": "royalblue",
+          "name": "Royal Blue",
+          "hex": "#0d00ff",
+          "label": "Royal Blue"
+        },
+        {
+          "id": "khaki",
+          "name": "Khaki Brown",
+          "hex": "#95815c",
+          "label": "Khaki Brown"
+        },
+        {
+          "id": "maroon",
+          "name": "Maroon Red",
+          "hex": "#7c1a22",
+          "label": "Maroon Red"
+        }
+      ],
+      "images": [
+        "/images/katalog/track-and-field-tribune/Screenshot%202026-11-13%20at%2014.18.45.png"
+      ],
+      "desc": "Track & Field Tribune dengan rangka besi hitam/galvanis tebal 3 mm dan atap membrane 750 gsm, dirancang kokoh dan luas untuk melindungi area tribun lintasan lari serta lapangan olahraga."
+    },
+    {
+      "id": "stadium-grandstand-arch",
+      "name": "Stadium Grandstand Arch",
+      "category": "Tribun",
+      "alt": "Stadium Grandstand Arch struktur kanopi tribun stadion beratap membrane Pilar Canopy",
+      "priceAmount": "217.500.000",
+      "priceUnit": "",
+      "specs": {
+        "rangka": "Besi Hiam / Galvanis Tebal 3 mm",
+        "atap": "Membrane 750 gsm",
+        "volume": "290 m",
+        "dimension": "P 20m x L 13m Tinggi 12m"
+      },
+      "colors": [
+        {
+          "id": "darkgreen",
+          "name": "Dark Green",
+          "hex": "#043205",
+          "label": "Dark Green"
+        },
+        {
+          "id": "warmpeach",
+          "name": "Warm Peach",
+          "hex": "#ffc877",
+          "label": "Warm Peach"
+        },
+        {
+          "id": "white",
+          "name": "Bright White",
+          "hex": "#ffffff",
+          "border": true,
+          "label": "Bright White"
+        },
+        {
+          "id": "royalblue",
+          "name": "Royal Blue",
+          "hex": "#0d00ff",
+          "label": "Royal Blue"
+        },
+        {
+          "id": "khaki",
+          "name": "Khaki Brown",
+          "hex": "#95815c",
+          "label": "Khaki Brown"
+        },
+        {
+          "id": "maroon",
+          "name": "Maroon Red",
+          "hex": "#7c1a22",
+          "label": "Maroon Red"
+        }
+      ],
+      "images": [
+        "/images/katalog/stadium-grandstand-arch/Screenshot%202026-11-13%20at%2014.20.59.png"
+      ],
+      "desc": "Stadium Grandstand Arch dengan rangka besi hitam/galvanis tebal 3 mm dan atap membrane 750 gsm, dirancang sangat megah, kokoh, dan luas untuk perlindungan area tribun stadion utama."
+    }
+  ],
+  "projects": [
+    {
+      "id": "unpad-fisip",
+      "category": "membrane",
+      "title": "Lapang Serbaguna FISIP",
+      "client": "Universitas Padjadjaran",
+      "pekerjaan": "Pekerjaan: Lapang serbaguna",
+      "lokasi": "Bandung",
+      "tahun": "2026",
+      "badge": "PROYEK 01 / LAPANG SERBAGUNA",
+      "place": "BANDUNG • 2026",
+      "images": [
+        "/images/portofolio/kanopi-membrane-lapang-serbaguna-fisip-unpad-bandung-1.jpg",
+        "/images/portofolio/kanopi-membrane-lapang-serbaguna-fisip-unpad-bandung-2.png",
+        "/images/portofolio/kanopi-membrane-lapang-serbaguna-fisip-unpad-bandung-3.png",
+        "/images/portofolio/kanopi-membrane-lapang-serbaguna-fisip-unpad-bandung-4.png"
+      ],
+      "image": "/images/portofolio/kanopi-membrane-lapang-serbaguna-fisip-unpad-bandung-1.jpg",
+      "alt": "Kanopi membrane lapang serbaguna FISIP Universitas Padjadjaran Bandung",
+      "description": "Pekerjaan lapang serbaguna Universitas Padjadjaran (FISIP) di Bandung dengan struktur rangka pipa baja lengkung bentang lebar dan penutup membrane tensile.",
+      "chips": [
+        "Lapang Serbaguna",
+        "Tensile Membrane",
+        "Bandung"
+      ],
+      "scope": "Struktur atap lapang serbaguna kampus FISIP UNPAD",
+      "specs": [
+        "Luas area: ±600 m²",
+        "Material Rangka: Pipa Baja Galvanized Medium A",
+        "Bahan Atap: Membrane Tensile PVC/PVDF 850 GSM",
+        "Finishing: Epoxy Primer + Polyurethane Duco White",
+        "Pondasi: Bored Pile + Plat Baja Angkur M24"
+      ],
+      "highlights": [
+        "Bentang lebar tanpa kolom tengah untuk kebebasan aktivitas olahraga & serbaguna",
+        "Tahan terpaan angin kencang hingga 110 km/jam dengan sertifikasi engineering",
+        "Membran tembus cahaya alami di siang hari (translucent 12-15%) hemat energi",
+        "Garansi resmi pabrikan material membrane hingga 15 tahun"
+      ]
+    },
+    {
+      "id": "pitstop-jatim",
+      "category": "membrane",
+      "title": "Pit Stop Fuel",
+      "client": "PT. BSI / PT. Trustone",
+      "pekerjaan": "Pekerjaan: Pit stop fuel",
+      "lokasi": "Jawa Timur",
+      "tahun": "2026",
+      "badge": "PROYEK 02 / PIT STOP FUEL",
+      "place": "JAWA TIMUR • 2026",
+      "images": [
+        "/images/portofolio/kanopi-membrane-pit-stop-fuel-bsi-trustone-jawa-timur-1.jpg",
+        "/images/portofolio/kanopi-membrane-pit-stop-fuel-bsi-trustone-jawa-timur-2.png",
+        "/images/portofolio/kanopi-membrane-pit-stop-fuel-bsi-trustone-jawa-timur-3.png",
+        "/images/portofolio/kanopi-membrane-pit-stop-fuel-bsi-trustone-jawa-timur-4.png"
+      ],
+      "image": "/images/portofolio/kanopi-membrane-pit-stop-fuel-bsi-trustone-jawa-timur-1.jpg",
+      "alt": "Kanopi membrane pit stop fuel PT. BSI Trustone Jawa Timur",
+      "description": "Pekerjaan fasilitas pit stop fuel untuk PT. BSI / PT. Trustone di Jawa Timur, mencakup pekerjaan pondasi sipil, erection rangka baja, dan penutup membrane payung ganda.",
+      "chips": [
+        "Pit Stop Fuel",
+        "Struktur Baja",
+        "Jawa Timur"
+      ],
+      "scope": "Kanopi rest shelter & proteksi pengisian bahan bakar kendaraan berat",
+      "specs": [
+        "Luas area: ±450 m²",
+        "Material Rangka: Baja Hollow & WF Steel Heavy Duty",
+        "Bahan Atap: Membrane PVDF Blockout 950 GSM",
+        "Finishing: Sandblasting Sa 2.5 + Marine Coating",
+        "Pondasi: Telapak Beton Bertulang Cor On-Site"
+      ],
+      "highlights": [
+        "Material blockout tahan panas ekstrem radiasi matahari terbuka",
+        "Lapisan anti-flame retardant standar keselamatan area bahan bakar",
+        "Struktur modular kokoh tahan getaran mesin kendaraan berat",
+        "Pengerjaan on-schedule sesuai standar ketat K3 industri pertambangan"
+      ]
+    },
+    {
+      "id": "glamping-techno-park",
+      "category": "glamping",
+      "title": "Glamping Dome 10 unit",
+      "client": "Universitas Gunadarma (UG-TechnoPark)",
+      "pekerjaan": "Pekerjaan: 10 unit Glamping Dome",
+      "lokasi": "Cianjur",
+      "tahun": "2025",
+      "badge": "PROYEK 03 / GLAMPING DOME",
+      "place": "CIANJUR • 2025",
+      "images": [
+        "/images/portofolio/glamping-dome-geodesik-gunadarma-technopark-cianjur-1.jpg",
+        "/images/portofolio/glamping-dome-geodesik-gunadarma-technopark-cianjur-2.png",
+        "/images/portofolio/glamping-dome-geodesik-gunadarma-technopark-cianjur-3.png",
+        "/images/portofolio/glamping-dome-geodesik-gunadarma-technopark-cianjur-4.png"
+      ],
+      "image": "/images/portofolio/glamping-dome-geodesik-gunadarma-technopark-cianjur-1.jpg",
+      "alt": "Glamping dome geodesik 10 unit Universitas Gunadarma UG-TechnoPark Cianjur",
+      "description": "Pengerjaan 10 unit glamping dome geodesic untuk UG-TechnoPark Universitas Gunadarma di Cianjur sebagai fasilitas edu-wisata teknologi dan riset alam.",
+      "chips": [
+        "10 Unit Dome",
+        "Geodesic Frame",
+        "Cianjur"
+      ],
+      "scope": "Fabrikasi & instalasi 10 unit glamping dome terintegrasi deck panggung",
+      "specs": [
+        "Jumlah unit: 10 geodesic dome unit",
+        "Dimensi: Diameter 6.0 m, Tinggi 3.6 m (Area ~28 m² per dome)",
+        "Rangka: Pipa Baja Galvanized anti-karat sambungan baut presisi",
+        "Penutup: PVC/PVDF 850 GSM White + Panel Kaca Transparan Bayview",
+        "Platform: Decking WPC composite tahan rayap dan cuaca pegunungan"
+      ],
+      "highlights": [
+        "Desain geodesic dome aerodinamis tahan angin kencang dataran tinggi",
+        "Insulasi termal aluminium foil + tirai insulasi untuk menjaga suhu sejuk",
+        "Pemandangan panorama pegunungan melalui kaca bayview transparan",
+        "Dilengkapi fasilitas kamar mandi dalam (en-suite bathroom system)"
+      ]
+    },
+    {
+      "id": "padel-bintaro",
+      "category": "membrane",
+      "title": "Lapang Padel",
+      "client": "Perorangan (milik pribadi)",
+      "pekerjaan": "Pekerjaan: Lapang Padel",
+      "lokasi": "Bintaro",
+      "tahun": "2025",
+      "badge": "PROYEK 04 / LAPANG PADEL",
+      "place": "BINTARO • 2025",
+      "images": [
+        "/images/portofolio/kanopi-membrane-lapangan-padel-bintaro-1.png",
+        "/images/portofolio/kanopi-membrane-lapangan-padel-bintaro-2.png",
+        "/images/portofolio/kanopi-membrane-lapangan-padel-bintaro-3.png",
+        "/images/portofolio/kanopi-membrane-lapangan-padel-bintaro-4.png"
+      ],
+      "image": "/images/portofolio/kanopi-membrane-lapangan-padel-bintaro-1.png",
+      "alt": "Kanopi membrane lapangan padel tennis pribadi Bintaro",
+      "description": "Pekerjaan penutup struktur lapangan padel tennis pribadi di Bintaro dengan rangka lengkung pipa tubular estetis dan membrane anti-bising.",
+      "chips": [
+        "Lapang Padel",
+        "Rangka Lengkung",
+        "Bintaro"
+      ],
+      "scope": "Kanopi peneduh lapangan padel tennis outdoor private residence",
+      "specs": [
+        "Luas bentang: 220 m²",
+        "Rangka: Pipa Baja Lengkung Curved Pipe 4-inch Schedule 40",
+        "Bahan Atap: Membrane PVDF 750 GSM Translucent White",
+        "Finishing: Double Powder Coating White Glossy",
+        "Aksesoris: Kabel Sling Stainless Steel 316 + Turnbuckle M16"
+      ],
+      "highlights": [
+        "Desain lengkung kontinu tanpa kolom tengah yang mengganggu jalannya bola",
+        "Peredaman suara rintik hujan signifikan dibanding atap seng atau spandek",
+        "Transmisi cahaya alami seragam tanpa bayangan menyilaukan pemain",
+        "Pengerjaan bersih dan rapi tepat waktu dalam 21 hari kerja"
+      ]
+    },
+    {
+      "id": "canopy-cgv",
+      "category": "retractable",
+      "title": "Canopy Slide Otomatis",
+      "client": "CGV Cinemas Indonesia",
+      "pekerjaan": "Pekerjaan: Canopy Slide Otomatis",
+      "lokasi": "Padang",
+      "tahun": "2026",
+      "badge": "PROYEK 05 / CANOPY SLIDE",
+      "place": "PADANG • 2026",
+      "images": [
+        "/images/portofolio/canopy-slide-otomatis-cgv-cinemas-padang-1.png",
+        "/images/portofolio/canopy-slide-otomatis-cgv-cinemas-padang-2.png",
+        "/images/portofolio/canopy-slide-otomatis-cgv-cinemas-padang-3.png",
+        "/images/portofolio/canopy-slide-otomatis-cgv-cinemas-padang-4.png"
+      ],
+      "image": "/images/portofolio/canopy-slide-otomatis-cgv-cinemas-padang-1.png",
+      "alt": "Canopy slide otomatis retractable CGV Cinemas Indonesia Padang",
+      "description": "Pekerjaan canopy slide otomatis (motorized retractable) untuk area drop-off dan lobi outdoor CGV Cinemas dengan kontrol remote cerdas.",
+      "chips": [
+        "Canopy Slide",
+        "Motorized Remote",
+        "Padang"
+      ],
+      "scope": "Sistem kanopi retractable otomatis area komersial mall & cinema",
+      "specs": [
+        "Panjang bentang: 18 × 6 meter (±110 m²)",
+        "Motor Penggerak: Somfy Tubular Motor Heavy Duty dengan sensor hujan",
+        "Material Rangka: Aluminium Alloy 6063-T5 + Bracket Baja Laser Cut",
+        "Kain Kanopi: Dickson / Recasens Acrylic Fabric 100% Waterproof",
+        "Sistem Rel: Heavy Rail System dengan bearing nylon anti-aus"
+      ],
+      "highlights": [
+        "Dapat dibuka-tutup otomatis dalam hitungan 40 detik melalui remote control",
+        "Sensor pintar otomatis menutup kanopi saat terdeteksi rintik hujan",
+        "Tampilan elegan modern meningkatkan prestise area entrance komersial",
+        "Sistem drainase samping terintegrasi pembuangan talang tersembunyi"
+      ]
+    },
+    {
+      "id": "glamping-gunung-walat",
+      "category": "glamping",
+      "title": "Glamping PVC Alderon",
+      "client": "PT. Wandri Jaya",
+      "pekerjaan": "Pekerjaan: Glamping PVC Alderon",
+      "lokasi": "Gunung Walat Park, Sukabumi",
+      "tahun": "2025",
+      "badge": "PROYEK 06 / GLAMPING CABIN",
+      "place": "SUKABUMI • 2025",
+      "images": [
+        "/images/portofolio/glamping-cabin-pvc-alderon-gunung-walat-sukabumi-1.png",
+        "/images/portofolio/glamping-cabin-pvc-alderon-gunung-walat-sukabumi-2.png",
+        "/images/portofolio/glamping-cabin-pvc-alderon-gunung-walat-sukabumi-3.png",
+        "/images/portofolio/glamping-cabin-pvc-alderon-gunung-walat-sukabumi-4.png"
+      ],
+      "image": "/images/portofolio/glamping-cabin-pvc-alderon-gunung-walat-sukabumi-1.png",
+      "alt": "Glamping cabin PVC Alderon PT. Wandri Jaya Gunung Walat Park Sukabumi",
+      "description": "Pekerjaan pembangunan glamping cabin resort untuk PT. Wandri Jaya di kawasan hutan pendidikan Gunung Walat, Sukabumi menggunakan kombinasi PVC Alderon dan membrane.",
+      "chips": [
+        "Glamping Cabin",
+        "PVC Alderon",
+        "Sukabumi"
+      ],
+      "scope": "Pembangunan 8 unit glamping cabin resort siap huni",
+      "specs": [
+        "Jumlah unit: 8 unit cabin",
+        "Konstruksi Rangka: Hollow Baja Galvanized 50x100 mm & 40x80 mm",
+        "Atap: PVC Alderon Twinwall + Kanopi Teras Membrane PVDF",
+        "Dinding: Smartpanel Sandwich EPS Insulation + Wood Texture Finish",
+        "Lantai: Rangka Besi UNP + WPC Decking Board"
+      ],
+      "highlights": [
+        "Struktur tahan lembab, kabut tinggi, dan cuaca dingin pegunungan",
+        "Peredam panas dan suara maksimal untuk kenyamanan tidur para tamu",
+        "Desain arsitektur modern berpadu harmoni dengan lanskap hutan pinus",
+        "Fasilitas lengkap mencakup teras santai depan dengan view alam"
+      ]
+    },
+    {
+      "id": "push-pull-tent",
+      "category": "retractable",
+      "title": "Push Pull Retractable Tent",
+      "client": "PT. ABC Kogen Dairy Milk",
+      "pekerjaan": "Pekerjaan: Push Pull Retractable Tent",
+      "lokasi": "Bandung",
+      "tahun": "2026",
+      "badge": "PROYEK 07 / RETRACTABLE TENT",
+      "place": "BANDUNG • 2026",
+      "images": [
+        "/images/portofolio/tenda-push-pull-retractable-kogen-dairy-bandung-1.png"
+      ],
+      "image": "/images/portofolio/tenda-push-pull-retractable-kogen-dairy-bandung-1.png",
+      "alt": "Tenda push pull retractable loading dock PT. ABC Kogen Dairy Milk Bandung",
+      "description": "Pekerjaan fabrikasi dan instalasi tenda push-pull lipat industri untuk area bongkar muat logistik PT. ABC Kogen Dairy Milk di Bandung.",
+      "chips": [
+        "Push-Pull Tent",
+        "Loading Dock",
+        "Bandung"
+      ],
+      "scope": "Struktur peneduh fleksibel loading dock industri makanan & susu",
+      "specs": [
+        "Dimensi Bentang: 12.0 m × 25.0 m (Luas 300 m²)",
+        "Mekanisme: Scissor Accordion Folding System dengan Roda Heavy Duty",
+        "Material Rangka: Pipa Baja Galvanized anti-karat standar food plant",
+        "Cover: Terpal Tarpaulin PVC Tarpaulin 900 GSM Tebal dan Anti-Sobek",
+        "Rel Jalur: Pipa As Baja Padat tertanam rata lantai (flush track)"
+      ],
+      "highlights": [
+        "Tenda dapat dimampatkan hingga hanya 2.5 meter saat tidak digunakan",
+        "Fleksibel untuk akses keluar masuk truk kontainer tinggi tanpa hambatan",
+        "Menjamin higienitas proses transfer produk terlindung dari hujan & debu",
+        "Sistem penguncian rem roda ganda untuk keamanan cuaca angin kencang"
+      ]
+    },
+    {
+      "id": "canopy-rumah-cafe",
+      "category": "membrane",
+      "title": "Canopy Rumah Tinggal & Cafe",
+      "client": "Rumah Tinggal & Cafe",
+      "pekerjaan": "Pekerjaan: Canopy Rumah & Cafe",
+      "lokasi": "Jabodetabek & Jawa Barat",
+      "tahun": "2025 sampai 2026",
+      "badge": "PROYEK 08 / RUMAH & CAFE",
+      "place": "JABODETABEK & JABAR • 2025–2026",
+      "images": [
+        "/images/portofolio/kanopi-membrane-carport-rumah-cafe-jabodetabek-jawa-barat-1.png",
+        "/images/portofolio/kanopi-membrane-carport-rumah-cafe-jabodetabek-jawa-barat-2.png"
+      ],
+      "image": "/images/portofolio/kanopi-membrane-carport-rumah-cafe-jabodetabek-jawa-barat-1.png",
+      "alt": "Kanopi membrane carport rumah tinggal dan cafe Jabodetabek Jawa Barat",
+      "description": "Rangkaian instalasi kanopi carport rumah tinggal mewah dan outdoor cafe di wilayah Jabodetabek dan Jawa Barat dengan model tensile membrane custom.",
+      "chips": [
+        "Canopy Residensial",
+        "Tensile Carport",
+        "Jabodetabek"
+      ],
+      "scope": "Lebih dari 35+ titik pemasangan carport rumah mewah & kafe aesthetic",
+      "specs": [
+        "Dimensi variatif: 3x5 m, 4x6 m, hingga 6x8 m (muat 2-3 mobil)",
+        "Rangka: Pipa & Hollow Baja Galvanized Finishing Polyurethane Duco",
+        "Membrane: Heytex Jerman / Verseidag / Dickson PVC 750-850 GSM",
+        "Aksesoris: Kawat Seling Stainless Steel SUS 304, Plat Baseplate 12 mm",
+        "Warna pilihan: Putih Salju, Beige/Krem, Abu-abu Modern"
+      ],
+      "highlights": [
+        "Menaikkan nilai estetika dan kemewahan fasad depan hunian residensial",
+        "Melindungi cat mobil mewah dari sinar UV perusak dan getah pohon",
+        "Pemasangan ringkas dan presisi tanpa merusak struktur dinding eksisting",
+        "Bebas perawatan rutin dengan bahan membrane self-cleaning coating"
+      ]
+    }
+  ]
+}

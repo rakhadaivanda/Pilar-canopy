@@ -1,9 +1,10 @@
-import { useState, useMemo, useRef } from "react";
+import { useState, useMemo, useRef, useEffect } from "react";
 import Icon from "../../ui/Icon";
 import SectionEyebrow from "../../ui/SectionEyebrow";
 import ProjectCard from "./ProjectCard";
 import ProjectDetailModal from "./ProjectDetailModal";
 import { PROJECTS, PROJECTS_HEADER, PROJECT_CATEGORIES } from "../../../data/projects";
+import { fetchCmsContent } from "../../../lib/cmsClient";
 
 const pad = (n) => String(n).padStart(2, "0");
 
@@ -11,17 +12,47 @@ const INITIAL_VISIBLE = 8;
 
 /* DIUBAH: Section Portofolio (id="portofolio") dengan Category Tabs, Grid/Slider Switcher, 24+ Card Lengkap, dan Modal Detail Proyek Independent Scroll */
 export default function ProjectsSection() {
+  const [projects, setProjects] = useState(PROJECTS);
+  const [projectsHeader, setProjectsHeader] = useState(PROJECTS_HEADER);
   const [activeCategory, setActiveCategory] = useState("all");
   const [viewMode, setViewMode] = useState("grid"); // "grid" | "slider"
   const [visibleCount, setVisibleCount] = useState(INITIAL_VISIBLE);
   const [selectedProject, setSelectedProject] = useState(null);
   const sliderTrackRef = useRef(null);
 
+  useEffect(() => {
+    let cancelled = false;
+    fetchCmsContent()
+      .then((data) => {
+        if (cancelled) return;
+        if (Array.isArray(data?.projects) && data.projects.length > 0) {
+          setProjects(data.projects);
+        }
+        if (data?.settings?.projectsHeader) {
+          setProjectsHeader(data.settings.projectsHeader);
+        }
+      })
+      .catch(() => {
+        // Fallback ke data statis jika backend belum jalan
+      });
+
+    const handleCmsUpdate = (e) => {
+      const data = e.detail;
+      if (Array.isArray(data?.projects)) setProjects(data.projects);
+      if (data?.settings?.projectsHeader) setProjectsHeader(data.settings.projectsHeader);
+    };
+    window.addEventListener("cms-updated", handleCmsUpdate);
+    return () => {
+      cancelled = true;
+      window.removeEventListener("cms-updated", handleCmsUpdate);
+    };
+  }, []);
+
   // Filter projects by category
   const filteredProjects = useMemo(() => {
-    if (activeCategory === "all") return PROJECTS;
-    return PROJECTS.filter((p) => p.category === activeCategory);
-  }, [activeCategory]);
+    if (activeCategory === "all") return projects;
+    return projects.filter((p) => p.category === activeCategory);
+  }, [activeCategory, projects]);
 
   // Displayed projects in grid mode
   const displayedProjects = useMemo(() => {
@@ -31,12 +62,12 @@ export default function ProjectsSection() {
 
   // Category counts
   const categoryCounts = useMemo(() => {
-    const counts = { all: PROJECTS.length };
-    PROJECTS.forEach((p) => {
+    const counts = { all: projects.length };
+    projects.forEach((p) => {
       counts[p.category] = (counts[p.category] || 0) + 1;
     });
     return counts;
-  }, []);
+  }, [projects]);
 
   const handleCategoryChange = (categoryId) => {
     setActiveCategory(categoryId);
@@ -67,15 +98,15 @@ export default function ProjectsSection() {
           {/* Header Portofolio & Controls */}
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
             <div data-reveal-group>
-              <SectionEyebrow className="mb-2">{PROJECTS_HEADER.eyebrow}</SectionEyebrow>
+              <SectionEyebrow className="mb-2">{projectsHeader.eyebrow}</SectionEyebrow>
               <h2
                 id="portofolio-heading"
                 className="font-headline-lg text-2xl sm:text-3xl lg:text-4xl text-primary font-bold tracking-tight"
               >
-                {PROJECTS_HEADER.heading}
+                {projectsHeader.heading}
               </h2>
               <p className="font-body-md text-base text-on-surface-variant mt-2 max-w-2xl leading-relaxed">
-                {PROJECTS_HEADER.description}
+                {projectsHeader.description}
               </p>
             </div>
 

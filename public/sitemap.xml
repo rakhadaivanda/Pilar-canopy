@@ -8,81 +8,393 @@
     <lastmod>2026-11-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-
     <!-- Logo -->
-    <image:image><image:loc>https://canopy.rezekibarokahjaya.net/logo.png</image:loc><image:title>Canopy Pilar Canopy Perkasa</image:title><image:caption>Logo resmi Pilar Canopy Perkasa, spesialis canopy membrane dan struktur baja.</image:caption></image:image>
-
-    <!-- Portofolio -->
-    <image:image><image:loc>https://canopy.rezekibarokahjaya.net/images/portofolio/kanopi-membrane-lapang-serbaguna-fisip-unpad-bandung-1.jpg</image:loc><image:title>Canopy Lapang Serbaguna FISIP UNPAD Bandung - Foto 1</image:title><image:caption>Canopy membrane bentang lebar lapang serbaguna FISIP UNPAD Bandung oleh Pilar Canopy Perkasa (Foto 1).</image:caption></image:image>
-    <image:image><image:loc>https://canopy.rezekibarokahjaya.net/images/portofolio/kanopi-membrane-lapang-serbaguna-fisip-unpad-bandung-2.png</image:loc><image:title>Canopy Lapang Serbaguna FISIP UNPAD Bandung - Foto 2</image:title><image:caption>Canopy membrane bentang lebar lapang serbaguna FISIP UNPAD Bandung oleh Pilar Canopy Perkasa (Foto 2).</image:caption></image:image>
-    <image:image><image:loc>https://canopy.rezekibarokahjaya.net/images/portofolio/kanopi-membrane-lapang-serbaguna-fisip-unpad-bandung-3.png</image:loc><image:title>Canopy Lapang Serbaguna FISIP UNPAD Bandung - Foto 3</image:title><image:caption>Canopy membrane bentang lebar lapang serbaguna FISIP UNPAD Bandung oleh Pilar Canopy Perkasa (Foto 3).</image:caption></image:image>
-    <image:image><image:loc>https://canopy.rezekibarokahjaya.net/images/portofolio/kanopi-membrane-lapang-serbaguna-fisip-unpad-bandung-4.png</image:loc><image:title>Canopy Lapang Serbaguna FISIP UNPAD Bandung - Foto 4</image:title><image:caption>Canopy membrane bentang lebar lapang serbaguna FISIP UNPAD Bandung oleh Pilar Canopy Perkasa (Foto 4).</image:caption></image:image>
-    <image:image><image:loc>https://canopy.rezekibarokahjaya.net/images/portofolio/kanopi-membrane-pit-stop-fuel-bsi-trustone-jawa-timur-1.jpg</image:loc><image:title>Canopy Pit Stop Fuel BSI Trustone Jawa Timur - Foto 1</image:title><image:caption>Canopy membrane shelter pit stop fuel pertambangan Jawa Timur oleh Pilar Canopy Perkasa (Foto 1).</image:caption></image:image>
-    <image:image><image:loc>https://canopy.rezekibarokahjaya.net/images/portofolio/kanopi-membrane-pit-stop-fuel-bsi-trustone-jawa-timur-2.png</image:loc><image:title>Canopy Pit Stop Fuel BSI Trustone Jawa Timur - Foto 2</image:title><image:caption>Canopy membrane shelter pit stop fuel pertambangan Jawa Timur oleh Pilar Canopy Perkasa (Foto 2).</image:caption></image:image>
-    <image:image><image:loc>https://canopy.rezekibarokahjaya.net/images/portofolio/kanopi-membrane-pit-stop-fuel-bsi-trustone-jawa-timur-3.png</image:loc><image:title>Canopy Pit Stop Fuel BSI Trustone Jawa Timur - Foto 3</image:title><image:caption>Canopy membrane shelter pit stop fuel pertambangan Jawa Timur oleh Pilar Canopy Perkasa (Foto 3).</image:caption></image:image>
-    <image:image><image:loc>https://canopy.rezekibarokahjaya.net/images/portofolio/kanopi-membrane-pit-stop-fuel-bsi-trustone-jawa-timur-4.png</image:loc><image:title>Canopy Pit Stop Fuel BSI Trustone Jawa Timur - Foto 4</image:title><image:caption>Canopy membrane shelter pit stop fuel pertambangan Jawa Timur oleh Pilar Canopy Perkasa (Foto 4).</image:caption></image:image>
-    <image:image><image:loc>https://canopy.rezekibarokahjaya.net/images/portofolio/glamping-dome-geodesik-gunadarma-technopark-cianjur-1.jpg</image:loc><image:title>Canopy Glamping Dome Geodesik UG TechnoPark Cianjur - Foto 1</image:title><image:caption>Canopy glamping dome geodesik di Gunadarma TechnoPark Cianjur oleh Pilar Canopy Perkasa (Foto 1).</image:caption></image:image>
-    <image:image><image:loc>https://canopy.rezekibarokahjaya.net/images/portofolio/glamping-dome-geodesik-gunadarma-technopark-cianjur-2.png</image:loc><image:title>Canopy Glamping Dome Geodesik UG TechnoPark Cianjur - Foto 2</image:title><image:caption>Canopy glamping dome geodesik di Gunadarma TechnoPark Cianjur oleh Pilar Canopy Perkasa (Foto 2).</image:caption></image:image>
-    <image:image><image:loc>https://canopy.rezekibarokahjaya.net/images/portofolio/glamping-dome-geodesik-gunadarma-technopark-cianjur-3.png</image:loc><image:title>Canopy Glamping Dome Geodesik UG TechnoPark Cianjur - Foto 3</image:title><image:caption>Canopy glamping dome geodesik di Gunadarma TechnoPark Cianjur oleh Pilar Canopy Perkasa (Foto 3).</image:caption></image:image>
-    <image:image><image:loc>https://canopy.rezekibarokahjaya.net/images/portofolio/glamping-dome-geodesik-gunadarma-technopark-cianjur-4.png</image:loc><image:title>Canopy Glamping Dome Geodesik UG TechnoPark Cianjur - Foto 4</image:title><image:caption>Canopy glamping dome geodesik di Gunadarma TechnoPark Cianjur oleh Pilar Canopy Perkasa (Foto 4).</image:caption></image:image>
-    <image:image><image:loc>https://canopy.rezekibarokahjaya.net/images/portofolio/kanopi-membrane-lapangan-padel-bintaro-1.png</image:loc><image:title>Canopy Membrane Lapangan Padel Bintaro - Foto 1</image:title><image:caption>Canopy membrane lapangan padel Bintaro tanpa kolom oleh Pilar Canopy Perkasa (Foto 1).</image:caption></image:image>
-    <image:image><image:loc>https://canopy.rezekibarokahjaya.net/images/portofolio/kanopi-membrane-lapangan-padel-bintaro-2.png</image:loc><image:title>Canopy Membrane Lapangan Padel Bintaro - Foto 2</image:title><image:caption>Canopy membrane lapangan padel Bintaro tanpa kolom oleh Pilar Canopy Perkasa (Foto 2).</image:caption></image:image>
-    <image:image><image:loc>https://canopy.rezekibarokahjaya.net/images/portofolio/kanopi-membrane-lapangan-padel-bintaro-3.png</image:loc><image:title>Canopy Membrane Lapangan Padel Bintaro - Foto 3</image:title><image:caption>Canopy membrane lapangan padel Bintaro tanpa kolom oleh Pilar Canopy Perkasa (Foto 3).</image:caption></image:image>
-    <image:image><image:loc>https://canopy.rezekibarokahjaya.net/images/portofolio/kanopi-membrane-lapangan-padel-bintaro-4.png</image:loc><image:title>Canopy Membrane Lapangan Padel Bintaro - Foto 4</image:title><image:caption>Canopy membrane lapangan padel Bintaro tanpa kolom oleh Pilar Canopy Perkasa (Foto 4).</image:caption></image:image>
-    <image:image><image:loc>https://canopy.rezekibarokahjaya.net/images/portofolio/canopy-slide-otomatis-cgv-cinemas-padang-1.png</image:loc><image:title>Canopy Slide Otomatis CGV Cinemas Padang - Foto 1</image:title><image:caption>Canopy retractable slide otomatis CGV Cinemas Padang oleh Pilar Canopy Perkasa (Foto 1).</image:caption></image:image>
-    <image:image><image:loc>https://canopy.rezekibarokahjaya.net/images/portofolio/canopy-slide-otomatis-cgv-cinemas-padang-2.png</image:loc><image:title>Canopy Slide Otomatis CGV Cinemas Padang - Foto 2</image:title><image:caption>Canopy retractable slide otomatis CGV Cinemas Padang oleh Pilar Canopy Perkasa (Foto 2).</image:caption></image:image>
-    <image:image><image:loc>https://canopy.rezekibarokahjaya.net/images/portofolio/canopy-slide-otomatis-cgv-cinemas-padang-3.png</image:loc><image:title>Canopy Slide Otomatis CGV Cinemas Padang - Foto 3</image:title><image:caption>Canopy retractable slide otomatis CGV Cinemas Padang oleh Pilar Canopy Perkasa (Foto 3).</image:caption></image:image>
-    <image:image><image:loc>https://canopy.rezekibarokahjaya.net/images/portofolio/canopy-slide-otomatis-cgv-cinemas-padang-4.png</image:loc><image:title>Canopy Slide Otomatis CGV Cinemas Padang - Foto 4</image:title><image:caption>Canopy retractable slide otomatis CGV Cinemas Padang oleh Pilar Canopy Perkasa (Foto 4).</image:caption></image:image>
-    <image:image><image:loc>https://canopy.rezekibarokahjaya.net/images/portofolio/glamping-cabin-pvc-alderon-gunung-walat-sukabumi-1.png</image:loc><image:title>Canopy Glamping Cabin PVC Alderon Sukabumi - Foto 1</image:title><image:caption>Canopy glamping cabin PVC Alderon Gunung Walat Sukabumi oleh Pilar Canopy Perkasa (Foto 1).</image:caption></image:image>
-    <image:image><image:loc>https://canopy.rezekibarokahjaya.net/images/portofolio/glamping-cabin-pvc-alderon-gunung-walat-sukabumi-2.png</image:loc><image:title>Canopy Glamping Cabin PVC Alderon Sukabumi - Foto 2</image:title><image:caption>Canopy glamping cabin PVC Alderon Gunung Walat Sukabumi oleh Pilar Canopy Perkasa (Foto 2).</image:caption></image:image>
-    <image:image><image:loc>https://canopy.rezekibarokahjaya.net/images/portofolio/glamping-cabin-pvc-alderon-gunung-walat-sukabumi-3.png</image:loc><image:title>Canopy Glamping Cabin PVC Alderon Sukabumi - Foto 3</image:title><image:caption>Canopy glamping cabin PVC Alderon Gunung Walat Sukabumi oleh Pilar Canopy Perkasa (Foto 3).</image:caption></image:image>
-    <image:image><image:loc>https://canopy.rezekibarokahjaya.net/images/portofolio/glamping-cabin-pvc-alderon-gunung-walat-sukabumi-4.png</image:loc><image:title>Canopy Glamping Cabin PVC Alderon Sukabumi - Foto 4</image:title><image:caption>Canopy glamping cabin PVC Alderon Gunung Walat Sukabumi oleh Pilar Canopy Perkasa (Foto 4).</image:caption></image:image>
-    <image:image><image:loc>https://canopy.rezekibarokahjaya.net/images/portofolio/tenda-push-pull-retractable-kogen-dairy-bandung-1.png</image:loc><image:title>Canopy Tenda Push Pull Retractable Kogen Dairy Bandung</image:title><image:caption>Canopy tenda push-pull retractable PT ABC Kogen Dairy Bandung oleh Pilar Canopy Perkasa.</image:caption></image:image>
-    <image:image><image:loc>https://canopy.rezekibarokahjaya.net/images/portofolio/kanopi-membrane-carport-rumah-cafe-jabodetabek-jawa-barat-1.png</image:loc><image:title>Canopy Membrane Carport Rumah dan Cafe Jabodetabek - Foto 1</image:title><image:caption>Canopy membrane carport hunian mewah dan cafe Jabodetabek oleh Pilar Canopy Perkasa (Foto 1).</image:caption></image:image>
-    <image:image><image:loc>https://canopy.rezekibarokahjaya.net/images/portofolio/kanopi-membrane-carport-rumah-cafe-jabodetabek-jawa-barat-2.png</image:loc><image:title>Canopy Membrane Carport Rumah dan Cafe Jabodetabek - Foto 2</image:title><image:caption>Canopy membrane carport hunian mewah dan cafe Jabodetabek oleh Pilar Canopy Perkasa (Foto 2).</image:caption></image:image>
-
-    <!-- Katalog terbaru (satu foto per model) -->
-    <image:image><image:loc>https://canopy.rezekibarokahjaya.net/images/katalog/awning-gulung/awning-gulung-1.png</image:loc><image:title>Canopy Awning Gulung</image:title><image:caption>Canopy awning gulung lipat outdoor dari katalog Pilar Canopy Perkasa.</image:caption></image:image>
-    <image:image><image:loc>https://canopy.rezekibarokahjaya.net/images/katalog/classic-vase-revisi/classic-vase-revisi-1.png</image:loc><image:title>Canopy Classic Vase</image:title><image:caption>Canopy awning klasik lengkung untuk eksterior bangunan dari Pilar Canopy Perkasa.</image:caption></image:image>
-    <image:image><image:loc>https://canopy.rezekibarokahjaya.net/images/katalog/awning-tombak/awning-tombak-1.png</image:loc><image:title>Canopy Awning Tombak</image:title><image:caption>Canopy awning model tombak klasik dari katalog Pilar Canopy Perkasa.</image:caption></image:image>
-    <image:image><image:loc>https://canopy.rezekibarokahjaya.net/images/katalog/kanopi-kain/kanopi-kain-1.png</image:loc><image:title>Canopy Kain</image:title><image:caption>Canopy kain peneduh teras dan jendela dari Pilar Canopy Perkasa.</image:caption></image:image>
-    <image:image><image:loc>https://canopy.rezekibarokahjaya.net/images/katalog/double-wing/double-wing-1.png</image:loc><image:title>Canopy Membrane Double Wing Pavilion</image:title><image:caption>Canopy membrane double wing pavilion dari katalog Pilar Canopy Perkasa.</image:caption></image:image>
-    <image:image><image:loc>https://canopy.rezekibarokahjaya.net/images/katalog/glamping-dome/glamping%20dome.png</image:loc><image:title>Canopy Glamping Dome</image:title><image:caption>Canopy glamping dome struktur membrane modern dari Pilar Canopy Perkasa.</image:caption></image:image>
-    <image:image><image:loc>https://canopy.rezekibarokahjaya.net/images/katalog/glamping-membrane-safari/glamping-membrane-safari.png</image:loc><image:title>Canopy Glamping Membrane Safari</image:title><image:caption>Canopy glamping membrane safari untuk resor alam dari Pilar Canopy Perkasa.</image:caption></image:image>
-    <image:image><image:loc>https://canopy.rezekibarokahjaya.net/images/katalog/glamping-doble-dome/glamping-doble-dome-1.png</image:loc><image:title>Canopy Glamping Doble Dome</image:title><image:caption>Canopy glamping doble dome dari katalog Pilar Canopy Perkasa.</image:caption></image:image>
-    <image:image><image:loc>https://canopy.rezekibarokahjaya.net/images/katalog/glamping-membran-cabin-wrap/Screenshot%202026-11-12%20at%2013.42.20.png</image:loc><image:title>Canopy Glamping Membran Cabin Wrap</image:title><image:caption>Canopy glamping membran cabin wrap dari Pilar Canopy Perkasa.</image:caption></image:image>
-    <image:image><image:loc>https://canopy.rezekibarokahjaya.net/images/katalog/geodesic-hybrid-shell/geodesic-hybrid-shell-1.png</image:loc><image:title>Canopy Geodesic Hybrid Shell</image:title><image:caption>Canopy geodesic hybrid shell struktur hibrida modern dari Pilar Canopy Perkasa.</image:caption></image:image>
-    <image:image><image:loc>https://canopy.rezekibarokahjaya.net/images/katalog/glamping-barrel-arch-cabin/glamping-barrel-arch-cabin.png</image:loc><image:title>Canopy Glamping Barrel Arch Cabin</image:title><image:caption>Canopy glamping barrel arch cabin dari katalog Pilar Canopy Perkasa.</image:caption></image:image>
-    <image:image><image:loc>https://canopy.rezekibarokahjaya.net/images/katalog/umbrella-canopy-custom/umbrella-canopy-custom-1.png</image:loc><image:title>Canopy Umbrella Custom</image:title><image:caption>Canopy umbrella custom untuk area outdoor dari Pilar Canopy Perkasa.</image:caption></image:image>
-    <image:image><image:loc>https://canopy.rezekibarokahjaya.net/images/katalog/walkway-arch-tunnel/Screenshot%202026-11-12%20at%2014.24.12.png</image:loc><image:title>Canopy Walkway Arch Tunnel</image:title><image:caption>Canopy walkway arch tunnel jalur pejalan kaki dari Pilar Canopy Perkasa.</image:caption></image:image>
-    <image:image><image:loc>https://canopy.rezekibarokahjaya.net/images/katalog/wave-cantilever-carport/wave-cantilever-carport-1.png</image:loc><image:title>Canopy Wave Cantilever Carport</image:title><image:caption>Canopy wave cantilever carport membrane dari Pilar Canopy Perkasa.</image:caption></image:image>
-    <image:image><image:loc>https://canopy.rezekibarokahjaya.net/images/katalog/curved-arch-carport/curved-arch-carport-1.png</image:loc><image:title>Canopy Curved Arch Carport</image:title><image:caption>Canopy curved arch carport lengkung dari Pilar Canopy Perkasa.</image:caption></image:image>
-    <image:image><image:loc>https://canopy.rezekibarokahjaya.net/images/katalog/model-double-cantilever-parking/model-double-cantilever-parking.png</image:loc><image:title>Canopy Model Double Cantilever Parking</image:title><image:caption>Canopy parkir ganda double cantilever dari Pilar Canopy Perkasa.</image:caption></image:image>
-    <image:image><image:loc>https://canopy.rezekibarokahjaya.net/images/katalog/cantilever-luxury-parking/cantilever-luxury-parking-1.png</image:loc><image:title>Canopy Cantilever Luxury Parking</image:title><image:caption>Canopy parkir mewah cantilever dari Pilar Canopy Perkasa.</image:caption></image:image>
-    <image:image><image:loc>https://canopy.rezekibarokahjaya.net/images/katalog/butterfly-luxury-parking/butterfly-luxury-parking.png</image:loc><image:title>Canopy Butterfly Luxury Parking</image:title><image:caption>Canopy parkir mewah model kupu-kupu dari Pilar Canopy Perkasa.</image:caption></image:image>
-    <image:image><image:loc>https://canopy.rezekibarokahjaya.net/images/katalog/canopy-membrane-lapangan-serbaguna/Screenshot%202026-11-12%20at%2015.04.59.png</image:loc><image:title>Canopy Membrane Lapangan Serbaguna</image:title><image:caption>Canopy membrane bentang lebar lapangan serbaguna dari Pilar Canopy Perkasa.</image:caption></image:image>
-    <image:image><image:loc>https://canopy.rezekibarokahjaya.net/images/katalog/canopy-membrane-pool-shelter/Screenshot%202026-11-12%20at%2015.11.42.png</image:loc><image:title>Canopy Membrane Pool Shelter</image:title><image:caption>Canopy membrane penutup kolam renang dari Pilar Canopy Perkasa.</image:caption></image:image>
-    <image:image><image:loc>https://canopy.rezekibarokahjaya.net/images/katalog/canopy-membrane-lengkung-single-frame/Screenshot%202026-11-12%20at%2015.16.57.png</image:loc><image:title>Canopy Membrane Lengkung Single Frame</image:title><image:caption>Canopy membrane lengkung single frame dari Pilar Canopy Perkasa.</image:caption></image:image>
-    <image:image><image:loc>https://canopy.rezekibarokahjaya.net/images/katalog/kanopi-membran-s-curve-luxury/kanopi-membran-s-curve-luxury-1.png</image:loc><image:title>Canopy Membran S-Curve Luxury</image:title><image:caption>Canopy membran S-curve luxury dari Pilar Canopy Perkasa.</image:caption></image:image>
-    <image:image><image:loc>https://canopy.rezekibarokahjaya.net/images/katalog/canopy-membrane-model-barrel-arch/canopy-membrane-model-barrel-arch-1.png</image:loc><image:title>Canopy Membrane Model Barrel Arch</image:title><image:caption>Canopy membrane model barrel arch dari Pilar Canopy Perkasa.</image:caption></image:image>
-    <image:image><image:loc>https://canopy.rezekibarokahjaya.net/images/katalog/double-cantilever-gate/Screenshot%202026-11-12%20at%2015.28.51.png</image:loc><image:title>Canopy Double Cantilever Gate</image:title><image:caption>Canopy gerbang ganda cantilever dari Pilar Canopy Perkasa.</image:caption></image:image>
-    <image:image><image:loc>https://canopy.rezekibarokahjaya.net/images/katalog/asymmetric-wave/Screenshot%202026-11-13%20at%2009.01.49.png</image:loc><image:title>Canopy Asymmetric Wave</image:title><image:caption>Canopy membrane gelombang asimetris dari Pilar Canopy Perkasa.</image:caption></image:image>
-    <image:image><image:loc>https://canopy.rezekibarokahjaya.net/images/katalog/canopy-butterfly-arch/Screenshot%202026-11-13%20at%2009.03.58.png</image:loc><image:title>Canopy Butterfly Arch</image:title><image:caption>Canopy membrane model kupu-kupu dari Pilar Canopy Perkasa.</image:caption></image:image>
-    <image:image><image:loc>https://canopy.rezekibarokahjaya.net/images/katalog/canopy-teras/Screenshot%202026-11-13%20at%2009.05.48.png</image:loc><image:title>Canopy Teras</image:title><image:caption>Canopy teras bangunan beratap membrane dari Pilar Canopy Perkasa.</image:caption></image:image>
-    <image:image><image:loc>https://canopy.rezekibarokahjaya.net/images/katalog/canopy-gelombang-sinus/Screenshot%202026-11-13%20at%2009.10.11.png</image:loc><image:title>Canopy Gelombang Sinus</image:title><image:caption>Canopy membrane bentuk gelombang sinus dari Pilar Canopy Perkasa.</image:caption></image:image>
-    <image:image><image:loc>https://canopy.rezekibarokahjaya.net/images/katalog/canopy-laser-cut-cantilever/Screenshot%202026-11-13%20at%2009.14.02.png</image:loc><image:title>Canopy Laser Cut Cantilever</image:title><image:caption>Canopy cantilever ornamen laser cut dari Pilar Canopy Perkasa.</image:caption></image:image>
-    <image:image><image:loc>https://canopy.rezekibarokahjaya.net/images/katalog/canopy-perforated-cantilever/Screenshot%202026-11-13%20at%2009.27.56.png</image:loc><image:title>Canopy Perforated Cantilever</image:title><image:caption>Canopy cantilever berlubang estetik dari Pilar Canopy Perkasa.</image:caption></image:image>
-    <image:image><image:loc>https://canopy.rezekibarokahjaya.net/images/katalog/canopy-pavilion-arch-series/Screenshot%202026-11-13%20at%2009.30.06.png</image:loc><image:title>Canopy Pavilion Arch Series</image:title><image:caption>Canopy paviliun lengkung arch series dari Pilar Canopy Perkasa.</image:caption></image:image>
-    <image:image><image:loc>https://canopy.rezekibarokahjaya.net/images/katalog/canopy-barrel-arch-truss-wide-span/Screenshot%202026-11-13%20at%2009.34.08.png</image:loc><image:title>Canopy Barrel Arch Truss Wide Span</image:title><image:caption>Canopy bentang lebar barrel arch truss dari Pilar Canopy Perkasa.</image:caption></image:image>
-    <image:image><image:loc>https://canopy.rezekibarokahjaya.net/images/katalog/sports-court-canopy/Screenshot%202026-11-13%20at%2009.35.14.png</image:loc><image:title>Canopy Sports Court</image:title><image:caption>Canopy lapangan olahraga dari Pilar Canopy Perkasa.</image:caption></image:image>
-    <image:image><image:loc>https://canopy.rezekibarokahjaya.net/images/katalog/liceria-vase-set/Screenshot%202026-11-13%20at%2010.11.43.png</image:loc><image:title>Canopy Liceria Vase Set</image:title><image:caption>Canopy liceria vase set bentang luas dari Pilar Canopy Perkasa.</image:caption></image:image>
-    <image:image><image:loc>https://canopy.rezekibarokahjaya.net/images/katalog/canopy-umbrella/Screenshot%202026-11-13%20at%2009.39.29.png</image:loc><image:title>Canopy Umbrella</image:title><image:caption>Canopy umbrella besar untuk area publik dari Pilar Canopy Perkasa.</image:caption></image:image>
-    <image:image><image:loc>https://canopy.rezekibarokahjaya.net/images/katalog/canopy-layang-layang/Screenshot%202026-11-13%20at%2009.40.22.png</image:loc><image:title>Canopy Layang Layang</image:title><image:caption>Canopy model layang-layang dari Pilar Canopy Perkasa.</image:caption></image:image>
-    <image:image><image:loc>https://canopy.rezekibarokahjaya.net/images/katalog/hyperbolic-canopy/Screenshot%202026-11-13%20at%2009.42.34.png</image:loc><image:title>Canopy Hyperbolic</image:title><image:caption>Canopy bentuk hiperbolik modern dari Pilar Canopy Perkasa.</image:caption></image:image>
-    <image:image><image:loc>https://canopy.rezekibarokahjaya.net/images/katalog/grand-entrance-arch/Screenshot%202026-11-13%20at%2009.43.41.png</image:loc><image:title>Canopy Grand Entrance Arch</image:title><image:caption>Canopy lengkung pintu masuk utama dari Pilar Canopy Perkasa.</image:caption></image:image>
-    <image:image><image:loc>https://canopy.rezekibarokahjaya.net/images/katalog/liceria-vase/Screenshot%202026-11-13%20at%2009.46.05.png</image:loc><image:title>Canopy Liceria Vase</image:title><image:caption>Canopy liceria vase untuk teras dan carport dari Pilar Canopy Perkasa.</image:caption></image:image>
-    <image:image><image:loc>https://canopy.rezekibarokahjaya.net/images/katalog/tribun-canopy-membrane/Screenshot%202026-11-13%20at%2010.15.43.png</image:loc><image:title>Canopy Tribun Membrane</image:title><image:caption>Canopy tribun lapangan beratap membrane dari Pilar Canopy Perkasa.</image:caption></image:image>
-    <image:image><image:loc>https://canopy.rezekibarokahjaya.net/images/katalog/track-and-field-tribune/Screenshot%202026-11-13%20at%2014.18.45.png</image:loc><image:title>Canopy Track and Field Tribune</image:title><image:caption>Canopy tribun lintasan lari dari Pilar Canopy Perkasa.</image:caption></image:image>
-    <image:image><image:loc>https://canopy.rezekibarokahjaya.net/images/katalog/stadium-grandstand-arch/Screenshot%202026-11-13%20at%2014.20.59.png</image:loc><image:title>Canopy Stadium Grandstand Arch</image:title><image:caption>Canopy tribun stadion utama dari Pilar Canopy Perkasa.</image:caption></image:image>
+    <image:image>
+      <image:loc>https://canopy.rezekibarokahjaya.net/logo.png</image:loc>
+      <image:title>Logo Resmi Pilar Canopy Perkasa PT Rezeki Barokah Jaya</image:title>
+      <image:caption>Spesialis Canopy Membrane Struktur Rangka Baja dan Tenda Glamping Indonesia</image:caption>
+    </image:image>
+    <!-- Portofolio &amp; Pengalaman Proyek -->
+    <image:image>
+      <image:loc>https://canopy.rezekibarokahjaya.net/images/portofolio/kanopi-membrane-lapang-serbaguna-fisip-unpad-bandung-1.jpg</image:loc>
+      <image:title>Lapang Serbaguna FISIP - Foto 1</image:title>
+      <image:caption>Kanopi membrane lapang serbaguna FISIP Universitas Padjadjaran Bandung (Foto 1)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://canopy.rezekibarokahjaya.net/images/portofolio/kanopi-membrane-lapang-serbaguna-fisip-unpad-bandung-2.png</image:loc>
+      <image:title>Lapang Serbaguna FISIP - Foto 2</image:title>
+      <image:caption>Kanopi membrane lapang serbaguna FISIP Universitas Padjadjaran Bandung (Foto 2)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://canopy.rezekibarokahjaya.net/images/portofolio/kanopi-membrane-lapang-serbaguna-fisip-unpad-bandung-3.png</image:loc>
+      <image:title>Lapang Serbaguna FISIP - Foto 3</image:title>
+      <image:caption>Kanopi membrane lapang serbaguna FISIP Universitas Padjadjaran Bandung (Foto 3)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://canopy.rezekibarokahjaya.net/images/portofolio/kanopi-membrane-lapang-serbaguna-fisip-unpad-bandung-4.png</image:loc>
+      <image:title>Lapang Serbaguna FISIP - Foto 4</image:title>
+      <image:caption>Kanopi membrane lapang serbaguna FISIP Universitas Padjadjaran Bandung (Foto 4)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://canopy.rezekibarokahjaya.net/images/portofolio/kanopi-membrane-pit-stop-fuel-bsi-trustone-jawa-timur-1.jpg</image:loc>
+      <image:title>Pit Stop Fuel - Foto 1</image:title>
+      <image:caption>Kanopi membrane pit stop fuel PT. BSI Trustone Jawa Timur (Foto 1)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://canopy.rezekibarokahjaya.net/images/portofolio/kanopi-membrane-pit-stop-fuel-bsi-trustone-jawa-timur-2.png</image:loc>
+      <image:title>Pit Stop Fuel - Foto 2</image:title>
+      <image:caption>Kanopi membrane pit stop fuel PT. BSI Trustone Jawa Timur (Foto 2)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://canopy.rezekibarokahjaya.net/images/portofolio/kanopi-membrane-pit-stop-fuel-bsi-trustone-jawa-timur-3.png</image:loc>
+      <image:title>Pit Stop Fuel - Foto 3</image:title>
+      <image:caption>Kanopi membrane pit stop fuel PT. BSI Trustone Jawa Timur (Foto 3)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://canopy.rezekibarokahjaya.net/images/portofolio/kanopi-membrane-pit-stop-fuel-bsi-trustone-jawa-timur-4.png</image:loc>
+      <image:title>Pit Stop Fuel - Foto 4</image:title>
+      <image:caption>Kanopi membrane pit stop fuel PT. BSI Trustone Jawa Timur (Foto 4)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://canopy.rezekibarokahjaya.net/images/portofolio/glamping-dome-geodesik-gunadarma-technopark-cianjur-1.jpg</image:loc>
+      <image:title>Glamping Dome 10 unit - Foto 1</image:title>
+      <image:caption>Glamping dome geodesik 10 unit Universitas Gunadarma UG-TechnoPark Cianjur (Foto 1)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://canopy.rezekibarokahjaya.net/images/portofolio/glamping-dome-geodesik-gunadarma-technopark-cianjur-2.png</image:loc>
+      <image:title>Glamping Dome 10 unit - Foto 2</image:title>
+      <image:caption>Glamping dome geodesik 10 unit Universitas Gunadarma UG-TechnoPark Cianjur (Foto 2)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://canopy.rezekibarokahjaya.net/images/portofolio/glamping-dome-geodesik-gunadarma-technopark-cianjur-3.png</image:loc>
+      <image:title>Glamping Dome 10 unit - Foto 3</image:title>
+      <image:caption>Glamping dome geodesik 10 unit Universitas Gunadarma UG-TechnoPark Cianjur (Foto 3)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://canopy.rezekibarokahjaya.net/images/portofolio/glamping-dome-geodesik-gunadarma-technopark-cianjur-4.png</image:loc>
+      <image:title>Glamping Dome 10 unit - Foto 4</image:title>
+      <image:caption>Glamping dome geodesik 10 unit Universitas Gunadarma UG-TechnoPark Cianjur (Foto 4)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://canopy.rezekibarokahjaya.net/images/portofolio/kanopi-membrane-lapangan-padel-bintaro-1.png</image:loc>
+      <image:title>Lapang Padel - Foto 1</image:title>
+      <image:caption>Kanopi membrane lapangan padel tennis pribadi Bintaro (Foto 1)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://canopy.rezekibarokahjaya.net/images/portofolio/kanopi-membrane-lapangan-padel-bintaro-2.png</image:loc>
+      <image:title>Lapang Padel - Foto 2</image:title>
+      <image:caption>Kanopi membrane lapangan padel tennis pribadi Bintaro (Foto 2)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://canopy.rezekibarokahjaya.net/images/portofolio/kanopi-membrane-lapangan-padel-bintaro-3.png</image:loc>
+      <image:title>Lapang Padel - Foto 3</image:title>
+      <image:caption>Kanopi membrane lapangan padel tennis pribadi Bintaro (Foto 3)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://canopy.rezekibarokahjaya.net/images/portofolio/kanopi-membrane-lapangan-padel-bintaro-4.png</image:loc>
+      <image:title>Lapang Padel - Foto 4</image:title>
+      <image:caption>Kanopi membrane lapangan padel tennis pribadi Bintaro (Foto 4)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://canopy.rezekibarokahjaya.net/images/portofolio/canopy-slide-otomatis-cgv-cinemas-padang-1.png</image:loc>
+      <image:title>Canopy Slide Otomatis - Foto 1</image:title>
+      <image:caption>Canopy slide otomatis retractable CGV Cinemas Indonesia Padang (Foto 1)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://canopy.rezekibarokahjaya.net/images/portofolio/canopy-slide-otomatis-cgv-cinemas-padang-2.png</image:loc>
+      <image:title>Canopy Slide Otomatis - Foto 2</image:title>
+      <image:caption>Canopy slide otomatis retractable CGV Cinemas Indonesia Padang (Foto 2)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://canopy.rezekibarokahjaya.net/images/portofolio/canopy-slide-otomatis-cgv-cinemas-padang-3.png</image:loc>
+      <image:title>Canopy Slide Otomatis - Foto 3</image:title>
+      <image:caption>Canopy slide otomatis retractable CGV Cinemas Indonesia Padang (Foto 3)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://canopy.rezekibarokahjaya.net/images/portofolio/canopy-slide-otomatis-cgv-cinemas-padang-4.png</image:loc>
+      <image:title>Canopy Slide Otomatis - Foto 4</image:title>
+      <image:caption>Canopy slide otomatis retractable CGV Cinemas Indonesia Padang (Foto 4)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://canopy.rezekibarokahjaya.net/images/portofolio/glamping-cabin-pvc-alderon-gunung-walat-sukabumi-1.png</image:loc>
+      <image:title>Glamping PVC Alderon - Foto 1</image:title>
+      <image:caption>Glamping cabin PVC Alderon PT. Wandri Jaya Gunung Walat Park Sukabumi (Foto 1)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://canopy.rezekibarokahjaya.net/images/portofolio/glamping-cabin-pvc-alderon-gunung-walat-sukabumi-2.png</image:loc>
+      <image:title>Glamping PVC Alderon - Foto 2</image:title>
+      <image:caption>Glamping cabin PVC Alderon PT. Wandri Jaya Gunung Walat Park Sukabumi (Foto 2)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://canopy.rezekibarokahjaya.net/images/portofolio/glamping-cabin-pvc-alderon-gunung-walat-sukabumi-3.png</image:loc>
+      <image:title>Glamping PVC Alderon - Foto 3</image:title>
+      <image:caption>Glamping cabin PVC Alderon PT. Wandri Jaya Gunung Walat Park Sukabumi (Foto 3)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://canopy.rezekibarokahjaya.net/images/portofolio/glamping-cabin-pvc-alderon-gunung-walat-sukabumi-4.png</image:loc>
+      <image:title>Glamping PVC Alderon - Foto 4</image:title>
+      <image:caption>Glamping cabin PVC Alderon PT. Wandri Jaya Gunung Walat Park Sukabumi (Foto 4)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://canopy.rezekibarokahjaya.net/images/portofolio/tenda-push-pull-retractable-kogen-dairy-bandung-1.png</image:loc>
+      <image:title>Push Pull Retractable Tent - Foto 1</image:title>
+      <image:caption>Tenda push pull retractable loading dock PT. ABC Kogen Dairy Milk Bandung (Foto 1)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://canopy.rezekibarokahjaya.net/images/portofolio/kanopi-membrane-carport-rumah-cafe-jabodetabek-jawa-barat-1.png</image:loc>
+      <image:title>Canopy Rumah Tinggal &amp; Cafe - Foto 1</image:title>
+      <image:caption>Kanopi membrane carport rumah tinggal dan cafe Jabodetabek Jawa Barat (Foto 1)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://canopy.rezekibarokahjaya.net/images/portofolio/kanopi-membrane-carport-rumah-cafe-jabodetabek-jawa-barat-2.png</image:loc>
+      <image:title>Canopy Rumah Tinggal &amp; Cafe - Foto 2</image:title>
+      <image:caption>Kanopi membrane carport rumah tinggal dan cafe Jabodetabek Jawa Barat (Foto 2)</image:caption>
+    </image:image>
+    <!-- Katalog Produk -->
+    <image:image>
+      <image:loc>https://canopy.rezekibarokahjaya.net/images/katalog/awning-gulung/awning-gulung-1.png</image:loc>
+      <image:title>Katalog Awning - AWNING GULUNG - Variasi 1</image:title>
+      <image:caption>Awning gulung lipat kanopi outdoor teras Pilar Canopy Pilar Canopy Perkasa (Koleksi 1)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://canopy.rezekibarokahjaya.net/images/katalog/classic-vase-revisi/classic-vase-revisi-1.png</image:loc>
+      <image:title>Katalog Awning - CLASSIC VASE - Variasi 1</image:title>
+      <image:caption>Kanopi awning klasik lengkung penutup jendela exterior Pilar Canopy Pilar Canopy Perkasa (Koleksi 1)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://canopy.rezekibarokahjaya.net/images/katalog/awning-tombak/awning-tombak-1.png</image:loc>
+      <image:title>Katalog Awning - AWNING TOMBAK - Variasi 1</image:title>
+      <image:caption>Kanopi awning model tombak klasik penutup jendela exterior Pilar Canopy Pilar Canopy Perkasa (Koleksi 1)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://canopy.rezekibarokahjaya.net/images/katalog/kanopi-kain/kanopi-kain-1.png</image:loc>
+      <image:title>Katalog Awning - Kanopi Kain - Variasi 1</image:title>
+      <image:caption>Kanopi awning model tombak klasik penutup jendela exterior Pilar Canopy Pilar Canopy Perkasa (Koleksi 1)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://canopy.rezekibarokahjaya.net/images/katalog/kanopi-kain/kanopi-kain-2.png</image:loc>
+      <image:title>Katalog Awning - Kanopi Kain - Variasi 2</image:title>
+      <image:caption>Kanopi awning model tombak klasik penutup jendela exterior Pilar Canopy Pilar Canopy Perkasa (Koleksi 2)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://canopy.rezekibarokahjaya.net/images/katalog/kanopi-kain/kanopi-kain-3.png</image:loc>
+      <image:title>Katalog Awning - Kanopi Kain - Variasi 3</image:title>
+      <image:caption>Kanopi awning model tombak klasik penutup jendela exterior Pilar Canopy Pilar Canopy Perkasa (Koleksi 3)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://canopy.rezekibarokahjaya.net/images/katalog/double-wing/double-wing-1.png</image:loc>
+      <image:title>Katalog Kanopi - Canopy Membrane Double Wing Pavilion - Variasi 1</image:title>
+      <image:caption>Canopy Membrane Double Wing Pavilion model gazebo lengkung outdoor Pilar Canopy Pilar Canopy Perkasa (Koleksi 1)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://canopy.rezekibarokahjaya.net/images/katalog/glamping-dome/glamping%20dome.png</image:loc>
+      <image:title>Katalog Glamping - Glamping Dome - Variasi 1</image:title>
+      <image:caption>Tenda Glamping Dome struktur membrane lengkung modern Pilar Canopy Pilar Canopy Perkasa (Koleksi 1)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://canopy.rezekibarokahjaya.net/images/katalog/glamping-membrane-safari/glamping-membrane-safari.png</image:loc>
+      <image:title>Katalog Glamping - Glamping Membrane Safari - Variasi 1</image:title>
+      <image:caption>Tenda Glamping Membrane Safari dengan struktur rangka kokoh Pilar Canopy Pilar Canopy Perkasa (Koleksi 1)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://canopy.rezekibarokahjaya.net/images/katalog/glamping-doble-dome/glamping-doble-dome-1.png</image:loc>
+      <image:title>Katalog Glamping - Glamping Doble Dome - Variasi 1</image:title>
+      <image:caption>Tenda Glamping Doble Dome dengan struktur rangka kokoh Pilar Canopy Pilar Canopy Perkasa (Koleksi 1)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://canopy.rezekibarokahjaya.net/images/katalog/glamping-membran-cabin-wrap/Screenshot%202026-11-12%20at%2013.42.20.png</image:loc>
+      <image:title>Katalog Glamping - Glamping Membran Cabin Wrap - Variasi 1</image:title>
+      <image:caption>Tenda Glamping Membran Cabin Wrap dengan struktur rangka kokoh Pilar Canopy Pilar Canopy Perkasa (Koleksi 1)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://canopy.rezekibarokahjaya.net/images/katalog/geodesic-hybrid-shell/geodesic-hybrid-shell-1.png</image:loc>
+      <image:title>Katalog Glamping - Geodesic Hybrid Shell - Variasi 1</image:title>
+      <image:caption>Struktur Geodesic Hybrid Shell dengan desain modern dan kokoh Pilar Canopy Pilar Canopy Perkasa (Koleksi 1)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://canopy.rezekibarokahjaya.net/images/katalog/glamping-barrel-arch-cabin/glamping-barrel-arch-cabin.png</image:loc>
+      <image:title>Katalog Glamping - Glamping Barrel Arch Cabin - Variasi 1</image:title>
+      <image:caption>Tenda Glamping Barrel Arch Cabin dengan struktur rangka kokoh Pilar Canopy Pilar Canopy Perkasa (Koleksi 1)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://canopy.rezekibarokahjaya.net/images/katalog/umbrella-canopy-custom/umbrella-canopy-custom-1.png</image:loc>
+      <image:title>Katalog Kanopi - Umbrella Canopy Custom - Variasi 1</image:title>
+      <image:caption>Umbrella Canopy Custom dengan struktur kokoh dan desain elegan Pilar Canopy Pilar Canopy Perkasa (Koleksi 1)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://canopy.rezekibarokahjaya.net/images/katalog/umbrella-canopy-custom/umbrella-canopy-custom-2.png</image:loc>
+      <image:title>Katalog Kanopi - Umbrella Canopy Custom - Variasi 2</image:title>
+      <image:caption>Umbrella Canopy Custom dengan struktur kokoh dan desain elegan Pilar Canopy Pilar Canopy Perkasa (Koleksi 2)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://canopy.rezekibarokahjaya.net/images/katalog/umbrella-canopy-custom/umbrella-canopy-custom-3.png</image:loc>
+      <image:title>Katalog Kanopi - Umbrella Canopy Custom - Variasi 3</image:title>
+      <image:caption>Umbrella Canopy Custom dengan struktur kokoh dan desain elegan Pilar Canopy Pilar Canopy Perkasa (Koleksi 3)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://canopy.rezekibarokahjaya.net/images/katalog/walkway-arch-tunnel/Screenshot%202026-11-12%20at%2014.24.12.png</image:loc>
+      <image:title>Katalog Kanopi - Walkway Arch Tunnel - Variasi 1</image:title>
+      <image:caption>Walkway Arch Tunnel struktur terowongan kanopi membrane lengkung Pilar Canopy Pilar Canopy Perkasa (Koleksi 1)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://canopy.rezekibarokahjaya.net/images/katalog/wave-cantilever-carport/wave-cantilever-carport-1.png</image:loc>
+      <image:title>Katalog Carport - Wave Cantilever Carport - Variasi 1</image:title>
+      <image:caption>Wave Cantilever Carport struktur kanopi carport membrane bergelombang Pilar Canopy Pilar Canopy Perkasa (Koleksi 1)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://canopy.rezekibarokahjaya.net/images/katalog/curved-arch-carport/curved-arch-carport-1.png</image:loc>
+      <image:title>Katalog Carport - Curved Arch Carport - Variasi 1</image:title>
+      <image:caption>Curved Arch Carport struktur kanopi carport lengkung membrane Pilar Canopy Pilar Canopy Perkasa (Koleksi 1)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://canopy.rezekibarokahjaya.net/images/katalog/model-double-cantilever-parking/model-double-cantilever-parking.png</image:loc>
+      <image:title>Katalog Carport - Model Double Cantilever Parking - Variasi 1</image:title>
+      <image:caption>Model Double Cantilever Parking struktur kanopi parkir ganda membrane Pilar Canopy Pilar Canopy Perkasa (Koleksi 1)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://canopy.rezekibarokahjaya.net/images/katalog/cantilever-luxury-parking/cantilever-luxury-parking-1.png</image:loc>
+      <image:title>Katalog Carport - Cantilever Luxury Parking - Variasi 1</image:title>
+      <image:caption>Cantilever Luxury Parking struktur kanopi parkir mewah beratap membrane Pilar Canopy Pilar Canopy Perkasa (Koleksi 1)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://canopy.rezekibarokahjaya.net/images/katalog/butterfly-luxury-parking/butterfly-luxury-parking.png</image:loc>
+      <image:title>Katalog Carport - Butterfly Luxury Parking - Variasi 1</image:title>
+      <image:caption>Butterfly Luxury Parking struktur kanopi parkir mewah berbentuk kupu-kupu beratap membrane Pilar Canopy Pilar Canopy Perkasa (Koleksi 1)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://canopy.rezekibarokahjaya.net/images/katalog/canopy-membrane-lapangan-serbaguna/Screenshot%202026-11-12%20at%2015.04.59.png</image:loc>
+      <image:title>Katalog Lapangan - Canopy Membrane Lapangan Serbaguna - Variasi 1</image:title>
+      <image:caption>Canopy Membrane Lapangan Serbaguna struktur bentang lebar untuk lapangan olahraga Pilar Canopy Perkasa Pilar Canopy Perkasa (Koleksi 1)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://canopy.rezekibarokahjaya.net/images/katalog/canopy-membrane-pool-shelter/Screenshot%202026-11-12%20at%2015.11.42.png</image:loc>
+      <image:title>Katalog Kanopi - Canopy Membrane Pool Shelter - Variasi 1</image:title>
+      <image:caption>Canopy Membrane Pool Shelter struktur penutup kolam renang beratap membrane Pilar Canopy Pilar Canopy Perkasa (Koleksi 1)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://canopy.rezekibarokahjaya.net/images/katalog/canopy-membrane-lengkung-single-frame/Screenshot%202026-11-12%20at%2015.16.57.png</image:loc>
+      <image:title>Katalog Kanopi - Canopy Membrane Lengkung Single Frame - Variasi 1</image:title>
+      <image:caption>Canopy Membrane Lengkung Single Frame struktur penutup area kolam beratap membrane Pilar Canopy Pilar Canopy Perkasa (Koleksi 1)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://canopy.rezekibarokahjaya.net/images/katalog/kanopi-membran-s-curve-luxury/kanopi-membran-s-curve-luxury-1.png</image:loc>
+      <image:title>Katalog Kanopi - Kanopi Membran S-Curve Luxury - Variasi 1</image:title>
+      <image:caption>Kanopi Membran S-Curve Luxury struktur kanopi lengkung mewah beratap membrane Pilar Canopy Pilar Canopy Perkasa (Koleksi 1)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://canopy.rezekibarokahjaya.net/images/katalog/canopy-membrane-model-barrel-arch/canopy-membrane-model-barrel-arch-1.png</image:loc>
+      <image:title>Katalog Kanopi - Canopy Membrane Model Barrel Arch - Variasi 1</image:title>
+      <image:caption>Canopy Membrane Model Barrel Arch struktur kanopi lengkung terowongan beratap membrane Pilar Canopy Pilar Canopy Perkasa (Koleksi 1)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://canopy.rezekibarokahjaya.net/images/katalog/double-cantilever-gate/Screenshot%202026-11-12%20at%2015.28.51.png</image:loc>
+      <image:title>Katalog Gerbang - Double Cantilever Gate - Variasi 1</image:title>
+      <image:caption>Double Cantilever Gate struktur kanopi gerbang ganda beratap membrane Pilar Canopy Pilar Canopy Perkasa (Koleksi 1)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://canopy.rezekibarokahjaya.net/images/katalog/asymmetric-wave/Screenshot%202026-11-13%20at%2009.01.49.png</image:loc>
+      <image:title>Katalog Kanopi - Asymmetric Wave - Variasi 1</image:title>
+      <image:caption>Asymmetric Wave struktur kanopi membrane asimetris bergelombang Pilar Canopy Pilar Canopy Perkasa (Koleksi 1)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://canopy.rezekibarokahjaya.net/images/katalog/canopy-butterfly-arch/Screenshot%202026-11-13%20at%2009.03.58.png</image:loc>
+      <image:title>Katalog Kanopi - Canopy Butterfly Arch - Variasi 1</image:title>
+      <image:caption>Canopy Butterfly Arch struktur kanopi membrane model kupu-kupu Pilar Canopy Pilar Canopy Perkasa (Koleksi 1)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://canopy.rezekibarokahjaya.net/images/katalog/canopy-teras/Screenshot%202026-11-13%20at%2009.05.48.png</image:loc>
+      <image:title>Katalog Kanopi - Canopy Teras - Variasi 1</image:title>
+      <image:caption>Canopy Teras struktur kanopi teras bangunan beratap membrane Pilar Canopy Pilar Canopy Perkasa (Koleksi 1)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://canopy.rezekibarokahjaya.net/images/katalog/canopy-gelombang-sinus/Screenshot%202026-11-13%20at%2009.10.11.png</image:loc>
+      <image:title>Katalog Kanopi - Canopy Gelombang Sinus - Variasi 1</image:title>
+      <image:caption>Canopy Gelombang Sinus struktur kanopi beratap membrane bentuk gelombang sinus Pilar Canopy Pilar Canopy Perkasa (Koleksi 1)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://canopy.rezekibarokahjaya.net/images/katalog/canopy-laser-cut-cantilever/Screenshot%202026-11-13%20at%2009.14.02.png</image:loc>
+      <image:title>Katalog Carport - Canopy Laser Cut Cantilever - Variasi 1</image:title>
+      <image:caption>Canopy Laser Cut Cantilever struktur kanopi cantilever dengan ornamen laser cut beratap membrane Pilar Canopy Pilar Canopy Perkasa (Koleksi 1)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://canopy.rezekibarokahjaya.net/images/katalog/canopy-perforated-cantilever/Screenshot%202026-11-13%20at%2009.27.56.png</image:loc>
+      <image:title>Katalog Carport - Canopy Perforated Cantilever - Variasi 1</image:title>
+      <image:caption>Canopy Perforated Cantilever struktur kanopi cantilever berlubang estetik beratap membrane Pilar Canopy Pilar Canopy Perkasa (Koleksi 1)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://canopy.rezekibarokahjaya.net/images/katalog/canopy-pavilion-arch-series/Screenshot%202026-11-13%20at%2009.30.06.png</image:loc>
+      <image:title>Katalog Kanopi - Canopy Pavilion Arch Series - Variasi 1</image:title>
+      <image:caption>Canopy Pavilion Arch Series struktur kanopi lengkung model paviliun beratap membrane Pilar Canopy Pilar Canopy Perkasa (Koleksi 1)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://canopy.rezekibarokahjaya.net/images/katalog/canopy-barrel-arch-truss-wide-span/Screenshot%202026-11-13%20at%2009.34.08.png</image:loc>
+      <image:title>Katalog Lapangan - Canopy Barrel Arch Truss Wide Span - Variasi 1</image:title>
+      <image:caption>Canopy Barrel Arch Truss Wide Span struktur kanopi bentang lebar beratap membrane Pilar Canopy Pilar Canopy Perkasa (Koleksi 1)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://canopy.rezekibarokahjaya.net/images/katalog/sports-court-canopy/Screenshot%202026-11-13%20at%2009.35.14.png</image:loc>
+      <image:title>Katalog Lapangan - Sports Court Canopy - Variasi 1</image:title>
+      <image:caption>Sports Court Canopy struktur kanopi lapangan olahraga beratap membrane Pilar Canopy Pilar Canopy Perkasa (Koleksi 1)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://canopy.rezekibarokahjaya.net/images/katalog/liceria-vase-set/Screenshot%202026-11-13%20at%2010.11.43.png</image:loc>
+      <image:title>Katalog Kanopi - Liceria Vase Set - Variasi 1</image:title>
+      <image:caption>Liceria Vase Set struktur kanopi besar beratap membrane Pilar Canopy Pilar Canopy Perkasa (Koleksi 1)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://canopy.rezekibarokahjaya.net/images/katalog/canopy-umbrella/Screenshot%202026-11-13%20at%2009.39.29.png</image:loc>
+      <image:title>Katalog Kanopi - Canopy Umbrella - Variasi 1</image:title>
+      <image:caption>Canopy Umbrella struktur kanopi payung besar beratap membrane Pilar Canopy Pilar Canopy Perkasa (Koleksi 1)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://canopy.rezekibarokahjaya.net/images/katalog/canopy-layang-layang/Screenshot%202026-11-13%20at%2009.40.22.png</image:loc>
+      <image:title>Katalog Kanopi - Canopy Layang Layang - Variasi 1</image:title>
+      <image:caption>Canopy Layang Layang struktur kanopi bentuk layang-layang beratap membrane Pilar Canopy Pilar Canopy Perkasa (Koleksi 1)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://canopy.rezekibarokahjaya.net/images/katalog/hyperbolic-canopy/Screenshot%202026-11-13%20at%2009.42.34.png</image:loc>
+      <image:title>Katalog Kanopi - Hyperbolic Canopy - Variasi 1</image:title>
+      <image:caption>Hyperbolic Canopy struktur kanopi bentuk hiperbolik beratap membrane Pilar Canopy Pilar Canopy Perkasa (Koleksi 1)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://canopy.rezekibarokahjaya.net/images/katalog/grand-entrance-arch/Screenshot%202026-11-13%20at%2009.43.41.png</image:loc>
+      <image:title>Katalog Gerbang - Grand Entrance Arch - Variasi 1</image:title>
+      <image:caption>Grand Entrance Arch struktur kanopi lengkung pintu masuk utama beratap membrane Pilar Canopy Pilar Canopy Perkasa (Koleksi 1)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://canopy.rezekibarokahjaya.net/images/katalog/liceria-vase/Screenshot%202026-11-13%20at%2009.46.05.png</image:loc>
+      <image:title>Katalog Kanopi - Liceria Vase - Variasi 1</image:title>
+      <image:caption>Liceria Vase struktur kanopi carport atau teras beratap membrane Pilar Canopy Pilar Canopy Perkasa (Koleksi 1)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://canopy.rezekibarokahjaya.net/images/katalog/liceria-vase-set/Screenshot%202026-11-13%20at%2010.11.43.png</image:loc>
+      <image:title>Katalog Kanopi - Liceria Vase Set - Variasi 1</image:title>
+      <image:caption>Liceria Vase Set struktur kanopi carport atau teras beratap membrane Pilar Canopy Pilar Canopy Perkasa (Koleksi 1)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://canopy.rezekibarokahjaya.net/images/katalog/liceria-vase-set/Screenshot%202026-11-13%20at%2010.13.22.png</image:loc>
+      <image:title>Katalog Kanopi - Liceria Vase Set - Variasi 2</image:title>
+      <image:caption>Liceria Vase Set struktur kanopi carport atau teras beratap membrane Pilar Canopy Pilar Canopy Perkasa (Koleksi 2)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://canopy.rezekibarokahjaya.net/images/katalog/liceria-vase-set/Screenshot%202026-11-13%20at%2010.13.50.png</image:loc>
+      <image:title>Katalog Kanopi - Liceria Vase Set - Variasi 3</image:title>
+      <image:caption>Liceria Vase Set struktur kanopi carport atau teras beratap membrane Pilar Canopy Pilar Canopy Perkasa (Koleksi 3)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://canopy.rezekibarokahjaya.net/images/katalog/tribun-canopy-membrane/Screenshot%202026-11-13%20at%2010.15.43.png</image:loc>
+      <image:title>Katalog Tribun - Tribun Canopy Membrane - Variasi 1</image:title>
+      <image:caption>Tribun Canopy Membrane struktur kanopi tribun lapangan beratap membrane Pilar Canopy Pilar Canopy Perkasa (Koleksi 1)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://canopy.rezekibarokahjaya.net/images/katalog/track-and-field-tribune/Screenshot%202026-11-13%20at%2014.18.45.png</image:loc>
+      <image:title>Katalog Tribun - Track &amp; Field Tribune - Variasi 1</image:title>
+      <image:caption>Track &amp; Field Tribune struktur kanopi tribun lintasan lari beratap membrane Pilar Canopy Pilar Canopy Perkasa (Koleksi 1)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://canopy.rezekibarokahjaya.net/images/katalog/stadium-grandstand-arch/Screenshot%202026-11-13%20at%2014.20.59.png</image:loc>
+      <image:title>Katalog Tribun - Stadium Grandstand Arch - Variasi 1</image:title>
+      <image:caption>Stadium Grandstand Arch struktur kanopi tribun stadion beratap membrane Pilar Canopy Pilar Canopy Perkasa (Koleksi 1)</image:caption>
+    </image:image>
   </url>
 </urlset>

@@ -5,6 +5,12 @@ import path from "node:path";
 import fs from "node:fs";
 import { fileURLToPath } from "node:url";
 import { GoogleAuth } from "google-auth-library";
+import {
+  loadCmsData,
+  saveCmsData,
+  saveUploadedImage,
+  regenerateSitemap,
+} from "./cms.js";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, "..");
@@ -50,7 +56,7 @@ function loadCredentials() {
 }
 
 const app = express();
-app.use(express.json({ limit: "1mb" }));
+app.use(express.json({ limit: "20mb" }));
 
 /* ─── Akun dari Google Sheet (cache 5 menit) ─────────────────────────────── */
 let accountsCache = { at: 0, rows: [] };
@@ -244,6 +250,107 @@ app.post("/api/auth/refresh", async (req, res) => {
     res.status(502).json({ error: e.message });
   }
 });
+
+/* ─── Middleware Auth untuk CMS ──────────────────────────────────────────── */
+function requireAuth(req, res, next) {
+  const session = getSession(req);
+  if (!session) {
+    return res.status(401).json({ error: "Sesi berakhir atau belum login. Silakan login terlebih dahulu." });
+  }
+  req.user = session;
+  next();
+}
+
+/* ─── API CMS (Google Sheets + Local Fallback + Upload + Sitemap) ─────────── */
+app.get("/api/cms/content", async (req, res) => {
+  try {
+    const data = await loadCmsData(loadCredentials);
+    res.json(data);
+  } catch (e) {
+    console.error("GET /api/cms/content:", e);
+    res.status(500).json({ error: "Gagal memuat konten CMS." });
+  }
+});
+
+app.post("/api/cms/sync", requireAuth, async (req, res) => {
+  try {
+    const data = await loadCmsData(loadCredentials, { forceRefresh: true });
+    res.json(data);
+  } catch (e) {
+    res.status(500).json({ error: e.message || "Gagal sinkronisasi dengan Google Sheets." });
+  }
+});
+
+app.put("/api/cms/catalog", requireAuth, async (req, res) => {
+  try {
+    const items = req.body?.catalog;
+    if (!Array.isArray(items)) {
+      return res.status(400).json({ error: "Format data katalog harus berupa array." });
+    }
+    const result = await saveCmsData(loadCredentials, { catalog: items });
+    res.json(result);
+  } catch (e) {
+    console.error("PUT /api/cms/catalog:", e);
+    res.status(500).json({ error: e.message || "Gagal menyimpan katalog." });
+  }
+});
+
+app.put("/api/cms/projects", requireAuth, async (req, res) => {
+  try {
+    const projects = req.body?.projects;
+    if (!Array.isArray(projects)) {
+      return res.status(400).json({ error: "Format data portofolio harus berupa array." });
+    }
+    const result = await saveCmsData(loadCredentials, { projects });
+    res.json(result);
+  } catch (e) {
+    console.error("PUT /api/cms/projects:", e);
+    res.status(500).json({ error: e.message || "Gagal menyimpan portofolio." });
+  }
+});
+
+app.put("/api/cms/settings", requireAuth, async (req, res) => {
+  try {
+    const settings = req.body?.settings;
+    if (!settings || typeof settings !== "object") {
+      return res.status(400).json({ error: "Format data pengaturan teks tidak valid." });
+    }
+    const result = await saveCmsData(loadCredentials, { settings });
+    res.json(result);
+  } catch (e) {
+    console.error("PUT /api/cms/settings:", e);
+    res.status(500).json({ error: e.message || "Gagal menyimpan pengaturan teks." });
+  }
+});
+
+app.post("/api/cms/upload", requireAuth, (req, res) => {
+  try {
+    const { target, filename, dataUrl } = req.body || {};
+    const url = saveUploadedImage({ target, filename, dataUrl });
+    res.json({ url });
+  } catch (e) {
+    console.error("POST /api/cms/upload:", e);
+    res.status(400).json({ error: e.message || "Gagal mengunggah gambar." });
+  }
+});
+
+app.post("/api/cms/sitemap", requireAuth, async (req, res) => {
+  try {
+    const data = await loadCmsData(loadCredentials);
+    const sitemap = regenerateSitemap(data);
+    res.json({ ok: true, sitemap });
+  } catch (e) {
+    console.error("POST /api/cms/sitemap:", e);
+    res.status(500).json({ error: e.message || "Gagal memperbarui sitemap." });
+  }
+});
+
+/* ─── Static Uploads & Asset Fallbacks ───────────────────────────────────── */
+app.use("/uploads", express.static(path.join(ROOT, "public", "uploads")));
+app.use(
+  "/images/katalog",
+  express.static(path.join(ROOT, "src", "assets", "images", "projects", "katalog"))
+);
 
 /* ─── Static build (production) ──────────────────────────────────────────── */
 const distDir = path.join(ROOT, "dist");

@@ -6,6 +6,7 @@ import { SITE } from "../../data/site";
 import { buildWhatsAppUrl } from "../../lib/whatsapp";
 import { useAuth } from "../../auth/AuthContext";
 import LoginModal from "../../auth/LoginModal";
+import CmsModal from "../cms/CmsModal";
 
 /* DIUBAH: Navbar dengan 4 item utama, Dropdown interaktif pada menu Layanan (Layanan Kami, Material & Spesifikasi, Portofolio & Pengalaman Proyek, Katalog), tombol CTA "Hubungi Kami" ke WhatsApp, dan Scrollspy cerdas */
 export default function Navbar() {
@@ -18,6 +19,7 @@ export default function Navbar() {
   const dropdownTimeoutRef = useRef(null);
   const { user, logout } = useAuth();
   const [showLogin, setShowLogin] = useState(false);
+  const [showCms, setShowCms] = useState(false);
 
   const closeMenu = () => setMenuOpen(false);
 
@@ -206,8 +208,16 @@ export default function Navbar() {
         <div className="flex items-center gap-2 sm:gap-3">
           {user ? (
             <div className="hidden sm:flex items-center gap-2">
-              <a
+              <button
+                type="button"
+                onClick={() => setShowCms(true)}
                 className="inline-flex items-center justify-center bg-primary text-on-primary hover:brightness-110 px-4 sm:px-5 py-2 sm:py-2.5 rounded-full font-label-caps text-label-caps uppercase tracking-wider shadow-md hover:shadow-lg transition-all duration-300 active:scale-95 text-[10px] xs:text-[11px] sm:text-xs"
+              >
+                <Icon name="dashboard_customize" className="text-[16px] sm:text-[18px] mr-1.5 sm:mr-2" />
+                <span>CMS</span>
+              </button>
+              <a
+                className="inline-flex items-center justify-center bg-primary/15 text-primary hover:bg-primary hover:text-on-primary px-4 sm:px-5 py-2 sm:py-2.5 rounded-full font-label-caps text-label-caps uppercase tracking-wider shadow-sm transition-all duration-300 active:scale-95 text-[10px] xs:text-[11px] sm:text-xs"
                 href="https://erp.canopy.rezekibarokahjaya.net/"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -339,8 +349,19 @@ export default function Navbar() {
 
             {user ? (
               <div className="mt-4 space-y-2">
+                <button
+                  type="button"
+                  onClick={() => {
+                    closeMenu();
+                    setShowCms(true);
+                  }}
+                  className="w-full flex items-center justify-center gap-2 text-center bg-primary text-on-primary py-3 rounded-full shadow-md font-semibold"
+                >
+                  <Icon name="dashboard_customize" className="text-[18px]" />
+                  <span>Kelola Konten (CMS)</span>
+                </button>
                 <a
-                  className="flex items-center justify-center gap-2 text-center bg-primary text-on-primary py-3 rounded-full shadow-md font-semibold"
+                  className="flex items-center justify-center gap-2 text-center bg-primary/15 text-primary py-3 rounded-full font-semibold"
                   href="https://erp.canopy.rezekibarokahjaya.net/"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -390,6 +411,7 @@ export default function Navbar() {
       )}
 
       <LoginModal open={showLogin} onClose={() => setShowLogin(false)} />
+      <CmsModal open={showCms} onClose={() => setShowCms(false)} />
     </header>
   );
 }
