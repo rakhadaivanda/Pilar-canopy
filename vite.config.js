@@ -1,6 +1,6 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
-import { copyFileSync, existsSync, mkdirSync, createReadStream } from 'node:fs'
+import { copyFileSync, cpSync, existsSync, mkdirSync, createReadStream } from 'node:fs'
 import { dirname, resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
@@ -23,6 +23,13 @@ function copyPublicMetaFiles() {
         const source = resolve(rootDir, 'public', file)
         if (!existsSync(source)) continue
         copyFileSync(source, resolve(outDir, file))
+      }
+
+      const catalogSource = resolve(rootDir, 'src/assets/images/projects/katalog')
+      const catalogTarget = resolve(outDir, 'images/katalog')
+      if (existsSync(catalogSource)) {
+        mkdirSync(catalogTarget, { recursive: true })
+        cpSync(catalogSource, catalogTarget, { recursive: true, force: true })
       }
     },
   }
