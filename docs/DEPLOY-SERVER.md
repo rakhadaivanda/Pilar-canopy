@@ -22,8 +22,9 @@ Nginx menyajikan file statis dari folder `dist`, lalu meneruskan `/api/` ke back
 - PM2
 - Nginx
 - Akses SSH ke VPS
-- File service account Google atau environment variable `GOOGLE_SERVICE_ACCOUNT_JSON`
-- File `.env` produksi sudah berisi `SESSION_SECRET`, `SHEET_ID`, dan `SHEET_RANGE`
+- File service account Google atau environment variable `GOOGLE_SERVICE_ACCOUNT_JSON` (dipakai CMS, bukan login)
+- File `.env` produksi sudah berisi `SESSION_SECRET`, `ADMIN_USERNAME`, `ADMIN_PASSWORD`, dan `SHEET_ID`
+- Login memakai akun statis dari `ADMIN_USERNAME`/`ADMIN_PASSWORD`; Google Sheet tetap dipakai untuk konten CMS
 
 Jangan commit file `.env` atau file service account ke GitHub.
 

@@ -7,6 +7,7 @@ import { buildWhatsAppUrl } from "../../lib/whatsapp";
 import { useAuth } from "../../auth/AuthContext";
 import LoginModal from "../../auth/LoginModal";
 import CmsModal from "../cms/CmsModal";
+import { getErpSsoUrl } from "../../lib/cmsClient";
 
 /* DIUBAH: Navbar dengan 4 item utama, Dropdown interaktif pada menu Layanan (Layanan Kami, Material & Spesifikasi, Portofolio & Pengalaman Proyek, Katalog), tombol CTA "Hubungi Kami" ke WhatsApp, dan Scrollspy cerdas */
 export default function Navbar() {
@@ -20,8 +21,22 @@ export default function Navbar() {
   const { user, logout } = useAuth();
   const [showLogin, setShowLogin] = useState(false);
   const [showCms, setShowCms] = useState(false);
+  const [erpLoading, setErpLoading] = useState(false);
 
   const closeMenu = () => setMenuOpen(false);
+
+  const handleOpenErp = async () => {
+    if (erpLoading) return;
+    setErpLoading(true);
+    try {
+      const url = await getErpSsoUrl();
+      window.open(url, "_blank", "noopener,noreferrer");
+    } catch (e) {
+      window.alert(e.message || "Gagal membuka ERP.");
+    } finally {
+      setErpLoading(false);
+    }
+  };
 
   // Scrollspy: highlight menu "Layanan" saat berada di #layanan, #material, #portofolio, atau #katalog
   useEffect(() => {
@@ -216,15 +231,15 @@ export default function Navbar() {
                 <Icon name="dashboard_customize" className="text-[16px] sm:text-[18px] mr-1.5 sm:mr-2" />
                 <span>CMS</span>
               </button>
-              <a
-                className="inline-flex items-center justify-center bg-primary/15 text-primary hover:bg-primary hover:text-on-primary px-4 sm:px-5 py-2 sm:py-2.5 rounded-full font-label-caps text-label-caps uppercase tracking-wider shadow-sm transition-all duration-300 active:scale-95 text-[10px] xs:text-[11px] sm:text-xs"
-                href="https://erp.canopy.rezekibarokahjaya.net/"
-                target="_blank"
-                rel="noopener noreferrer"
+              <button
+                type="button"
+                onClick={handleOpenErp}
+                disabled={erpLoading}
+                className="inline-flex items-center justify-center bg-primary/15 text-primary hover:bg-primary hover:text-on-primary px-4 sm:px-5 py-2 sm:py-2.5 rounded-full font-label-caps text-label-caps uppercase tracking-wider shadow-sm transition-all duration-300 active:scale-95 text-[10px] xs:text-[11px] sm:text-xs disabled:opacity-60"
               >
                 <Icon name="grid_view" className="text-[16px] sm:text-[18px] mr-1.5 sm:mr-2" />
-                <span>ERP</span>
-              </a>
+                <span>{erpLoading ? "Membuka..." : "ERP"}</span>
+              </button>
               <button
                 type="button"
                 onClick={logout}
@@ -360,16 +375,18 @@ export default function Navbar() {
                   <Icon name="dashboard_customize" className="text-[18px]" />
                   <span>Kelola Konten (CMS)</span>
                 </button>
-                <a
-                  className="flex items-center justify-center gap-2 text-center bg-primary/15 text-primary py-3 rounded-full font-semibold"
-                  href="https://erp.canopy.rezekibarokahjaya.net/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  onClick={closeMenu}
+                <button
+                  type="button"
+                  onClick={async () => {
+                    closeMenu();
+                    await handleOpenErp();
+                  }}
+                  disabled={erpLoading}
+                  className="w-full flex items-center justify-center gap-2 text-center bg-primary/15 text-primary py-3 rounded-full font-semibold disabled:opacity-60"
                 >
                   <Icon name="grid_view" className="text-[18px]" />
-                  <span>ERP</span>
-                </a>
+                  <span>{erpLoading ? "Membuka ERP..." : "ERP"}</span>
+                </button>
                 <button
                   type="button"
                   onClick={() => {

@@ -4,7 +4,6 @@ import crypto from "node:crypto";
 import path from "node:path";
 import fs from "node:fs";
 import { fileURLToPath } from "node:url";
-import { GoogleAuth } from "google-auth-library";
 import {
   loadCmsData,
   saveCmsData,
@@ -16,13 +15,26 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, "..");
 
 const PORT = process.env.PORT || 3001;
-const SHEET_ID =
-  process.env.SHEET_ID || "1TTxOa5Ax4W-7GZY4hWVWrTUk87gXObbYx-0QR0UzSrQ";
-const SHEET_RANGE = process.env.SHEET_RANGE || "Akun Login";
+const ADMIN_USERNAME = process.env.ADMIN_USERNAME || "SuperAdmin";
+const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD || "";
+const ADMIN_ACCOUNT = {
+  username: ADMIN_USERNAME,
+  nama: "Super Admin",
+  role: "SuperAdmin",
+  penempatan: "Pilar Canopy Perkasa",
+  password: ADMIN_PASSWORD,
+};
 const SECRET = process.env.SESSION_SECRET || "pilar-canopy-dev-secret-change-me";
+const SSO_SHARED_SECRET = process.env.SSO_SHARED_SECRET || SECRET;
+const ERP_SSO_URL = process.env.ERP_SSO_URL || "https://erp.canopy.rezekibarokahjaya.net/login";
 if (!process.env.SESSION_SECRET) {
   console.warn(
     "[pilar-canopy] PERINGATAN: SESSION_SECRET belum di-set. Set di .env / environment VPS dengan string acak panjang."
+  );
+}
+if (!ADMIN_PASSWORD) {
+  console.warn(
+    "[pilar-canopy] PERINGATAN: ADMIN_PASSWORD belum di-set. Set di .env / environment VPS."
   );
 }
 const SESSION_COOKIE = "pc_session";
@@ -57,70 +69,6 @@ function loadCredentials() {
 
 const app = express();
 app.use(express.json({ limit: "20mb" }));
-
-/* ─── Akun dari Google Sheet (cache 5 menit) ─────────────────────────────── */
-let accountsCache = { at: 0, rows: [] };
-let lastGoodRows = [];
-
-async function fetchAccounts() {
-  const now = Date.now();
-  if (now - accountsCache.at < 5 * 60 * 1000 && accountsCache.rows.length) {
-    return accountsCache.rows;
-  }
-
-  const credentials = loadCredentials();
-  if (!credentials) {
-    throw new Error(
-      "Service account tidak ditemukan. Set GOOGLE_SERVICE_ACCOUNT_JSON (isi file key) atau taruh file key di /var/www/."
-    );
-  }
-
-  const auth = new GoogleAuth({
-    credentials,
-    scopes: ["https://www.googleapis.com/auth/spreadsheets.readonly"],
-  });
-  const client = await auth.getClient();
-  const token = await client.getAccessToken();
-  if (!token?.token) throw new Error("Gagal mendapatkan token Google API");
-
-  const url = `https://sheets.googleapis.com/v4/spreadsheets/${SHEET_ID}/values/${encodeURIComponent(
-    SHEET_RANGE
-  )}`;
-  const res = await fetch(url, {
-    headers: { Authorization: `Bearer ${token.token}` },
-  });
-  if (!res.ok) throw new Error(`Google Sheets API error: ${res.status}`);
-  const data = await res.json();
-  const values = data.values || [];
-
-  // Cari baris header (mengandung "Username")
-  const headerIdx = values.findIndex((r) =>
-    r.some((c) => String(c).trim().toLowerCase() === "username")
-  );
-  if (headerIdx === -1) throw new Error("Header 'Username' tidak ditemukan");
-
-  const header = values[headerIdx].map((c) => String(c).trim().toLowerCase());
-  const col = (name) => header.indexOf(name);
-  const rows = values.slice(headerIdx + 1).filter((r) => r.some((c) => c?.trim()));
-  const accounts = rows.map((r) => ({
-    username: (r[col("username")] || "").trim(),
-    nama: (r[col("nama")] || "").trim(),
-    role: (r[col("role")] || "Karyawan").trim() || "Karyawan",
-    passDefault: (r[col("pass default")] || "").trim(),
-    newPass: (r[col("new pass")] || "").trim(),
-    penempatan: (r[col("penempatan")] || "").trim(),
-  }));
-
-  accountsCache = { at: now, rows: accounts };
-  lastGoodRows = accounts;
-  return accounts;
-}
-
-function pickAccounts() {
-  if (accountsCache.rows.length) return accountsCache.rows;
-  if (lastGoodRows.length) return lastGoodRows;
-  return null;
-}
 
 /* ─── Sesi (cookie HMAC, httpOnly) ───────────────────────────────────────── */
 function sign(payload) {
@@ -172,49 +120,35 @@ function getSession(req) {
   return verify(decodeURIComponent(match.slice(SESSION_COOKIE.length + 1)));
 }
 
+function signSsoTicket(payload) {
+  const body = Buffer.from(JSON.stringify(payload)).toString("base64url");
+  const sig = crypto.createHmac("sha256", SSO_SHARED_SECRET).update(body).digest("base64url");
+  return `${body}.${sig}`;
+}
+
 /* ─── API Auth ───────────────────────────────────────────────────────────── */
-app.post("/api/auth/login", async (req, res) => {
+app.post("/api/auth/login", (req, res) => {
   try {
     const username = String(req.body?.username || "").trim().toLowerCase();
-    const password = String(req.body?.password || "").trim();
+    const password = String(req.body?.password || "");
     if (!username || !password) {
       return res.status(400).json({ error: "Username dan password wajib diisi." });
     }
 
-    let accounts = pickAccounts();
-    if (!accounts) {
-      try {
-        accounts = await fetchAccounts();
-      } catch (e) {
-        console.error("fetchAccounts:", e.message);
-        return res.status(502).json({ error: "Gagal memuat data akun. Coba lagi." });
-      }
+    if (
+      username !== ADMIN_ACCOUNT.username.toLowerCase() ||
+      password !== ADMIN_ACCOUNT.password
+    ) {
+      return res.status(401).json({ error: "Username atau password salah." });
     }
 
-    const acc = accounts.find(
-      (a) =>
-        a.username.toLowerCase() === username ||
-        (a.nama && a.nama.toLowerCase() === username)
-    );
-
-    if (!acc) {
-      return res.status(401).json({ error: "Username tidak terdaftar." });
-    }
-
-    // Logika validasi password dari sistem-presensi:
-    // New Pass (jika ada) → Pass Default → fallback "123456"
-    const validPasses = [acc.newPass, acc.passDefault, "123456"].filter(Boolean);
-    if (!validPasses.includes(password)) {
-      return res.status(401).json({ error: "Password salah." });
-    }
-
-    setSession(res, acc);
+    setSession(res, ADMIN_ACCOUNT);
     res.json({
       user: {
-        username: acc.username,
-        nama: acc.nama,
-        role: acc.role,
-        penempatan: acc.penempatan,
+        username: ADMIN_ACCOUNT.username,
+        nama: ADMIN_ACCOUNT.nama,
+        role: ADMIN_ACCOUNT.role,
+        penempatan: ADMIN_ACCOUNT.penempatan,
       },
     });
   } catch (e) {
@@ -241,13 +175,30 @@ app.post("/api/auth/logout", (req, res) => {
   res.json({ ok: true });
 });
 
-// Refresh daftar akun (dipakai admin / warmup)
-app.post("/api/auth/refresh", async (req, res) => {
+app.post("/api/auth/refresh", (req, res) => {
+  res.json({ ok: true, count: 1 });
+});
+
+app.post("/api/auth/sso-ticket", (req, res) => {
+  const session = getSession(req);
+  if (!session) {
+    return res.status(401).json({ error: "Sesi berakhir atau belum login. Silakan login terlebih dahulu." });
+  }
+
   try {
-    const rows = await fetchAccounts();
-    res.json({ ok: true, count: rows.length });
+    const target = new URL(ERP_SSO_URL);
+    const ticket = signSsoTicket({
+      username: session.username || ADMIN_ACCOUNT.username,
+      nama: session.nama || ADMIN_ACCOUNT.nama,
+      role: session.role || ADMIN_ACCOUNT.role,
+      exp: Date.now() + 1000 * 60 * 2, // 2 menit
+      nonce: crypto.randomBytes(16).toString("hex"),
+    });
+    target.searchParams.set("sso_token", ticket);
+    res.json({ url: target.toString() });
   } catch (e) {
-    res.status(502).json({ error: e.message });
+    console.error("sso-ticket error:", e);
+    res.status(500).json({ error: "Gagal membuat tautan SSO ERP." });
   }
 });
 
@@ -400,7 +351,7 @@ app.listen(PORT, () => {
   console.log(`[pilar-canopy] server auth jalan di http://localhost:${PORT}`);
   if (!loadCredentials()) {
     console.warn(
-      "[pilar-canopy] PERINGATAN: service account tidak ditemukan. Set GOOGLE_SERVICE_ACCOUNT_JSON atau taruh file key di /var/www/."
+      "[pilar-canopy] PERINGATAN: service account untuk CMS tidak ditemukan. Set GOOGLE_SERVICE_ACCOUNT_JSON atau taruh file key di /var/www/."
     );
   }
 });

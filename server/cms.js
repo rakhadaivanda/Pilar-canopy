@@ -14,7 +14,7 @@ const DIST_DIR = path.join(ROOT, "dist");
 
 const BASE_URL = process.env.SITE_URL || "https://canopy.rezekibarokahjaya.net";
 const SHEET_ID =
-  process.env.SHEET_ID || "1TTxOa5Ax4W-7GZY4hWVWrTUk87gXObbYx-0QR0UzSrQ";
+  process.env.SHEET_ID || "19HbZQ3iHpQJve1Lcev_lsp3y6ohKZ3kRwjxbKdXptYA";
 
 const TAB_CATALOG = "CMS_Catalog";
 const TAB_PORTFOLIO = "CMS_Portfolio";
@@ -524,6 +524,7 @@ export function regenerateSitemap(cmsData) {
 
   lines.push("    <!-- Katalog Produk -->");
   const seenIds = new Set();
+  const seenLocs = new Set();
   for (const item of data.catalog || []) {
     if (item.id && seenIds.has(item.id)) continue;
     if (item.id) seenIds.add(item.id);
@@ -535,7 +536,8 @@ export function regenerateSitemap(cmsData) {
 
     imgs.forEach((img, idx) => {
       const loc = toAbsoluteUrl(img);
-      if (!loc) return;
+      if (!loc || seenLocs.has(loc)) return;
+      seenLocs.add(loc);
       totalImages += 1;
       lines.push("    <image:image>");
       lines.push(`      <image:loc>${xmlEscape(loc)}</image:loc>`);

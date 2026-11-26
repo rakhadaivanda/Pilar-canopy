@@ -64,6 +64,16 @@ export async function regenerateCmsSitemap() {
   return result;
 }
 
+export async function getErpSsoUrl() {
+  const res = await fetch("/api/auth/sso-ticket", {
+    method: "POST",
+    credentials: "include",
+  });
+  const data = await res.json().catch(() => ({}));
+  if (!res.ok) throw new Error(data.error || "Gagal membuka ERP.");
+  return data.url;
+}
+
 export function fileToDataUrl(file) {
   return new Promise((resolve, reject) => {
     const reader = new FileReader();

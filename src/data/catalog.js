@@ -693,7 +693,7 @@ export const CATALOG_ITEMS = [
       dimension: "P 10m x L 11m Tinggi 7,5m",
     },
     colors: DEFAULT_CATALOG_COLORS,
-    images: catalogImages("liceria-vase-set", 1),
+    images: catalogImages("liceria-vase-set", 3),
     desc: "Liceria Vase Set dengan rangka galvanis tebal 2,8 mm dan atap membrane 650 gsm, dirancang kokoh dengan bentang luas untuk perlindungan area fasilitas outdoor berukuran besar.",
   },
   {
@@ -780,23 +780,6 @@ export const CATALOG_ITEMS = [
     colors: DEFAULT_CATALOG_COLORS,
     images: catalogImages("liceria-vase", 1),
     desc: "Liceria Vase dengan rangka besi hitam/galvanis tebal 2,8 mm dan atap membrane 750 gsm, menghadirkan struktur kanopi lengkung yang kokoh dan elegan untuk melindungi area teras atau carport bangunan.",
-  },
-  {
-    id: "liceria-vase-set",
-    name: "Liceria Vase Set",
-    category: "Kanopi",
-    alt: "Liceria Vase Set struktur kanopi carport atau teras beratap membrane Pilar Canopy",
-    priceAmount: "", // Tidak tertera harga pada gambar
-    priceUnit: "",
-    specs: {
-      rangka: "Besi Hiam / Galvanis Tebal 2,8 mm",
-      atap: "Membrane 750 gsm",
-      volume: "16 m",
-      dimension: "P 4m x L 4m Tinggi 3m",
-    },
-    colors: DEFAULT_CATALOG_COLORS,
-    images: catalogImages("liceria-vase-set", 3),
-    desc: "Liceria Vase Set dengan rangka besi hitam/galvanis tebal 2,8 mm dan atap membrane 750 gsm, menghadirkan struktur kanopi lengkung yang kokoh dan elegan untuk melindungi area teras atau carport bangunan.",
   },
   {
     id: "tribun-canopy-membrane",
