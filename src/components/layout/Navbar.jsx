@@ -32,7 +32,8 @@ export default function Navbar() {
       const url = await getErpSsoUrl();
       window.open(url, "_blank", "noopener,noreferrer");
     } catch (e) {
-      window.alert(e.message || "Gagal membuka ERP.");
+      const msg = e?.message || "Gagal membuka ERP.";
+      window.alert(msg.includes("404") ? "Fitur SSO ERP belum aktif di server. Pastikan deploy terbaru sudah berjalan." : msg);
     } finally {
       setErpLoading(false);
     }

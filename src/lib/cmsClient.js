@@ -70,7 +70,8 @@ export async function getErpSsoUrl() {
     credentials: "include",
   });
   const data = await res.json().catch(() => ({}));
-  if (!res.ok) throw new Error(data.error || "Gagal membuka ERP.");
+  if (!res.ok) throw new Error(data.error || `Gagal membuka ERP (${res.status}).`);
+  if (!data.url) throw new Error("URL ERP tidak tersedia.");
   return data.url;
 }
 
